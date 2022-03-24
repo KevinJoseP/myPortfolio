@@ -12,6 +12,8 @@ html, body{
 }
 
 #projects{
+    padding-top: 7rem;
+    background-color: rgb(90, 88, 88);
     
 }
 
@@ -50,6 +52,7 @@ html, body{
     color: rgb(216, 166, 29);
     cursor: pointer;
     font-family: 'Patrick Hand', cursive;
+    text-decoration: none;
     
 }
 
@@ -81,5 +84,7 @@ html, body{
 }
 
 #contact-section{
+    padding-top: 10rem;
+    background-color: aqua;
 
 }
