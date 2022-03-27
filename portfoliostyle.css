@@ -20,7 +20,7 @@ html, body{
 
 #projects{
     background-color: rgb(90, 88, 88);
-    flex-direction: column;
+    
     
 }
 
@@ -40,7 +40,7 @@ html, body{
     left: 0;
     top: 0;
     text-align: center;
-    background-color: rgb(124, 153, 70, 1);
+    background-color:  rgb(255, 247, 226);
     justify-content: space-between;
     align-items: center;
     
@@ -59,6 +59,9 @@ html, body{
     color: rgb(0, 0, 0);
     cursor: pointer;
     text-decoration: none;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 0.3rem;
 }
 
 .font-fam{
@@ -67,8 +70,9 @@ html, body{
 }
 
 .nav-link:hover{
-    color: rgb(71, 71, 69);
+    color: rgb(255, 255, 255);
     cursor: pointer; 
+    background-color: rgb(97, 95, 93);
        
 }
 
@@ -82,13 +86,18 @@ html, body{
         left: 0;
         top: 0;
         text-align: center;
-        background-color: rgb(48, 43, 38);
+        background-color: rgb(124, 153, 70, 1);
         justify-content: space-around;
         align-items: center;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         
         
+    }
+    #project-heading{
+        padding-top: 10rem !important; 
+        margin: 0;
+        text-align: center;
     }
     
 }
@@ -113,6 +122,7 @@ html, body{
 
 #contact-section{
     background-color: rgb(82, 82, 82);
+    height: 60vh;
 
 }
 
@@ -123,6 +133,7 @@ html, body{
 
 #welcome-div-image{
     width: 100vw;
+    margin-top: 6rem;
 }
 
 #profile-link{
@@ -141,3 +152,59 @@ html, body{
     padding: 0;
     margin: 0;
 }
+
+#project-heading{
+    padding-top: 8rem;
+    margin: 0;
+    text-align: center;
+}
+
+#grid-container-projects{
+    display: grid;
+    gap: 1rem;
+
+}
+
+.project-div{
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    background-color: beige;
+}
+
+footer{
+    width: 100vw;
+    height: 40vh;
+}
+
+.social-media-profile{
+    width: 3rem;
+    height: 3rem;
+}
+
+.social-media-link{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.back-to-top{
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+    margin-top: 1rem;
+    
+}
+
+.back-to-top:hover{
+    font-weight: 600;
+
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
