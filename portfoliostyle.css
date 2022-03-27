@@ -2,8 +2,9 @@ html, body{
     font-size: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Patrick Hand', cursive;
-    color: antiquewhite;
+    font-family: 'Cormorant Garamond', serif;
+    color: rgb(0, 0, 0);
+    scroll-behavior: smooth;
 
 }
 
@@ -14,7 +15,7 @@ html, body{
 
 }
 #welcome-section{
-    background-color: rgb(24, 19, 6);
+    background-color: rgb(255, 247, 226);
 }
 
 #projects{
@@ -39,7 +40,7 @@ html, body{
     left: 0;
     top: 0;
     text-align: center;
-    background-color: rgb(48, 43, 38);
+    background-color: rgb(124, 153, 70, 1);
     justify-content: space-between;
     align-items: center;
     
@@ -55,20 +56,20 @@ html, body{
 }
 
 .nav-link{
-    color: rgb(216, 166, 29);
+    color: rgb(0, 0, 0);
     cursor: pointer;
-    font-family: 'Patrick Hand', cursive;
     text-decoration: none;
-    
+}
+
+.font-fam{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
 }
 
 .nav-link:hover{
-    color: rgb(216, 166, 29);
-    cursor: pointer;
-    font-family: 'Patrick Hand', cursive;
-    color: blanchedalmond;
-    
-    
+    color: rgb(71, 71, 69);
+    cursor: pointer; 
+       
 }
 
 @media screen and (max-width: 600px){
@@ -120,12 +121,23 @@ html, body{
     
 }
 
+#welcome-div-image{
+    width: 100vw;
+}
+
 #profile-link{
     cursor: pointer;
-    color: antiquewhite;
+    text-decoration: none;
+    color: black;
+    
 }
 
 #profile-link:hover{
     cursor: pointer;
     color: white;
+}
+
+#contact-section p{
+    padding: 0;
+    margin: 0;
 }
