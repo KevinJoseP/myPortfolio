@@ -2,6 +2,7 @@ html, body{
     font-size: 100%;
     margin: 0;
     padding: 0;
+    width: 100vw;
     font-family: 'Cormorant Garamond', serif;
     color: rgb(0, 0, 0);
     scroll-behavior: smooth;
@@ -28,6 +29,7 @@ html, body{
     width: 100%;
     height: 100vh;
     margin-left: 0%;
+    margin-right: 0%;
     
 
 }
@@ -36,7 +38,7 @@ html, body{
     display: flex;
     position: fixed;
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     left: 0;
     top: 0;
     text-align: center;
@@ -103,7 +105,7 @@ html, body{
 }
 
 #Kevin-jose-logo{
-    width: 4.5rem;
+    width: 4rem;
     padding-left: 1rem;
     
 }
@@ -155,21 +157,27 @@ html, body{
 
 #project-heading{
     padding-top: 8rem;
+    padding-bottom: 3rem;;
     margin: 0;
+    color: bisque;
+    font-size: 3rem;
     text-align: center;
 }
 
 #grid-container-projects{
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    
 
 }
 
 .project-div{
-    width: 10rem;
-    height: 10rem;
     text-align: center;
     background-color: beige;
+    border-radius: 0.5rem;
 }
 
 footer{
