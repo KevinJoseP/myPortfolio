@@ -111,11 +111,6 @@ html, body{
         font-weight: 600;
     }
 
-    #Kevin-jose-logo:hover{
-        width: 4rem !important;
-        padding-left: 1rem !important;
-        
-    }
 }
 
 #Kevin-jose-logo{
@@ -125,8 +120,7 @@ html, body{
 }
 
 #Kevin-jose-logo:hover{
-    width: 4.7rem;
-    padding-left: 0.8rem;
+    cursor: pointer;
     
 }
 
