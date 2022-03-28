@@ -30,8 +30,13 @@ html, body{
     height: 100vh;
     margin-left: 0%;
     margin-right: 0%;
-    
+}
 
+.viewport-w{
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-bottom: 10%;
 }
 
 #nav-bar-container{
@@ -102,6 +107,15 @@ html, body{
         text-align: center;
     }
     
+    .nav-link{
+        font-weight: 600;
+    }
+
+    #Kevin-jose-logo:hover{
+        width: 4rem !important;
+        padding-left: 1rem !important;
+        
+    }
 }
 
 #Kevin-jose-logo{
