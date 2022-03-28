@@ -21,9 +21,12 @@ html, body{
 
 #projects{
     background-color: rgb(90, 88, 88);
-    
-    
 }
+#experiences{
+    background-color: rgb(90, 88, 88);
+}
+
+
 
 .viewport-w-h{
     width: 100%;
@@ -106,6 +109,11 @@ html, body{
         margin: 0;
         text-align: center;
     }
+    #experience-heading{
+        padding-top: 10rem !important; 
+        margin: 0;
+        text-align: center;
+    }
     
     .nav-link{
         font-weight: 600;
@@ -172,12 +180,31 @@ html, body{
     text-align: center;
 }
 
+#experience-heading{
+    padding-top: 8rem;
+    padding-bottom: 3rem;
+    margin: 0;
+    color: bisque;
+    font-size: 3rem;
+    text-align: center;
+}
+
 #grid-container-projects{
     display: grid;
     gap: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    
+
+}
+#grid-container-experiences{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
     
 
 }
@@ -186,6 +213,18 @@ html, body{
     text-align: center;
     background-color: beige;
     border-radius: 0.5rem;
+}
+
+.experience-div{
+    text-align: center;
+    background-color: beige;
+    border-radius: 0.5rem;
+    width:40%;
+    max-width: 30rem;
+    min-width: 20rem;
+    margin: 2rem 0 2rem 0;
+    padding-bottom: 1rem;
+    
 }
 
 footer{
@@ -222,5 +261,10 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.experience-logo{
+    width:80%;
+    margin-top: 2rem;
 }
 
