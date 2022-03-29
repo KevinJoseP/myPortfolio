@@ -8,39 +8,9 @@ html, body{
     scroll-behavior: smooth;
 
 }
-
-.display-flex-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-#welcome-section{
-    background-color: rgb(255, 247, 226);
-}
-
-#projects{
-    background-color: rgb(90, 88, 88);
-}
-#experiences{
-    background-color: rgb(90, 88, 88);
-}
-
-
-
-.viewport-w-h{
-    width: 100%;
-    height: 100vh;
-    margin-left: 0%;
-    margin-right: 0%;
-}
-
-.viewport-w{
-    width: 100%;
-    margin-left: 0%;
-    margin-right: 0%;
-    padding-bottom: 10%;
-}
+/***************************************/
+/***************************************/
+/* Beinning of Navigation bar styles */
 
 #nav-bar-container{
     display: flex;
@@ -74,11 +44,6 @@ html, body{
     border-radius: 0.3rem;
 }
 
-.font-fam{
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-}
-
 .nav-link:hover{
     color: rgb(255, 255, 255);
     cursor: pointer; 
@@ -86,38 +51,9 @@ html, body{
        
 }
 
-@media screen and (max-width: 600px){
-    #nav-bar-container{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        width: 100%;
-        height: 8rem;
-        left: 0;
-        top: 0;
-        text-align: center;
-        background-color: rgb(124, 153, 70, 1);
-        justify-content: space-around;
-        align-items: center;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        
-        
-    }
-    #project-heading{
-        padding-top: 10rem !important; 
-        margin: 0;
-        text-align: center;
-    }
-    #experience-heading{
-        padding-top: 10rem !important; 
-        margin: 0;
-        text-align: center;
-    }
-    
-    .nav-link{
-        font-weight: 600;
-    }
+#image-link:hover{
+    cursor: pointer;
+    width: 4.7rem;
 
 }
 
@@ -132,57 +68,88 @@ html, body{
     
 }
 
-#image-link:hover{
-    cursor: pointer;
-    width: 4.7rem;
-
+.font-fam{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
 }
+/* Ending of Navigation bar styles */
+/***************************************/
+/***************************************/
+/* Beinning of Welcome section styles */
 
-#contact-section{
-    background-color: rgb(82, 82, 82);
-    height: 60vh;
-
+#welcome-section{
+    background-color: rgb(255, 247, 226);
 }
 
 #welcome-div{
-    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     
 }
 
 #welcome-div-image{
     width: 100vw;
-    margin-top: 6rem;
+    max-height: 100vh;
+    margin-top: 5rem;
 }
 
-#profile-link{
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    
+/* Ending of Welcome section styles */
+/***************************************/
+/***************************************/
+/* Beinning of Experience section styles */
+
+#experiences{
+    background-color: rgb(90, 88, 88);
 }
 
-#profile-link:hover{
-    cursor: pointer;
-    color: white;
-}
-
-#contact-section p{
-    padding: 0;
-    margin: 0;
-}
-
-#project-heading{
+#experience-heading{
     padding-top: 8rem;
-    padding-bottom: 3rem;;
+    padding-bottom: 3rem;
     margin: 0;
     color: bisque;
     font-size: 3rem;
     text-align: center;
 }
 
-#experience-heading{
+#grid-container-experiences{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-logo{
+    width:80%;
+    margin-top: 2rem;
+}
+
+.experience-div{
+    text-align: center;
+    background-color: beige;
+    border-radius: 0.5rem;
+    width:40%;
+    max-width: 30rem;
+    min-width: 20rem;
+    margin: 2rem 0 2rem 0;
+    padding-bottom: 1rem;
+    
+}
+
+/* Ending of Experience section styles */
+/***************************************/
+/***************************************/
+/* Beginning of Projects section styles */
+
+
+#projects{
+    background-color: rgb(90, 88, 88);
+}
+
+#project-heading{
     padding-top: 8rem;
-    padding-bottom: 3rem;
+    padding-bottom: 3rem;;
     margin: 0;
     color: bisque;
     font-size: 3rem;
@@ -198,16 +165,6 @@ html, body{
     
 
 }
-#grid-container-experiences{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    
-    
-
-}
 
 .project-div{
     text-align: center;
@@ -215,17 +172,28 @@ html, body{
     border-radius: 0.5rem;
 }
 
-.experience-div{
-    text-align: center;
-    background-color: beige;
-    border-radius: 0.5rem;
-    width:40%;
-    max-width: 30rem;
-    min-width: 20rem;
-    margin: 2rem 0 2rem 0;
-    padding-bottom: 1rem;
-    
+
+/* Ending of Projects section styles */
+/***************************************/
+/***************************************/
+/* Beginning of Contact section styles */
+
+
+#contact-section{
+    background-color: rgb(82, 82, 82);
+    height: 60vh;
+
 }
+
+#contact-section p{
+    padding: 0;
+    margin: 0;
+}
+
+/* Ending of Contact section styles */
+/***************************************/
+/***************************************/
+/* Beginning of Footer section styles */
 
 footer{
     width: 100vw;
@@ -263,8 +231,83 @@ footer{
     justify-content: center;
 }
 
-.experience-logo{
-    width:80%;
-    margin-top: 2rem;
+/* Ending of Footer section styles */
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+/***************************************/
+/* Beginning of Media query styles */
+
+
+
+@media screen and (max-width: 600px){
+    #nav-bar-container{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        height: 8rem;
+        left: 0;
+        top: 0;
+        text-align: center;
+        background-color: rgb(124, 153, 70, 1);
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        
+        
+    }
+    #project-heading{
+        padding-top: 10rem !important; 
+        margin: 0;
+        text-align: center;
+    }
+    #experience-heading{
+        padding-top: 10rem !important; 
+        margin: 0;
+        text-align: center;
+    }
+    
+    .nav-link{
+        font-weight: 600;
+    }
+    #welcome-div-image{
+        width: 100vw;
+        max-height: 100vh;
+        margin-top: 8rem;
+    }
+
 }
+
+/* Ending of media query styles */
+/***************************************/
+/***************************************/
+/* General util styles */
+
+
+.viewport-w-h{
+    width: 100%;
+    height: 100vh;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.viewport-w{
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-bottom: 10%;
+}
+
+
+
+
+
+
+
+
+
+
 
