@@ -95,6 +95,7 @@ html, body{
     margin-top: 5rem;
 }
 
+
 /* Ending of Welcome section styles */
 /***************************************/
 /***************************************/
@@ -277,6 +278,7 @@ footer{
         width: 100vw;
         max-height: 100vh;
         margin-top: 8rem;
+        display: none;
     }
 
 }
