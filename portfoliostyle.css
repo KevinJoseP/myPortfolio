@@ -125,8 +125,10 @@ html, body{
 }
 
 .experience-logo{
-    width:80%;
+    max-width:80%;
     margin-top: 2rem;
+    max-height: 10rem;
+
 }
 
 .experience-div{
