@@ -1,0 +1,182 @@
+/* 
+Global style */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+html, body
+{
+    font-family: var(--font-style-primary);
+    scroll-behavior: smooth;
+    text-align: center;
+    color: white;
+}
+
+html
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+
+body
+{
+    overflow: auto;
+    height: 100%;
+    color: var(--color-primary);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+:root{
+    --font-color-main: rgb(255, 255, 255);
+    --main-font: 'Playfair Display', serif;
+    --nav-bar-h: 5rem;
+}
+
+
+nav
+{
+    height: 5rem;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+
+
+a
+{
+    color: var(--font-color-main);
+}
+
+.main-section
+{
+    min-height: 100vh;
+    font-family: var(--main-font);
+}
+
+.title-class
+{
+    min-height: 100vh;
+    background-image: url(./images/iitg_hostel.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.527);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+
+    flex-direction: column;
+    
+}
+
+.title-grouping
+{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+    margin-right: 5rem;
+    gap: 1rem;
+}
+
+.article-title
+{
+    width: min-content;
+    font-size: 8rem;
+    line-height: 0.75;
+    text-align: right;
+
+}
+
+.content-cont
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+.content
+{
+    color: black;
+    width: 60vw;
+    text-align: left;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem 3rem;
+}
+
+h2, h3
+{
+    text-align: left;
+}
+
+h2
+{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.3em;
+}
+
+.first-letter
+{
+    font-size: 2em;
+}
+
+.thank-you
+{
+    font-size: 2em;
+    color: black;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+.bottom-floating-panel
+{
+    color: black;
+    position: fixed;
+    bottom: 2rem;
+    margin: auto;
+    background-color: rgb(70, 70, 70);
+    width: fit-content;
+    border-radius: 50px;
+    justify-self: center;
+}
+
+.floating-panel-options
+{
+    margin: 2rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content b
+{
+    font-size: 1.2em;
+}
+
+.display-none
+{
+    display: none;
+}
+
+.option-logo
+{
+    filter: invert();
+    width: clamp(1rem, 1rem + 0.5vw, 2rem);
+}
