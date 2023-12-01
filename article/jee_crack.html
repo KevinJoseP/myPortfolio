@@ -3,6 +3,7 @@
 <head>
     <title>Kevin Jose's portfolio</title>
     <link rel="stylesheet" href="./../normalize.css">
+    <link rel="stylesheet" href="./../portfoliostyle.css">
     <link href="./article.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,18 @@
     <link href="./../images/KJ_logo.png" rel="icon">
 </head>
 <body>
-    <header>
-        <nav id="article-nav">
-            <a href="./../index.html">Home</a>
-        </nav>
+    <header class="jee article header">
+        <div id="nav-bar-container">
+            <div>
+                <a id="image-link"><img id="Kevin-jose-logo" alt="Kevin Jose's logo" src="./../images/KJ_black.png"></a>
+            </div>
+            <nav id="navbar" class="font-fam">
+                <a class="nav-link" href="./../index.html#about-me">ABOUT</a>
+                <a class="nav-link" href="#experiences">EXPERIENCES</a>
+                <a class="nav-link" href="#projects">PROJECTS</a>
+                <!--<a class="nav-link" href="#contact-me">CONTACT</a> -->
+            </nav>
+        </div>
     </header>
     <a name="section-top"></a>
     <section class="main-section">
@@ -27,7 +36,7 @@
             </div>
         </div>
         <div class="content-cont">
-            <div class="content display-none" id="detailed-content">
+            <div class="content" id="detailed-content">
                 <p>&emsp;&emsp;<span class="first-letter">I</span> was a great student throughout my school days, earning a GPA of 10.0 in class X and securing 94.6% in class XII. The next step seemed obvious: either Engineering or Medicine. However, since I developed a strong aversion to biology at that time (ironically, all the books I read now are directly or indirectly related to the field of medicine), I decided to pursue a career in Engineering. Opting for one of the best colleges in India for this path, I set my sights on IIT and prepared for the formidable IIT-JEE exam, considered the toughest in Asia. So far, so good. Now what? The best coaching center in Kerala (my home state in India) was Brilliant Coaching Centre, situated in the beautiful town of Pala. The efforts it took for my family and me to secure admission there warrant another article in itself.
                 </p>
                 <p>&emsp;&emsp;Classes began, and everything was going well — in fact, it was going great. I felt like a hungry child during a famine, eagerly waiting for the morsels of wisdom being dispensed by these professors. I was confident, envisioning myself on the front pages of the next year's newspaper as the top-ranked student. This optimism continued until the very first exam.
@@ -119,7 +128,7 @@ While my tactics might not work for everyone, they highlight the importance of k
 </p><br><br>
         <div class="thank-you">Thank You</div>
             </div>
-            <div class="content " id="summarized-content">
+            <div class="content display-none" id="summarized-content">
                 <h2>Exam Preparation Strategies</h2>
 
 <p><b>No motivation:</b> A rank-tracking notebook to motivate improvement with each exam. </p>
@@ -154,15 +163,19 @@ Aligned daily routine with exam day events to maintain a sense of normalcy.</p> 
         <div class="grouping">
             <a class="floating-panel-options" href="./jee_crack.html#section-top">
                 <img src="./images/upArrow.svg" alt="Back to top" class="option-logo">
-                <div class="option-text">Back to Top</div>
-            </a>
-            <a class="floating-panel-options">
-                <img src="./images/cut.svg" alt="" class="option-logo">
-                <div class="option-text">Cut the BS</div>
+                <div class="option-text">BACK TO TOP</div>
             </a>
             <a class="floating-panel-options" href="./../index.html">
                 <img src="./images/home.svg" alt="" class="option-logo">
-                <div class="option-text">Home</div>
+                <div class="option-text">HOME</div>
+            </a>
+            <a class="floating-panel-options" id="cutTheBs">
+                <img src="./images/cut.svg" alt="" class="option-logo">
+                <div class="option-text">CUT THE BS</div>
+            </a>
+            <a class="floating-panel-options display-none" id="elaborate">
+                <img src="./images/expand.svg" alt="" class="option-logo">
+                <div class="option-text">ELABORATE</div>
             </a>
         </div>
     </nav>
