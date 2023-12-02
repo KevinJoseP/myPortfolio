@@ -1,44 +1,42 @@
-const headerCont = document.getElementById('article-nav');
+const headerNavCont = document.getElementById('nav-bar-container');
 const contents = document.querySelectorAll('.content');
 const titlePage = document.querySelector('.title-grouping');
 const cutTheBs = document.getElementById('cutTheBs');
 const elaborate = document.getElementById('elaborate');
 const elaborateContent = document.getElementById('detailed-content');
 const summarizedContent = document.getElementById('summarized-content');
+const floatingPanel = document.querySelector('.bottom-floating-panel');
 
 
 const mainOpt = {
 }
 
-const mainPageObserver = new IntersectionObserver(function (entries, mainPageObserver){
-    entries.forEach(entry => {
-        if (!entry.isIntersecting)
-        {
-            return;
-        }
-        else
-        {
-            headerCont.classList.add('display-none');
-        }
-    });
-}, mainOpt);
+// const mainPageObserver = new IntersectionObserver(function (entries, mainPageObserver){
+//     entries.forEach(entry => {
+//         if (!entry.isIntersecting)
+//         {
+//             return;
+//         }
+//         else
+//         {
+//             headerCont.classList.add('display-none');
+//         }
+//     });
+// }, mainOpt);
 
 const titleObserver = new IntersectionObserver(function (entries, mainPageObserver){
     entries.forEach(entry => {
-        if (!entry.isIntersecting)
-        {
-            return;
-        }
-        else
-        {
-            headerCont.classList.remove('display-none');
-        }
+        console.log(entry)
+        headerNavCont.classList.toggle('display-none', !entry.isIntersecting);
+        floatingPanel.classList.toggle('display-none', entry.isIntersecting);
     });
-}, mainOpt);
-
-contents.forEach(content => {
-    mainPageObserver.observe(content);
+}, {
+    threshold: 0.9
 });
+
+// contents.forEach(content => {
+//     mainPageObserver.observe(content);
+// });
 titleObserver.observe(titlePage);
 
 function handleBsButton(e)
