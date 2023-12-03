@@ -51,6 +51,7 @@ a
 .jee.article.header .nav-link
 {
     color: white;
+    font-family: var(--font-style-nav);
 }
 
 .jee.article.header #Kevin-jose-logo
@@ -191,6 +192,7 @@ h3{
     align-items: center;
     transition: transform 100ms ease-in;
     font-size: var(--font-size-floating-panel);
+    font-family: var(--font-style-nav);
 }
 
 .floating-panel-options:hover
