@@ -83,7 +83,7 @@ a
     display: flex;
     justify-content: center;
     align-items:flex-end;
-
+    background-position: center;
     flex-direction: column;
     
 }
