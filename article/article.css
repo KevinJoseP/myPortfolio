@@ -165,30 +165,7 @@ h3{
     box-shadow: 0 0 10rem black;
 }
 
-@media (max-width: 40em) {
-    .title-grouping
-    {
-        align-items:center;
-        margin: 0;
-    }
 
-    .article-title
-    {
-        text-align: center;
-        line-height: 0.85;
-        width: 80vw;
-    }
-    .title-class
-    {
-        align-items: center;
-    }
-    .content
-    {
-        padding: 3rem 0;
-        width: 80vw;
-    }
-
-}
 
 /* main section styling end */
 .bottom-floating-panel
@@ -206,7 +183,7 @@ h3{
 
 .floating-panel-options
 {
-    margin:1rem 2rem;
+    margin: clamp(0.3rem, 8vw, 1rem) clamp(1.2rem, 8vw, 2rem);
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -236,4 +213,36 @@ h3{
     filter: invert();
     width: clamp(1rem, 1rem + 0.5vw, 2rem);
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 40em) {
+    .title-grouping
+    {
+        align-items:center;
+        margin: 0;
+    }
+
+    .article-title
+    {
+        text-align: center;
+        line-height: 0.85;
+        width: 80vw;
+    }
+    .title-class
+    {
+        align-items: center;
+    }
+    .content
+    {
+        padding: 3rem 0;
+        width: 85vw;
+    }
+    .option-text
+    {
+        display: none;
+    }
+    .option-logo
+    {
+        margin-bottom: 0;
+    }
 }
