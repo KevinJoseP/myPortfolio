@@ -39,19 +39,29 @@ a
     --line-height-content-default: 1.6;
     --font-size-floating-panel: clamp(0.7rem, 0.5rem + 0.3vw, 1rem);
     --font-size-article-title: clamp(2.3rem, 8vw, 8rem);
+    --color-nav-bar-bg: rgb(116, 100, 31);
+    --color-grey-nav-bar: rgb(70, 70, 70);
 }
 
 
 
 .jee.article.header #nav-bar-container
 {
-    background-color: black;
+    background-color: var(--color-grey-nav-bar);
 }
 
 .jee.article.header .nav-link
 {
     color: white;
     font-family: var(--font-style-nav);
+    transition: transform 150ms ease-in;
+}
+
+.jee.article.header .nav-link:hover
+{
+    background-color: black;
+    transform: scale(1.1);
+
 }
 
 .jee.article.header #Kevin-jose-logo
@@ -161,7 +171,7 @@ h3{
 {
     display: flex;
     width: fit-content;
-    background-color: rgb(70, 70, 70);
+    background-color: var(--color-grey-nav-bar);
     border-radius: 50px;
     box-shadow: 0 0 10rem black;
 }
