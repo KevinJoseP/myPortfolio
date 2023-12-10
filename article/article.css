@@ -54,7 +54,7 @@ a
 {
     color: white;
     font-family: var(--font-style-nav);
-    transition: transform 150ms ease-in;
+    transition: transform 15 0ms ease-in;
 }
 
 .jee.article.header .nav-link:hover

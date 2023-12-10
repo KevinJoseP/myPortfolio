@@ -1,0 +1,209 @@
+/* 
+Global style */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+html, body
+{
+
+    scroll-behavior: smooth;
+    text-align: center;
+    color: white;
+}
+
+html
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+
+body
+{
+    overflow: auto;
+    height: 100%;
+    color: var(--color-primary);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+:root{
+    --font-color-main: rgb(255, 255, 255);
+    --bg-color-gallery: #85AF4E;
+    --bg-color-smiles: #626460;
+    --nav-bar-h: 5rem;
+    --font-family-main-title: 'Jost', sans-serif;
+    --font-size-content-default: clamp(1rem, 1rem + 0.36vw, 2rem);
+    --line-height-content-default: 1.6;
+    --font-size-floating-panel: clamp(0.7rem, 0.5rem + 0.3vw, 1rem);
+    --font-size-article-title: clamp(2.3rem, 8vw, 8rem);
+}
+
+.photography,
+.smiles
+{
+    display: flex;
+}
+
+
+.photography .descr-section-title,
+.smiles .descr-section-title
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.photography.head #nav-bar-container,
+.photography.head header
+{
+    background-color: white;
+}
+
+.photography.intro #image-link,
+.smiles.intro #image-link
+{
+    position: absolute;
+    top: 1.5rem;
+}
+
+.photography.intro #Kevin-jose-logo2,
+.smiles.intro #Kevin-jose-logo2
+{
+    height: 3rem;
+    filter: none;
+    
+}
+
+.photography.intro #Kevin-jose-logo2:hover,
+.smiles.intro #Kevin-jose-logo2:hover
+{
+    filter: invert();
+}
+
+.photography.head .nav-link
+{
+    color: black;
+    transition: transform 15 0ms ease-in;
+}
+.photography.head .nav-link:hover
+{
+    background-color: rgb(61, 61, 61);
+    transform: scale(1.1);
+    color: white;
+
+}
+
+.photography.head #Kevin-jose-logo
+{
+    height: 3rem;
+    filter: invert();
+    transition: transform 150ms ease-in;
+}
+
+.photography.head #Kevin-jose-logo:hover
+{
+    transform: scale(1.2);
+    filter: none;
+}
+
+.display-none
+{
+    display: none !important;
+}
+
+
+.photography .descr-section-title 
+{
+    background-color: var(--bg-color-gallery);
+    height: 100vh;
+    height: 100svh;
+    width: 40%;
+    position: fixed;
+    
+}
+
+.smiles .descr-section-title
+{
+    background-color: var(--bg-color-smiles);
+    height: 100vh;
+    height: 100svh;
+    width: 40%;
+    position: fixed;
+}
+
+.photography .main-title,
+.smiles .main-title
+{
+    font-size: clamp(4rem, calc(5vw), 8rem);
+    text-align: center;
+    width: 60%;
+    line-height: 0.8;
+    font-family: var(--font-family-main-title);
+}
+
+.photography .descr span
+{
+    font-size: 1.2em;
+}
+
+.photography .descr,
+.smiles .descr
+{
+    width: 80%;
+    font-size: 1.2rem;
+    font-family: var(--font-family-main-title);
+}
+
+.photography .social-media-profile,
+.smiles .social-media-profile
+{
+    width: 1rem;
+    height: auto;
+}
+
+.photography footer,
+.smiles footer
+{
+    position: absolute;
+    bottom: 1rem;
+}
+
+.photography h5,
+.smiles h5
+{
+    font-size: 0.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+#photography-gallery-section,
+#smiles-gallery-section
+{
+    width: 60%;
+    padding-top: 5rem;
+    margin-left: 40%;
+}
+
+.photography .gallery-photo
+{
+    width: 50rem;
+    margin: 1rem 0;
+}
+
+.smiles .gallery-photo
+{
+    width: 60%;
+    margin: 0;
+    gap: 0;
+
+}
+/* 
+gallery section begins */
+

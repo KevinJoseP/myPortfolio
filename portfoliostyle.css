@@ -226,7 +226,7 @@ show-more-anchor
 /***************************************/
 /* Beginning of Footer section styles */
 
-footer{
+.index footer{
     width: 100vw;
     height: 40vh;
 }
@@ -255,7 +255,7 @@ footer{
 
 }
 
-footer{
+.index footer{
     display: flex;
     flex-direction: column;
     align-items: center;
