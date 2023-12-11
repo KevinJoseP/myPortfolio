@@ -69,6 +69,12 @@ a
     background-color: white;
 }
 
+.photography.head.type-smile #nav-bar-container,
+.photography.head.type-smile header
+{
+    background-color: black;
+}
+
 .photography.intro #image-link
 {
     position: absolute;
@@ -88,13 +94,14 @@ a
     font-size: 0.8rem;
 }
 
-.smiles .grouping
+.smiles .bottom-floating-panel
 {
     background-color: black;
     padding: 0.8rem;
     border-radius: 20px;
     transition: transform 150ms ease-in;
     margin-top: 1rem;
+    box-shadow: 3px 3px 1px white;
 }
 
 .photography .bottom-floating-panel
@@ -104,24 +111,28 @@ a
     border-radius: 20px;
     margin-top: 3rem;
     transition: transform 150ms ease-in;
-    box-shadow: 0 0 black 10rem;
+    box-shadow: 3px 3px 1px black;
 }
+
 
 .photography .bottom-floating-panel:hover
 {
     background-color: rgb(0, 0, 0);
     cursor: pointer;
     transform: scale(1.1);
+    box-shadow: 3px 3px 1px white;
 }
 
-.smiles .grouping:hover
+
+.smiles .bottom-floating-panel:hover
 {
     background-color: white;
     cursor: pointer;
     transform: scale(1.1);
+    box-shadow: 3px 3px 1px black;
 }
 
-.smiles .grouping:hover .option-text
+.smiles .bottom-floating-panel:hover .option-text
 {
     color: black;
 }
@@ -133,7 +144,7 @@ a
     filter: invert();
 }
 
-.smiles .grouping:hover .option-logo
+.smiles .bottom-floating-panel:hover .option-logo
 {
     filter: none;
 }
@@ -172,6 +183,19 @@ a
     background-color: rgb(61, 61, 61);
     transform: scale(1.1);
     color: white;
+
+}
+
+.photography.head.type-smile .nav-link
+{
+    color: white;
+    transition: transform 15 0ms ease-in;
+}
+.photography.head.type-smile .nav-link:hover
+{
+    background-color: rgb(163, 163, 163);
+    transform: scale(1.1);
+    color: black
 
 }
 
