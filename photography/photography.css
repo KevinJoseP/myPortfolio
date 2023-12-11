@@ -265,15 +265,16 @@ a
 
 .photography .gallery-photo
 {
-    width: 50rem;
+    max-width: 80%;
+    max-height: 75vh;
     margin: 1rem 0;
+    outline: solid 5px black;
 }
 
 .smiles .gallery-photo
 {
-    width: 80%;
-    margin: 0;
-    gap: 0;
+    max-width: 80%;
+    max-height: 80vh;
 
 }
 
