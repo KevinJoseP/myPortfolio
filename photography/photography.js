@@ -1,26 +1,30 @@
 const smilesGallery = document.getElementById('smiles-gallery-section');
+const photoGallery = document.getElementById('photography-gallery-section');
 const myGalleryBtn = document.getElementById('my-gallery-button');
 const smileSectBtn = document.getElementById('smile-sect-button');
 const smilesSect = document.getElementById('smiles-intro');
 const gallerySect = document.getElementById('photography-intro');
 
 const MAX_SMILES_PHOTO_COUNT = 63;
-const MAX_GALLERY_PHOTO_COUNT = 2;
+const MAX_GALLERY_PHOTO_COUNT = 66;
 const SMILE_URL = "./smiles/smiles";
+const GALLERY_URL = "./gallery/gallery"
 
 
 function fillInPhotos(isSmiles)
 {
-    smilesGallery.innerHTML = '';
     let currMaxCount = 0;
     if (isSmiles)
     {
         currMaxCount = MAX_SMILES_PHOTO_COUNT;
         currUrl = SMILE_URL;
+        smilesGallery.innerHTML = '';
     }
     else
     {
         currMaxCount = MAX_GALLERY_PHOTO_COUNT;
+        currUrl = GALLERY_URL;
+        photoGallery.innerHTML = '';
 
     }
 
@@ -34,7 +38,14 @@ function fillInPhotos(isSmiles)
         galleryImg.loading = "lazy";
         photoCont.classList.add('photo-cont');
         photoCont.appendChild(galleryImg);
-        smilesGallery.appendChild(photoCont);
+        if (isSmiles)
+        {
+            smilesGallery.appendChild(photoCont);
+        }
+        else
+        {
+            photoGallery.appendChild(photoCont);
+        }
     }
 }
 
@@ -42,6 +53,7 @@ function handleChangeToGallery()
 {
     smilesSect.classList.add('display-none');
     gallerySect.classList.remove('display-none');
+    fillInPhotos(false);
 }
 
 function handleChangeToSmile()
@@ -51,5 +63,6 @@ function handleChangeToSmile()
     fillInPhotos(true);
 }
 
+fillInPhotos(false);
 if (myGalleryBtn)myGalleryBtn.addEventListener('click', handleChangeToGallery);
 if (smileSectBtn)smileSectBtn.addEventListener('click', handleChangeToSmile);
