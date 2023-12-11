@@ -94,6 +94,7 @@ a
     padding: 0.8rem;
     border-radius: 20px;
     transition: transform 150ms ease-in;
+    margin-top: 1rem;
 }
 
 .photography .bottom-floating-panel
@@ -101,6 +102,7 @@ a
     background-color: rgb(97, 97, 97);
     padding: 0.8rem;
     border-radius: 20px;
+    margin-top: 3rem;
     transition: transform 150ms ease-in;
     box-shadow: 0 0 black 10rem;
 }
@@ -218,6 +220,7 @@ a
     text-align: center;
     width: 60%;
     line-height: 0.8;
+    margin-bottom: 3rem;
     font-family: var(--font-family-main-title);
 }
 
@@ -229,8 +232,8 @@ a
 .photography .descr,
 .smiles .descr
 {
-    width: 80%;
-    font-size: 1.2em;
+    width: 90%;
+    font-size: 1.1em;
     font-family: var(--font-family-descr);
 }
 
@@ -261,6 +264,11 @@ a
     width: 60%;
     padding-top: 5rem;
     margin-left: 40%;
+}
+
+#smiles-gallery-section
+{
+    background-color: black;
 }
 
 .photography .gallery-photo
