@@ -354,4 +354,5 @@ gallery section begins */
         width: clamp(1rem, calc(1rem + 1vw), 2rem);
         height: auto;
     }
+
 }

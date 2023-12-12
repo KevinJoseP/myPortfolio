@@ -12,9 +12,11 @@
     <link href="images/KJ_logo.png" rel="icon">
 </head>
 <body>
-    <div id="nav-bar-container">
-        <div>
-            <a id="image-link"><img id="Kevin-jose-logo" alt="Kevin Jose's logo" src="./images/KJ_black.png"></a>
+    <header>
+    <div id="nav-bar-container" class="desktop">
+        <div class="nav-logo-grouping">
+            <a class="image-link"><img class="hero-logo"  alt="Kevin Jose's logo" src="./images/KJ_neo_logo.png"></a>
+            <a class="close-btn" href=""><img src="./images/close_icon.svg" alt="menu close button" class="menu-close-img"></a>
         </div>
         <nav id="navbar" class="font-fam">
             <a class="nav-link" href="#about-me">ABOUT</a>
@@ -23,11 +25,16 @@
             <!--<a class="nav-link" href="#contact-me">CONTACT</a> -->
         </nav>
     </div>
+    <nav class="mobile-header">
+        <a class="menu-btn" href=""><img src="./images/menu_icon.svg" alt="menu hamburger button" class="menu-btn-img"></a>
+        <a class="image-link"><img class="hero-logo" alt="Kevin Jose's logo" src="./images/KJ_neo_logo.png"></a>
+    </nav>
+    </header>
     <a name="about-me"></a>
     <section id="welcome-section" class="viewport-w-h">
         <div id="welcome-div">
             <img id="welcome-div-image" alt="Kevin's photo with some description" src="./images/KJ.jpg">
-            <img id="welcome-div-image-mobile" alt="Kevin's photo with some description" src="./images/KJ2.jpg">
+            <img id="welcome-div-image-mobile" alt="Kevin's photo with some description" src="./images/KJ.jpg">
         </div>
        
     </section>
@@ -177,5 +184,5 @@
         </address>
         <a class="back-to-top" href="#about-me">Back to the top</a>
     </footer>
-
+    <script src="./index.js"></script>
 </body>
