@@ -75,13 +75,6 @@ a
     background-color: black;
 }
 
-.photography.intro #image-link
-{
-    position: absolute;
-    top: 1.5rem;
-    left: 1rem;
-}
-
 a
 {
     text-decoration: none;
@@ -149,28 +142,25 @@ a
     filter: none;
 }
 
-.smiles.intro #image-link2
+.smiles.intro #image-link2,
+.photography.intro #image-sect-link
 {
     position: absolute;
     top: 1.5rem;
     left: 1rem;
 }
 
-.photography.intro #Kevin-jose-logo2,
-.smiles.intro #Kevin-jose-logo2
+.photography.intro #Kevin-jose-sect-logo,
+.smiles.intro #Kevin-jose-sect-logo2
 {
     height: 3rem;
     filter: none;
-
-    
 }
 
-.photography.intro #Kevin-jose-logo2:hover,
-.smiles.intro #Kevin-jose-logo2:hover
+.photography.intro #Kevin-jose-sect-logo:hover,
+.smiles.intro #Kevin-jose-sect-logo2:hover
 {
     filter: invert();
-    top: 1.5rem;
-    left: 1rem;
 }
 
 .photography.head .nav-link
@@ -199,18 +189,6 @@ a
 
 }
 
-.photography.head #Kevin-jose-logo
-{
-    height: 3rem;
-    filter: invert();
-    transition: transform 150ms ease-in;
-}
-
-.photography.head #Kevin-jose-logo:hover
-{
-    transform: scale(1.2);
-    filter: none;
-}
 
 .display-none
 {
