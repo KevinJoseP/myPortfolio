@@ -2,11 +2,27 @@ html, body{
     font-size: 100%;
     margin: 0;
     padding: 0;
-    width: 100vw;
     font-family: 'Cormorant Garamond', serif;
     color: rgb(0, 0, 0);
     scroll-behavior: smooth;
+}
 
+html
+{
+    overflow: hidden;
+    height: 100%;
+}
+
+
+body
+{
+    overflow: auto;
+    height: 100%;
+}
+
+a
+{
+    text-decoration: none;
 }
 
 
@@ -15,10 +31,6 @@ html, body{
     display: none !important;
 }
 
-.display-flex
-{
-    display: flex;
-}
 /***************************************/
 /***************************************/
 /* Beinning of Navigation bar styles */
@@ -27,15 +39,12 @@ html, body{
     display: flex;
     position: fixed;
     width: 100%;
-    height: 5rem;
-    left: 0;
+    height: min-content;
     top: 0;
     text-align: center;
-    background-color:  rgb(255, 247, 226);
+    background-color:  rgb(253, 250, 241);
     justify-content: space-between;
     align-items: center;
-    
-    
 }
 
 #navbar{
@@ -51,24 +60,24 @@ html, body{
     width: fit-content;
     padding: 1rem;
     border-radius: 0.3rem;
+    transition: transform 150ms ease-in;
 }
 
 .nav-link:hover{
     color: rgb(255, 255, 255);
     cursor: pointer; 
     background-color: rgb(97, 95, 93);
-       
+    transform: scale(1.05);
 }
 
 #image-link:hover{
     cursor: pointer;
-
 }
 
 .desktop .hero-logo
 {
-    height: 4rem;
-    padding-left: 1rem;
+    height: 3.5rem;
+    margin: 0.5rem;
 }
 
 .mobile-header
@@ -197,7 +206,6 @@ html, body{
     
 }
 
-show-more-anchor
 
 /* Ending of Experience section styles */
 /***************************************/
@@ -331,19 +339,27 @@ show-more-anchor
         min-height: 100vh;
         min-height: 100svh;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
+    }
+
+    #nav-bar-container.desktop.mobile
+    {
+        display: flex;
     }
     #nav-bar-container .hero-logo
     {
         height: 2rem;
     }
 
-    #nav-bar-container .nav-logo-grouping
+    #nav-bar-container.desktop.mobile .nav-logo-grouping
     {
         display: flex;
         justify-content: space-between;
         width: 100%;
         position: fixed;
+        top: 0;
     }
 
     #navbar
