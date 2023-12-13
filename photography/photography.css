@@ -355,4 +355,10 @@ gallery section begins */
         height: auto;
     }
 
+    #image-sect-link,
+    #image-link2
+    {
+        display: none;
+    }
+
 }

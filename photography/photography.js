@@ -5,6 +5,11 @@ const smileSectBtn = document.getElementById('smile-sect-button');
 const smilesSect = document.getElementById('smiles-intro');
 const gallerySect = document.getElementById('photography-intro');
 const navBarContHeader = document.getElementById('photography-nav-bar-cont-header');
+const menuBtn = document.querySelector('.mobile-header .menu-btn');
+const mobileNavbar = document.querySelector('.mobile-header');
+const desktopNavBar = document.getElementById('nav-bar-container');
+const closeBtn = document.querySelector('#nav-bar-container .close-btn');
+
 
 const MAX_SMILES_PHOTO_COUNT = 63;
 const MAX_GALLERY_PHOTO_COUNT = 66;
@@ -64,6 +69,24 @@ function handleChangeToSmile()
     smilesSect.classList.remove('display-none');
     fillInPhotos(true);
 }
+function handleMenuButton(e)
+{
+    e.preventDefault();
+    mobileNavbar.classList.add('display-none');
+    desktopNavBar.style.display = "flex";
+}
+
+function handleCloseButton(e)
+{
+    e.preventDefault();
+    mobileNavbar.classList.remove('display-none');
+    desktopNavBar.style.display = "none";
+}
+
+
+
+menuBtn.addEventListener('click', handleMenuButton);
+closeBtn.addEventListener('click', handleCloseButton);
 
 fillInPhotos(false);
 if (myGalleryBtn)myGalleryBtn.addEventListener('click', handleChangeToGallery);

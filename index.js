@@ -7,14 +7,14 @@ function handleMenuButton(e)
 {
     e.preventDefault();
     mobileNavbar.classList.add('display-none');
-    desktopNavBar.style.display = "flex";
+    desktopNavBar.classList.add('display-flex');
 }
 
 function handleCloseButton(e)
 {
     e.preventDefault();
     mobileNavbar.classList.remove('display-none');
-    desktopNavBar.style.display = "none";
+    desktopNavBar.classList.remove('display-flex');
 }
 
 

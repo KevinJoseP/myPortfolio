@@ -14,6 +14,11 @@ html, body{
 {
     display: none !important;
 }
+
+.display-flex
+{
+    display: flex;
+}
 /***************************************/
 /***************************************/
 /* Beinning of Navigation bar styles */
@@ -84,6 +89,10 @@ html, body{
     margin: 0.5rem;
 }
 
+.close-btn
+{
+    display: none;
+}
 
 .hero-logo:hover{
     cursor: pointer;
@@ -293,7 +302,6 @@ show-more-anchor
 /* Beginning of Media query styles */
 
 
-
 @media screen and (max-width: 40em){
     
 
@@ -354,6 +362,10 @@ show-more-anchor
         padding: 0;
     }
 
+    .close-btn
+    {
+        display: flex;
+    }
 
 
 
