@@ -218,7 +218,7 @@ a
 .photography .main-title,
 .smiles .main-title
 {
-    font-size: clamp(4rem, calc(5vw), 8rem);
+    font-size: clamp(2.5rem, calc(5vw), 8rem);
     text-align: center;
     width: 60%;
     line-height: 0.8;
@@ -228,14 +228,14 @@ a
 
 .photography .descr span
 {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .photography .descr,
 .smiles .descr
 {
     width: 90%;
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: var(--font-family-descr);
 }
 
@@ -304,10 +304,6 @@ gallery section begins */
         min-height: 100vh;
         min-height: 100svh;
         height: fit-content;
-        padding-top: var(--nav-bar-h);
-        padding-bottom: var(--nav-bar-h);
-        gap: 3rem;
-
     }
 
     .photography,

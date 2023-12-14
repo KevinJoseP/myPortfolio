@@ -341,13 +341,13 @@ a
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     #nav-bar-container.desktop.mobile
     {
         display: flex;
     }
+
     #nav-bar-container .hero-logo
     {
         height: 2rem;
@@ -384,11 +384,18 @@ a
     }
 
 
-
     .mobile-header
     {
         display: flex;
         justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        background-color: rgb(253, 250, 241);
+    }
+
+    .mobile-header.display-none
+    {
+        display: none;
     }
 
 }
