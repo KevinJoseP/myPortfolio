@@ -15,7 +15,6 @@ const GALLERY_URL = "./gallery/gallery"
 function fillInPhotos(isSmiles)
 {
     let currMaxCount = 0;
-    console.log("fill in photos");
     if (isSmiles)
     {
         currMaxCount = MAX_SMILES_PHOTO_COUNT;

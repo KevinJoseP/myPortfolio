@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
 html, body{
     font-size: 100%;
     margin: 0;
@@ -370,8 +372,6 @@ a
         align-items: center;
         height: 100%;
         margin: 0;
-        position: fixed;
-        z-index: 100;
     }
     
     #nav-bar-container.desktop .hero-logo,
