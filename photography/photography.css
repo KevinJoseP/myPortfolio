@@ -146,7 +146,7 @@ a
 .photography.intro #image-sect-link
 {
     position: absolute;
-    top: 1.5rem;
+    top: 1rem;
     left: 1rem;
 }
 
@@ -324,7 +324,7 @@ gallery section begins */
     .smiles .descr
     {
         width: 90%;
-        font-size: clamp(1rem, 0.5rem + 10vw, 1.2rem);
+        font-size: 1rem;
         font-family: var(--font-family-descr);
     }
     .photography footer,
@@ -355,6 +355,22 @@ gallery section begins */
     #image-link2
     {
         display: none;
+    }
+
+    .mobile-header
+    {
+        background-color: white;
+    }
+
+    .photography.head.type-smile .mobile-header
+    {
+        background-color: black;
+    }
+
+    .photography.head.type-smile .menu-btn,
+    .photography.head.type-smile .image-link
+    {
+        filter: invert();
     }
 
 }

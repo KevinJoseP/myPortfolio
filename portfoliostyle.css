@@ -51,6 +51,7 @@ a
     display: flex;
     justify-content: space-around;
     width: clamp(20rem, 40vw, 30rem);
+    margin-right: 1rem;
 }
 
 .nav-link{
@@ -368,6 +369,9 @@ a
         justify-content: center;
         align-items: center;
         height: 100%;
+        margin: 0;
+        position: fixed;
+        z-index: 100;
     }
     
     #nav-bar-container.desktop .hero-logo,
