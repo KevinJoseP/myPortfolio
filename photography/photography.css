@@ -92,6 +92,7 @@ a
     display:block;
 }
 
+
 .smiles .bottom-floating-panel
 {
     background-color: black;
@@ -227,7 +228,6 @@ a
     text-align: center;
     width: 60%;
     line-height: 0.8;
-    margin-bottom: 3rem;
     font-family: var(--font-family-main-title);
 }
 
@@ -240,7 +240,7 @@ a
 .smiles .descr
 {
     width: 90%;
-    font-size: clamp(1rem, calc(0.5rem + 1vw), 1.5rem);
+    font-size: clamp(1rem, calc(0.5rem + 1vw), 1.2rem);
     font-family: var(--font-family-descr);
 }
 
@@ -268,9 +268,9 @@ a
 #photography-gallery-section,
 #smiles-gallery-section
 {
-    width: 60%;
+    width: 60vw;
     padding-top: 5rem;
-    margin-left: 40%;
+    margin-left: 40vw;
 }
 
 #smiles-gallery-section
@@ -296,6 +296,36 @@ a
 #photography-page-footer
 {
     display: none;
+}
+
+.back-to-top
+{
+    background-color: #626460;
+    position: absolute;
+    bottom: 1.5rem;
+    left: calc(70vw - 1.5rem);
+    padding: 1rem;
+    border-radius: 30px;
+    box-shadow: 0 0 3rem black;
+    outline: solid 1px black;
+    transition: transform 150ms ease-in;
+}
+
+.back-to-top:hover
+{
+    transform: scale(1.1);
+}
+
+.back-to-top img
+{
+    width: 1rem;
+    filter: invert();
+}
+
+.smiles .back-to-top
+{
+    background-color: black;
+    outline: solid 1px white;
 }
 /* 
 gallery section begins */
@@ -323,6 +353,7 @@ gallery section begins */
         width: 100%;
         padding-top: 1rem;
         margin-left: 0;
+
     }
 
     .option-logo.hide-if-needed
@@ -334,7 +365,7 @@ gallery section begins */
     .smiles .descr
     {
         width: 90%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: var(--font-family-descr);
     }
     .photography footer,
@@ -382,6 +413,22 @@ gallery section begins */
     .photography.head.type-smile .close-btn
     {
         filter: invert();
+    }
+
+    .photography .main-title,
+    .smiles .main-title
+    {
+        margin-top: 5rem;
+    }
+
+    .bottom-floating-panel
+    {
+        margin-bottom: 2rem;
+    }
+
+    .back-to-top
+    {
+        left: calc(50vw - 1.5rem);
     }
 
 }

@@ -11,6 +11,24 @@ const MAX_GALLERY_PHOTO_COUNT = 66;
 const SMILE_URL = "./smiles/smiles";
 const GALLERY_URL = "./gallery/gallery"
 
+function addBackToTopBtn(galleryCnt)
+{
+    // Create the anchor element
+    var a = document.createElement('a');
+    a.href = './photography.html#section-top';
+    a.classList.add('back-to-top');
+
+    // Create the image element
+    var img = document.createElement('img');
+    img.src = './../images/back2Top.svg';
+    img.alt = 'up arrow key indicating back to top';
+
+    // Append the image and the description div to the anchor
+    a.appendChild(img);
+
+    galleryCnt.appendChild(a);
+}
+
 
 function fillInPhotos(isSmiles)
 {
@@ -49,6 +67,9 @@ function fillInPhotos(isSmiles)
             photoGallery.appendChild(photoCont);
         }
     }
+
+    if(isSmiles)addBackToTopBtn(smilesGallery);
+    else addBackToTopBtn(photoGallery);
 }
 
 function handleChangeToGallery()
