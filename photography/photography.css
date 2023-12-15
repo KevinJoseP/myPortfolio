@@ -99,7 +99,6 @@ a
     padding: 0.8rem;
     border-radius: 20px;
     transition: transform 150ms ease-in;
-    margin-top: 1rem;
     box-shadow: 3px 3px 1px white;
 }
 
@@ -108,7 +107,6 @@ a
     background-color: rgb(97, 97, 97);
     padding: 0.8rem;
     border-radius: 20px;
-    margin-top: 3rem;
     transition: transform 150ms ease-in;
     box-shadow: 3px 3px 1px black;
 }
