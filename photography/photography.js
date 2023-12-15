@@ -113,12 +113,10 @@ function handleBack2Top(entries, back2TopObserver)
         const backToTopBtn = document.querySelector('.back-to-top');
         if (entry.isIntersecting)
         {
-            console.log(entry);
             if (backToTopBtn)backToTopBtn.classList.add('display-none');
         }
         else
         {
-            console.log(entry);
             if (backToTopBtn)backToTopBtn.classList.remove('display-none');
         }
     });
