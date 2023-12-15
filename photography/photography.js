@@ -6,18 +6,54 @@ const smilesSect = document.getElementById('smiles-intro');
 const gallerySect = document.getElementById('photography-intro');
 const navBarContHeader = document.getElementById('photography-nav-bar-cont-header');
 const back2TopObserver = new IntersectionObserver (handleBack2Top, {});
+const shuffleBtn = document.querySelector('.shuffle');
 
 const MAX_SMILES_PHOTO_COUNT = 63;
 const MAX_GALLERY_PHOTO_COUNT = 66;
 const SMILE_URL = "./smiles/smiles";
 const GALLERY_URL = "./gallery/gallery"
 
+function addBackToTopHack(galleryCnt)
+{
+    const backToTopBtnHackdiv = document.createElement('div');
+    backToTopBtnHackdiv.classList.add('backtotophack');
+    back2TopObserver.observe(backToTopBtnHackdiv);
+    galleryCnt.insertBefore(backToTopBtnHackdiv, galleryCnt.children[1]);
+}
+
+function addBottomNavBar(galleryCnt)
+{
+    const bottomNavBar = document.createElement('div');
+    bottomNavBar.classList.add('bottom-control-panel');
+
+    addBackToTopBtn(bottomNavBar);
+    addShuffleBtn(bottomNavBar);
+    galleryCnt.appendChild(bottomNavBar);
+}
+
+function addShuffleBtn(galleryCnt)
+{
+    var a = document.createElement('a');
+    a.classList.add('shuffle');
+
+    // Create the image element
+    var img = document.createElement('img');
+    img.src = './../photography/util/shuffle.svg';
+    img.alt = 'shuffle image';
+
+    // Append the image and the description div to the anchor
+    a.appendChild(img);
+    a.addEventListener('click', handleShuffle);
+
+    galleryCnt.appendChild(a);
+}
+
 function addBackToTopBtn(galleryCnt)
 {
     // Create the anchor element
     var a = document.createElement('a');
     a.href = './photography.html#section-top';
-    a.classList.add('back-to-top');
+    a.classList.add('back-to-top-photo');
 
     // Create the image element
     var img = document.createElement('img');
@@ -57,8 +93,6 @@ function fillInPhotos(isSmiles)
         let tempUrl = currUrl + i + ".jpg";
         const photoCont = document.createElement('div');
         const galleryImg = document.createElement('img');
-        const backToTopBtnHackdiv = document.createElement('div');
-        backToTopBtnHackdiv.classList.add('backtotophack');
         galleryImg.classList.add('gallery-photo');
         galleryImg.src = tempUrl;
         photoCont.classList.add('photo-cont');
@@ -66,23 +100,23 @@ function fillInPhotos(isSmiles)
         if (isSmiles)
         {
             smilesGallery.appendChild(photoCont);
-            if (i == 0)
-            {
-                smilesGallery.appendChild(backToTopBtnHackdiv);
-            }
         }
         else
         {
             photoGallery.appendChild(photoCont);
-            if (i == 0)
-            {
-                photoGallery.appendChild(backToTopBtnHackdiv);
-            }
         }
     }
 
-    if(isSmiles)addBackToTopBtn(smilesGallery);
-    else addBackToTopBtn(photoGallery);
+    if(isSmiles)
+    {
+        addBackToTopHack(smilesGallery)
+        addBottomNavBar(smilesGallery);
+    }
+    else
+    { 
+        addBackToTopHack(photoGallery);
+        addBottomNavBar(photoGallery);
+    }
 }
 
 function handleChangeToGallery()
@@ -110,7 +144,7 @@ function controlBack2TopButton()
 function handleBack2Top(entries, back2TopObserver)
 {
     entries.forEach(entry => {
-        const backToTopBtn = document.querySelector('.back-to-top');
+        const backToTopBtn = document.querySelector('.back-to-top-photo');
         if (entry.isIntersecting)
         {
             if (backToTopBtn)backToTopBtn.classList.add('display-none');
@@ -120,6 +154,31 @@ function handleBack2Top(entries, back2TopObserver)
             if (backToTopBtn)backToTopBtn.classList.remove('display-none');
         }
     });
+}
+
+function handleShuffle(e)
+{
+    if (navBarContHeader.classList.contains('type-smile'))
+    {
+        const hackDiv = document.querySelector('#smiles-gallery-section .backtotophack');
+        smilesGallery.removeChild(hackDiv);
+        const divs = Array.prototype.slice.call(smilesGallery.children);
+        while (divs.length) {
+            smilesGallery.appendChild(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+        addBackToTopHack(smilesGallery);
+    }
+    else
+    {
+        const hackDiv = document.querySelector('#photography-gallery-section .backtotophack');
+        photoGallery.removeChild(hackDiv);
+        const divs = Array.prototype.slice.call(photoGallery.children);
+        while (divs.length) {
+            photoGallery.appendChild(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+        }
+        addBackToTopHack(photoGallery);
+    }
+    
 }
 
 
