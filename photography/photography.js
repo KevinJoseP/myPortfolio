@@ -6,6 +6,9 @@ const smilesSect = document.getElementById('smiles-intro');
 const gallerySect = document.getElementById('photography-intro');
 const navBarContHeader = document.getElementById('photography-nav-bar-cont-header');
 const back2TopObserver = new IntersectionObserver (handleBack2Top, {});
+const back2TopObserverMobile = new IntersectionObserver (handleBack2TopMobile, {
+    threshold: 0.5
+});
 const shuffleBtn = document.querySelector('.shuffle');
 
 const MAX_SMILES_PHOTO_COUNT = 63;
@@ -13,8 +16,71 @@ const MAX_GALLERY_PHOTO_COUNT = 66;
 const SMILE_URL = "./smiles/smiles";
 const GALLERY_URL = "./gallery/gallery"
 
-function addBackToTopHack(galleryCnt)
+const mediaQuery = window.matchMedia('(max-width: 40em)');
+let isMobile = mediaQuery.matches;
+mediaQuery.addEventListener('change', handleMediaChange);
+
+function handleMediaChange(e)
 {
+    let screenOldValue = isMobile;
+    if (e.matches)
+    {
+        isMobile = true;
+    }
+    else
+    {
+        isMobile = false;
+    }
+
+    if (screenOldValue != isMobile)
+    {
+        triggerMediaChangeActions();
+    }
+
+}
+
+function triggerMediaChangeActions()
+{
+    if(isMobile)
+    {
+        deleteHackDiv();
+    }
+    else
+    {
+        addBackToTopHack();
+    }
+
+}
+
+
+
+function deleteHackDiv()
+{
+    if (navBarContHeader.classList.contains('type-smile'))
+    {
+        const hackDiv = document.querySelector('#smiles-gallery-section .backtotophack');
+        smilesGallery.removeChild(hackDiv);
+    }
+    else
+    {
+        const hackDiv = document.querySelector('#photography-gallery-section .backtotophack');
+        photoGallery.removeChild(hackDiv);
+    }
+}
+
+
+function addBackToTopHack()
+{
+    let galleryCnt;
+    if (navBarContHeader.classList.contains('type-smile'))
+    {
+        galleryCnt = smilesGallery;
+    }
+    else
+    {
+       galleryCnt = photoGallery;
+    }
+    
     const backToTopBtnHackdiv = document.createElement('div');
     backToTopBtnHackdiv.classList.add('backtotophack');
     back2TopObserver.observe(backToTopBtnHackdiv);
@@ -109,14 +175,13 @@ function fillInPhotos(isSmiles)
 
     if(isSmiles)
     {
-        addBackToTopHack(smilesGallery)
         addBottomNavBar(smilesGallery);
     }
     else
     { 
-        addBackToTopHack(photoGallery);
         addBottomNavBar(photoGallery);
     }
+    if (!isSmiles)addBackToTopHack();
 }
 
 function handleChangeToGallery()
@@ -124,7 +189,6 @@ function handleChangeToGallery()
     smilesSect.classList.add('display-none');
     gallerySect.classList.remove('display-none');
     fillInPhotos(false);
-    controlBack2TopButton();
 }
 
 function handleChangeToSmile()
@@ -132,14 +196,8 @@ function handleChangeToSmile()
     gallerySect.classList.add('display-none');
     smilesSect.classList.remove('display-none');
     fillInPhotos(true);
-    controlBack2TopButton();
 }
 
-function controlBack2TopButton()
-{
-    const back2TopHack = document.querySelector('.backtotophack');
-    back2TopObserver.observe(back2TopHack);
-}
 
 function handleBack2Top(entries, back2TopObserver)
 {
@@ -156,33 +214,80 @@ function handleBack2Top(entries, back2TopObserver)
     });
 }
 
+function handleBack2TopMobile(entries, back2TopObserverMobile)
+{
+    entries.forEach(entry => {
+        let bottomNavBar;
+        if (navBarContHeader.classList.contains('type-smile'))
+        {
+            bottomNavBar = document.querySelector('#smiles-intro .bottom-control-panel');
+            
+        }
+        else
+        {
+            bottomNavBar = document.querySelector('#photography-intro .bottom-control-panel');
+        }
+
+        if (!entry.isIntersecting)
+        {
+            bottomNavBar.classList.remove('display-none');
+            console.log("non intersecting");
+        }
+        else
+        {
+            bottomNavBar.classList.add('display-none');
+            console.log("intersecting")
+        }
+    });
+}
+
 function handleShuffle(e)
 {
     if (navBarContHeader.classList.contains('type-smile'))
     {
-        const hackDiv = document.querySelector('#smiles-gallery-section .backtotophack');
-        smilesGallery.removeChild(hackDiv);
+        deleteHackDiv();
         const divs = Array.prototype.slice.call(smilesGallery.children);
         while (divs.length) {
             smilesGallery.appendChild(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
-        }
-        addBackToTopHack(smilesGallery);
+        }    
     }
     else
     {
-        const hackDiv = document.querySelector('#photography-gallery-section .backtotophack');
-        photoGallery.removeChild(hackDiv);
+        deleteHackDiv();
         const divs = Array.prototype.slice.call(photoGallery.children);
         while (divs.length) {
             photoGallery.appendChild(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
         }
-        addBackToTopHack(photoGallery);
     }
+    if (!isMobile)addBackToTopHack();
     
 }
 
+function addBottomPanelObserver()
+{
+    if (navBarContHeader.classList.contains('type-smile'))
+    {
+        const introSection = document.querySelector('#smiles-intro .descr-section-title');
+        back2TopObserverMobile.observe(introSection);
+    }
+    else
+    {
+        const introSection = document.querySelector('#photography-intro .descr-section-title');
+        back2TopObserverMobile.observe(introSection);
+    }
+}
 
-fillInPhotos(false);
-controlBack2TopButton();
-if (myGalleryBtn)myGalleryBtn.addEventListener('click', handleChangeToGallery);
-if (smileSectBtn)smileSectBtn.addEventListener('click', handleChangeToSmile);
+function init()
+{
+    fillInPhotos(false);
+    if (myGalleryBtn)myGalleryBtn.addEventListener('click', handleChangeToGallery);
+    if (smileSectBtn)smileSectBtn.addEventListener('click', handleChangeToSmile);
+    if (isMobile)
+    {
+        addBottomPanelObserver();
+    }
+}
+
+init();
+
+
