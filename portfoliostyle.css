@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
 
 html, body{
     font-size: 100%;
@@ -27,6 +29,13 @@ a
     text-decoration: none;
 }
 
+:root
+{
+    --color-text-main: #563524;
+    --color-text-dark-brown: #90553C;
+    --font-family-cookie: 'Cookie', cursive;
+    --font-family-beaur: 'Beau Rivage', cursive;
+}
 
 .display-none
 {
@@ -44,7 +53,8 @@ a
     height: min-content;
     top: 0;
     text-align: center;
-    background-color:  rgb(253, 250, 241);
+    background-color:  #778979;
+    background-color: #CBD5C0;
     justify-content: space-between;
     align-items: center;
 }
@@ -63,14 +73,14 @@ a
     width: fit-content;
     padding: 1rem;
     border-radius: 0.3rem;
-    transition: transform 150ms ease-in;
+    transition: all 150ms ease-in;
+    font-weight: 500;
 }
 
 .nav-link:hover{
     color: rgb(255, 255, 255);
     cursor: pointer; 
     background-color: rgb(97, 95, 93);
-    transform: scale(1.05);
 }
 
 #image-link:hover{
@@ -118,30 +128,99 @@ a
 /* Ending of Navigation bar styles */
 /***************************************/
 /***************************************/
-/* Beinning of Welcome section styles */
+/* Beginning of Welcome section styles */
 
-#welcome-section{
-    background-color: rgb(255, 247, 226);
-}
-
-#welcome-div{
+.welcome-section{
+    background-color: rgba(253, 252, 249, 0.712);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: clamp(1rem, 5vh, 5rem);
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: 4rem;
+}
+
+#welcome-section .main-icon-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+#welcome-section .main-icon-cont img
+{
+    width: clamp(15rem, 15vw, 20rem);
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#welcome-section .main-icon-cont div
+{
+    font-size: clamp(3rem, 2vw, 8rem);
+    width: clamp(10rem, 40vw, 30rem);
+    text-align: left;
+    color: var(--color-text-main);
+    font-family: var(--font-family-beaur);
     
-    
 }
 
-#welcome-div-image{
-    width: 100vw;
-    max-height: 100vh;
-    margin-top: 5rem;
+#welcome-section .separator-line
+{
+    width: clamp(10rem, 70vw, 150rem);
+    height: 5px;
+    background-color: var(--color-text-main);
 }
-#welcome-div-image-mobile{
-    display: none;
+
+#welcome-section .hero-descr
+{
+    font-size: clamp(1.4rem, calc(0.5rem + 1vw), 3rem);
+    text-align: center;
+    width: clamp(8rem, 60vw, 130rem);
+}
+
+#welcome-section .know-more-button
+{
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: var(--color-text-dark-brown);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.527);
+    transition: 150ms background-color ease-in , 50ms transform ease-in;
+    outline: 2px solid white;
+
+}
+
+#welcome-section .know-more-button:hover
+{
+    background-color: grey;
+    cursor: pointer;
+
+}
+
+#welcome-section .know-more-button:active
+{
+    background-color: black;
+    color: white;
+    transform: scale(0.96);
 }
 
 
+#welcome-section .down-arrow img
+{
+    width: 4rem;
+    transition: transform 150ms ease;
+}
+
+#welcome-section .down-arrow img:hover
+{
+    transform: scale(1.2);
+}
 /* Ending of Welcome section styles */
 /***************************************/
 /***************************************/
@@ -410,12 +489,6 @@ a
 /* General util styles */
 
 
-.viewport-w-h{
-    width: 100%;
-    height: 100vh;
-    margin-left: 0%;
-    margin-right: 0%;
-}
 
 .viewport-w{
     width: 100%;

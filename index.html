@@ -6,78 +6,39 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="images/KJ_logo.png" rel="icon">
+    <link href="./images/KJ_favicon.png" rel="icon">
 </head>
 <body>
-    <header>
-    <div id="nav-bar-container" class="desktop">
-        <div class="nav-logo-grouping">
-            <a class="image-link"><img class="hero-logo"  alt="Kevin Jose's logo" src="./images/KJ_neo_logo.png"></a>
-            <a class="close-btn" href=""><img src="./images/close_icon.svg" alt="menu close button" class="menu-close-img"></a>
+    <header id="home-page-icon">
+        <div id="nav-bar-container" class="desktop">
+            <div class="nav-logo-grouping">
+                <a class="image-link"><img class="hero-logo"  alt="Kevin Jose's logo" src="./images/KJ_neo_logo.png"></a>
+                <a class="close-btn" href=""><img src="./images/close_icon.svg" alt="menu close button" class="menu-close-img"></a>
+            </div>
+            <nav id="navbar" class="font-fam">
+                <a class="nav-link" href="./index.html#about-me">ABOUT</a>
+                <a class="nav-link" href="#projects">PROJECTS</a>
+                <a class="nav-link" href="#journey">JOURNEY</a>
+                <a class="nav-link" href="#journey">CONTACT</a>
+                <a class="nav-link" href="#journey">RESUME</a>
+            </nav>
         </div>
-        <nav id="navbar" class="font-fam">
-            <a class="nav-link" href="./index.html#about-me">ABOUT</a>
-            <a class="nav-link" href="#experiences">EXPERIENCES</a>
-            <a class="nav-link" href="#projects">PROJECTS</a>
-            <!--<a class="nav-link" href="#contact-me">CONTACT</a> -->
+        <nav class="mobile-header">
+            <a class="image-link" href="./index.html"><img class="hero-logo" alt="Kevin Jose's logo" src="./images/KJ_neo_logo.png"></a>
+            <a class="menu-btn" href=""><img src="./images/menu_icon.svg" alt="menu hamburger button" class="menu-btn-img"></a>
         </nav>
-    </div>
-    <nav class="mobile-header">
-        <a class="image-link" href="./index.html"><img class="hero-logo" alt="Kevin Jose's logo" src="./images/KJ_neo_logo.png"></a>
-        <a class="menu-btn" href=""><img src="./images/menu_icon.svg" alt="menu hamburger button" class="menu-btn-img"></a>
-    </nav>
     </header>
     <a name="about-me"></a>
-    <section id="welcome-section" class="viewport-w-h">
-        <div id="welcome-div">
-            <img id="welcome-div-image" alt="Kevin's photo with some description" src="./images/KJ.jpg">
-            <img id="welcome-div-image-mobile" alt="Kevin's photo with some description" src="./images/KJ.jpg">
+    <section id="welcome-section" class="welcome-section">
+        <div class="main-icon-cont">
+            <img src="./kj_main.png" alt="Kevin Jose Logo">
+            <div>Hi, I'm Kevin Jose!<br>Welcome to My Nook of the Internet!</div>
         </div>
-       
+        <div class="separator-line"></div>
+        <div class="hero-descr">As a software engineer evolving into a product designer, my world revolves around creating impactful digital experiences. My passions extend beyond the screen, capturing moments through photography, exploring the world of books, expressing creativity with doodles, and enjoying the dynamic energy of basketball.</div>
+        <div class="know-more-button">More about me</div>
+        <a href="./index.html#projects" class="down-arrow"><img src="./images/down-arrow.svg" alt="down arrow"></a>
     </section>
-    <a name="experiences"></a>
-    <section id="experiences" class="viewport-w">
-        <h2 id="experience-heading">My Experiences</h2>   
-        <div id="grid-container-experiences">    
-            <div class="experience-div">
-                <img class="experience-logo" alt="CISCO SYSTEMS LOGO" src="./images/cisco_logo.png">
-                <h2 class="individual-experience-title">CISCO SYSTEMS</h2>
-                <h3 class="individual-experience-title">Software Engineer II</h3>
-                <h4 class="individual-experience-title">Aug 2020 - Present</h4>
-                <div class="show-more-anchor-div">
-                    <a href="./cisco_experience.html" class="show-more-anchor">Show more</a>
-                </div>
-            </div>
-            <div class="experience-div">
-                <img class="experience-logo" alt="TJ LOGO" src="./images/LOGO.png">
-                <h2 class="individual-experience-title">TJ DISTRIBUTORS PVT LTD</h2>
-                <h3 class="individual-experience-title">Design and media partner</h3>
-                <h4 class="individual-experience-title">Mar 2021 - Present</h4>
-                <div class="show-more-anchor-div">
-                    <a href="#" class="show-more-anchor">Show more</a>
-                </div>
-            </div>
-            <div class="experience-div">
-                <img class="experience-logo" alt="SAMSUNG LOGO" src="./images/samsung_logo.png">
-                <h2 class="individual-experience-title">SAMSUNG RESEARCH INSTITUTE</h2>
-                <h3 class="individual-experience-title">Research Intern</h3>
-                <h4 class="individual-experience-title">May 2019 - July 2019 (3 months)</h4>
-                <div class="show-more-anchor-div">
-                    <a href="#" class="show-more-anchor">Show more</a>
-                </div>
-            </div>
-            <div class="experience-div">
-                <img class="experience-logo" alt="IITHyderabad LOGO" src="./images/iith_logo.png">
-                <h2 class="individual-experience-title">IIT HYDERABAD</h2>
-                <h3 class="individual-experience-title">Research Intern</h3>
-                <h4 class="individual-experience-title">May 2018 - July 2018 (3 months)</h4>
-                <div class="show-more-anchor-div">
-                    <a href="#" class="show-more-anchor">Show more</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <a name="projects"></a>
     <section id="projects" class="viewport-w">
         <h2 id="project-heading">My Projects</h2>    
@@ -164,6 +125,50 @@
             </div>
         </div>
     </section>
+</section>
+<a name="journey"></a>
+<section id="experiences" class="viewport-w">
+    <h2 id="experience-heading">My Experiences</h2>   
+    <div id="grid-container-experiences">    
+        <div class="experience-div">
+            <img class="experience-logo" alt="CISCO SYSTEMS LOGO" src="./images/cisco_logo.png">
+            <h2 class="individual-experience-title">CISCO SYSTEMS</h2>
+            <h3 class="individual-experience-title">Software Engineer II</h3>
+            <h4 class="individual-experience-title">Aug 2020 - Present</h4>
+            <div class="show-more-anchor-div">
+                <a href="./cisco_experience.html" class="show-more-anchor">Show more</a>
+            </div>
+        </div>
+        <div class="experience-div">
+            <img class="experience-logo" alt="TJ LOGO" src="./images/LOGO.png">
+            <h2 class="individual-experience-title">TJ DISTRIBUTORS PVT LTD</h2>
+            <h3 class="individual-experience-title">Design and media partner</h3>
+            <h4 class="individual-experience-title">Mar 2021 - Present</h4>
+            <div class="show-more-anchor-div">
+                <a href="#" class="show-more-anchor">Show more</a>
+            </div>
+        </div>
+        <div class="experience-div">
+            <img class="experience-logo" alt="SAMSUNG LOGO" src="./images/samsung_logo.png">
+            <h2 class="individual-experience-title">SAMSUNG RESEARCH INSTITUTE</h2>
+            <h3 class="individual-experience-title">Research Intern</h3>
+            <h4 class="individual-experience-title">May 2019 - July 2019 (3 months)</h4>
+            <div class="show-more-anchor-div">
+                <a href="#" class="show-more-anchor">Show more</a>
+            </div>
+        </div>
+        <div class="experience-div">
+            <img class="experience-logo" alt="IITHyderabad LOGO" src="./images/iith_logo.png">
+            <h2 class="individual-experience-title">IIT HYDERABAD</h2>
+            <h3 class="individual-experience-title">Research Intern</h3>
+            <h4 class="individual-experience-title">May 2018 - July 2018 (3 months)</h4>
+            <div class="show-more-anchor-div">
+                <a href="#" class="show-more-anchor">Show more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!--
     <a name="contact-me"></a>
     <section id="contact-section" class="viewport-w-h">  
