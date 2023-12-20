@@ -69,7 +69,7 @@ a
     align-items: center;
 }
 
-#nav-bar-container:has(.hero-page)
+#nav-bar-container.hero-page
 {
     justify-content: center;
     padding: 0.5rem 0;
@@ -81,6 +81,11 @@ a
     justify-content: space-around;
     width: clamp(20rem, 40vw, 30rem);
     margin-right: 1rem;
+}
+
+#nav-bar-container.hero-page #navbar
+{
+    margin: 0;
 }
 
 .nav-link{
@@ -210,7 +215,7 @@ a
 }
 
 
-.image-link.hero-page
+#home-page-icon #nav-bar-container.hero-page .image-link
 {
     display: none;
 }
@@ -543,7 +548,7 @@ a
         display: none;
     }
 
-    .image-link.hero-page
+    #home-page-icon #nav-bar-container.hero-page .image-link
     {
         display: flex;
     }

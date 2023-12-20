@@ -1,17 +1,15 @@
-const heroPageNavBarLogo = document.querySelector('#home-page-icon #nav-bar-container .nav-logo-grouping .image-link');
+const heroPageNavBar = document.querySelector('#home-page-icon #nav-bar-container');
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
     entries.forEach(entry => {
         if (entry.isIntersecting)
         {
-            heroPageNavBarLogo.classList.add('hero-page');
-            console.log("is Intersecting");
+            heroPageNavBar.classList.add('hero-page');
         }
         else
         {
-            heroPageNavBarLogo.classList.remove('hero-page');
-            console.log("is not intersecting");
+            heroPageNavBar.classList.remove('hero-page');
         }
     })
 }
