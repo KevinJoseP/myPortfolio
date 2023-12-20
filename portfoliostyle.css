@@ -202,6 +202,7 @@ a
     text-align: center;
     color: var(--color-text-main);
     font-family: var(--font-family-serif);
+    font-weight: 600;
     
 }
 
@@ -225,14 +226,23 @@ a
     background-color: var(--color-text-main);
 }
 
-#welcome-section .hero-descr
+#welcome-section .hero-descr,
+#welcome-section .hero-descr-sub
 {
-    font-size: clamp(1rem, calc(0.5rem + 1vw), 3rem);
+    font-size: clamp(1.2rem, calc(0.6rem + 1vw), 4rem);
     text-align: center;
     width: clamp(8rem, 60vw, 130rem);
-    font-weight: 300;
-    font-family: var(--font-family-sans);
+    font-weight: 500;
+    font-family: var(--font-family-serif);
 }
+
+#welcome-section .hero-descr-sub
+{
+    font-weight: 400;
+    margin-top: 0.5rem;
+    font-size: clamp(1rem, calc(0.5rem + 1vw), 3rem);
+}
+
 
 #welcome-section .know-more-button
 {
@@ -243,8 +253,8 @@ a
     font-weight: 300;
     color: white;
     border-radius: 10px;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.527);
-    transition: 150ms background-color ease-in , 50ms transform ease-in;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.527);
+    transition: 150ms background-color ease-in , 150ms transform ease-in;
     outline: 2px solid white;
 
 }
@@ -253,6 +263,7 @@ a
 {
     background-color: grey;
     cursor: pointer;
+    transform: scale(1.1);
 
 }
 
@@ -263,10 +274,10 @@ a
     transform: scale(0.96);
 }
 
-
 #welcome-section .down-arrow img
 {
     width: 4rem;
+    margin-top: 3rem;
     transition: transform 150ms ease;
 }
 
@@ -558,9 +569,15 @@ a
         height: 1.5px;
     }
 
-    #welcome-section .hero-descr
+    #welcome-section .hero-descr,
+    #welcome-section .hero-descr-sub
     {
         width: 90vw;
+    }
+
+    #welcome-section .down-arrow img
+    {
+        width: 2rem;
     }
 
 }
