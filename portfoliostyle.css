@@ -181,7 +181,6 @@ a
     gap: clamp(0.5rem, 5vh, 2rem);
     min-height: 100vh;
     min-height: 100svh;
-    padding-top: 4rem;
 }
 
 #welcome-section .main-icon-cont
@@ -263,7 +262,7 @@ a
 
 #welcome-section .know-more-button:hover
 {
-    background-color: grey;
+    background-color: #778979;
     cursor: pointer;
     transform: scale(1.1);
 
@@ -274,6 +273,17 @@ a
     background-color: black;
     color: white;
     transform: scale(0.96);
+}
+
+#welcome-section .down-arrow
+{
+    position: fixed;
+    bottom: 1rem;
+}
+
+#welcome-section .down-arrow.non-hero-page
+{
+    display: none;
 }
 
 #welcome-section .down-arrow img
