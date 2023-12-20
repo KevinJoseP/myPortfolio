@@ -95,15 +95,15 @@ a
     width: fit-content;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    transition: all 150ms ease-in;
-    font-weight: 300;
+    transition: color 150ms ease-in, background-color 150ms ease-in, transform 50ms ease-in;
+    font-weight: 400;
     font-size: 0.9rem;
     font-family: var(--font-family-sans-condensed);
 }
 
 .nav-link:active
 {
-    font-weight: 600;
+    transform: scale(0.92);
 }
 
 .nav-logo-grouping
@@ -126,7 +126,6 @@ a
     color: rgb(255, 255, 255);
     cursor: pointer; 
     background-color: rgb(97, 95, 93);
-    outline: 1px solid black;
 }
 
 #image-link:hover{
