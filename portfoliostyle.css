@@ -42,8 +42,11 @@ a
 {
     --color-text-main: #563524;
     --color-text-dark-brown: #90553C;
-    --font-family-beaur: 'Fira Sans', 'Fira Sans Condensed', 'Beau Rivage', cursive;
-    --font-family-sans-serif:'Fira Sans', 'Fira Sans Condensed','Mulish', 'Raleway', sans-serif;
+    --color-main-page-bg-color:rgb(247, 244, 237);
+    --font-family-serif: 'Cormorant Garamond', serif;
+    --font-family-sans: 'Fira Sans', sans-serif;
+    --font-family-sans-condensed: 'Fira Sans Condensed', sans-serif;
+    --font-nav-control-elements: var(--font-family-sans-condensed);
 }
 
 .display-none
@@ -72,7 +75,7 @@ a
 {
     justify-content: center;
     padding: 0.5rem 0;
-    background-color: rgb(247, 242, 226);
+    background-color: var(--color-main-page-bg-color);
 }
 
 #navbar{
@@ -92,7 +95,12 @@ a
     transition: all 150ms ease-in;
     font-weight: 300;
     font-size: 0.9rem;
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--font-family-sans-condensed);
+}
+
+.nav-link:active
+{
+    font-weight: 600;
 }
 
 .nav-logo-grouping
@@ -115,6 +123,7 @@ a
     color: rgb(255, 255, 255);
     cursor: pointer; 
     background-color: rgb(97, 95, 93);
+    outline: 1px solid black;
 }
 
 #image-link:hover{
@@ -155,22 +164,18 @@ a
     
 }
 
-.font-fam{
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-}
 /* Ending of Navigation bar styles */
 /***************************************/
 /***************************************/
 /* Beginning of Welcome section styles */
 
 .welcome-section{
-    background-color: rgb(247, 242, 226);
+    background-color: var(--color-main-page-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: clamp(1rem, 5vh, 5rem);
+    gap: clamp(0.5rem, 5vh, 2rem);
     min-height: 100vh;
     min-height: 100svh;
     padding-top: 4rem;
@@ -181,26 +186,30 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    flex-direction: column;
 }
 
 #welcome-section .main-icon-cont img
 {
-    width: clamp(15rem, 15vw, 20rem);
-    margin: 0;
-    padding: 0;
+    width: clamp(5rem, 10vw, 15rem);
+    margin-bottom: clamp(0.5rem, calc(0.5rem + 2vh), 2rem);
 }
 
-#welcome-section .main-icon-cont div
+#welcome-section .main-icon-cont .main-hero-title,
+#welcome-section .main-icon-cont .sub-hero-title
 {
-    font-size: clamp(3rem, 2vw, 8rem);
-    width: clamp(10rem, 40vw, 30rem);
-    text-align: left;
+    font-size: clamp(3rem, calc(1rem + 2vw), 8rem);
+    text-align: center;
     color: var(--color-text-main);
-    font-family: var(--font-family-sans-serif);
+    font-family: var(--font-family-serif);
     
 }
+
+#welcome-section .main-icon-cont .sub-hero-title
+{
+    font-size: clamp(2rem, calc(0.5rem + 2vw), 5rem);
+}
+
 
 .image-link.hero-page
 {
@@ -208,32 +217,30 @@ a
 }
 
 
-#welcome-section .main-icon-cont div span
-{
-    font-size: clamp(2rem, 1vw, 5rem);
-}
-
 #welcome-section .separator-line
 {
-    width: clamp(10rem, 70vw, 150rem);
-    height: 5px;
+    width: clamp(20rem, 50vw, 30rem);
+    margin: clamp(0.5rem, calc(0.5rem + 2vh), 1rem) 0;
+    height: 3px;
     background-color: var(--color-text-main);
 }
 
 #welcome-section .hero-descr
 {
-    font-size: clamp(1.4rem, calc(0.5rem + 1vw), 3rem);
+    font-size: clamp(1rem, calc(0.5rem + 1vw), 3rem);
     text-align: center;
     width: clamp(8rem, 60vw, 130rem);
     font-weight: 300;
-    font-family: 'Fira Sans';
+    font-family: var(--font-family-sans);
 }
 
 #welcome-section .know-more-button
 {
-    padding: 1rem;
-    font-size: 1.2rem;
+    padding: 0.8rem;
+    font-size: 1rem;
     background-color: var(--color-text-dark-brown);
+    font-family: var(--font-nav-control-elements);
+    font-weight: 300;
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.527);
@@ -520,7 +527,7 @@ a
         justify-content: space-between;
         position: fixed;
         width: 100%;
-        background-color: rgb(253, 250, 241);
+        background-color: var(--color-main-page-bg-color);
     }
 
     .mobile-header.display-none
@@ -531,6 +538,29 @@ a
     .image-link.hero-page
     {
         display: flex;
+    }
+
+    #welcome-section .main-icon-cont .main-hero-title,
+    #welcome-section .main-icon-cont .sub-hero-title
+    {
+        width: 90vw;
+        font-size: clamp(2rem, calc(1rem + 2vw), 5rem);
+    }
+
+    #welcome-section .main-icon-cont .sub-hero-title
+    {
+        font-size: clamp(1.5rem, calc(0.5rem + 2vw), 3rem);
+    }
+
+    #welcome-section .separator-line
+    {
+        width: 80vw;
+        height: 1.5px;
+    }
+
+    #welcome-section .hero-descr
+    {
+        width: 90vw;
     }
 
 }
