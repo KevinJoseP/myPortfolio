@@ -66,7 +66,7 @@ a
     text-align: center;
     background-color:  #778979;
     background-color: #CBD5C0;
-
+    z-index: 1200;
     justify-content: space-between;
     align-items: center;
 }
@@ -302,88 +302,19 @@ a
 /* Ending of Welcome section styles */
 /***************************************/
 /***************************************/
-/* Beinning of Experience section styles */
-
-#experiences{
-    background-color: rgb(90, 88, 88);
-}
-
-#experience-heading{
-    padding-top: 8rem;
-    padding-bottom: 3rem;
-    margin: 0;
-    color: bisque;
-    font-size: 3rem;
-    text-align: center;
-}
-
-#grid-container-experiences{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.experience-logo{
-    max-width:80%;
-    margin-top: 2rem;
-    max-height: 10rem;
-
-}
-
-.experience-div{
-    text-align: center;
-    background-color: beige;
-    border-radius: 0.5rem;
-    width:40%;
-    max-width: 30rem;
-    min-width: 20rem;
-    margin: 2rem 0 2rem 0;
-    padding-bottom: 1rem;
-    
-}
-
-.individual-experience-title{
-    padding: 0;
-    margin: 0 0 0.5rem 0;
-}
-
-.show-more-anchor-div{
-    margin: 1rem 0 1rem 0;
-    
-}
-
-.show-more-anchor{
-    cursor: pointer;
-    text-decoration: none;
-    color: black
-    
-}
-.show-more-anchor:hover{
-    cursor: pointer;
-    color: black;
-    font-weight: 600;
-    
-}
-
-
-/* Ending of Experience section styles */
-/***************************************/
-/***************************************/
-/* Beginning of Projects section styles */
-
-
-#projects{
-    background-color: var(--color-clay);
+/* Beginning of Common section styles */
+.section-common-def
+{
     min-height: 100vh;
     min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 0 4rem 0;
 }
 
-#projects h2
+.section-common-h2
 {
     color: #CBD5C0;
     font-size: 3rem;
@@ -391,7 +322,7 @@ a
     margin: 0 0.3rem;
 }
 
-#projects .title-cont
+.title-cont
 {
     display: flex;
     justify-content: center;
@@ -399,11 +330,31 @@ a
     margin: 2rem 0;
 }
 
-#projects .decor-line
+.decor-line
 {
     height: 1.5px;
     width: 5rem;
-    background-color: #CBD5C0;;
+    background-color: #CBD5C0;
+}
+
+a
+{
+    text-decoration: none;
+}
+/* Ending of Common section styles */
+/***************************************/
+/***************************************/
+/* Beginning of Projects section styles */
+
+
+#projects{
+    background-color: var(--color-clay);
+    background-color: #28312B;
+}
+
+.project-cont
+{
+    display: flex;
 }
 
 .project-inst-anchor
@@ -413,11 +364,6 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-a
-{
-    text-decoration: none;
 }
 
 .project-cont .project-inst
@@ -441,6 +387,7 @@ a
     padding: none;
     margin: none;
     display: block;
+    object-fit: cover;
 }
 
 .project-cont .project-inst:hover img
@@ -490,6 +437,130 @@ a
 
 
 /* Ending of Projects section styles */
+/***************************************/
+/***************************************/
+/* Beinning of Experience section styles */
+
+#experiences{
+    background-color: #1a1d18;
+}
+
+#experiences h2
+{
+    color: #CBD5C0;
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0 0.3rem;
+}
+
+#experiences .title-cont
+{
+    margin-bottom: 5rem;
+}
+
+.experience-cont
+{
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.experience-cont:before
+{
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    background-color: #CBD5C0;
+    left: 50%;
+    transform: translate(-50%);
+    content: "";
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#experiences .experience-inst
+{
+    width: clamp(30rem, 100%, 100rem);
+    color: rgb(143, 140, 140);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family-sans-serif-grotesque);
+}
+
+#experiences .experience-title
+{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+    width: 20rem;
+
+}
+
+#experiences .location
+{
+    margin-bottom: 0.5rem;
+}
+
+#experiences .position-date-cont
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#experiences .position
+{
+    margin-right: 1rem;
+}
+
+#experiences .experience-logo-cont img
+{
+    width: 100%;
+    aspect-ratio : 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#experiences .experience-logo-cont
+{
+    width: 6rem;
+    aspect-ratio : 1 / 1;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    outline: solid 4px #CBD5C0;
+    margin: 0 3rem;
+}
+
+#experiences .experience-descr
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    text-align: left;
+}
+
+#experiences .experience-inst.inverted
+{
+    flex-direction: row-reverse;
+}
+
+#experiences .experience-inst.inverted .experience-title
+{
+    align-items: flex-start;
+}
+
+#experiences .experience-inst.inverted .experience-descr
+{
+    text-align: right;
+}
+
+/* Ending of Experience section styles */
 /***************************************/
 /***************************************/
 /* Beginning of Contact section styles */
