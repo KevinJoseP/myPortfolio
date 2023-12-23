@@ -396,6 +396,7 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 2rem 0;
 }
 
 #projects .decor-line
@@ -404,6 +405,88 @@ a
     width: 5rem;
     background-color: #CBD5C0;;
 }
+
+.project-inst-anchor
+{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.project-cont .project-inst
+{
+    padding: 1rem;
+    background-color: rgb(248, 245, 241);
+    border-radius: 10px;
+    outline: 3px solid black;
+    box-shadow: 0 0 1rem black;
+    margin: 1rem;
+}
+
+
+
+.project-cont .project-inst img
+{
+    width: 20rem;
+    height: 15rem;
+    transition: opacity 100ms ease-in;
+    border: none;
+    padding: none;
+    margin: none;
+    display: block;
+}
+
+.project-cont .project-inst:hover img
+{
+    display: none;
+
+}
+
+
+
+.project-cont .project-inst .project-descr
+{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-sans-serif-grotesque);
+    color: rgba(110, 110, 110, 0.787);
+    display: none;
+    width: 20rem;
+    height: 15rem;
+    transition: all 300ms ease-in;
+}
+
+.project-cont .project-inst:hover .project-descr
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-cont .project-inst .project-title
+{
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--font-family-sans-serif-grotesque);
+    color: rgb(37, 37, 37);
+    margin-bottom: 0.3rem;
+}
+
+.project-cont .project-inst .project-sub-text
+{
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-family-sans-serif-grotesque);
+    color: rgba(110, 110, 110, 0.787);
+}
+
 
 
 /* Ending of Projects section styles */
