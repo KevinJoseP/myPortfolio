@@ -494,6 +494,11 @@ a
 
 #experiences .experience-inst
 {
+    width: 100%;
+}
+
+#experiences .desktop-grouping
+{
     width: clamp(30rem, 100%, 100rem);
     color: rgb(143, 140, 140);
     display: flex;
@@ -502,8 +507,8 @@ a
     font-family: var(--font-family-sans-serif-grotesque);
     font-size: 1.1rem;
     font-weight: 500;
-    
 }
+
 
 #experiences .experience-title
 {
@@ -528,6 +533,7 @@ a
     justify-content: space-between;
     font-size: 1rem;
     align-items: center;
+    width: auto;
 
 }
 
@@ -537,13 +543,15 @@ a
     text-align: right;
 }
 
-#experiences .experience-logo-cont img
+#experiences .experience-logo-cont.desktop img,
+#experiences .experience-logo-cont.mobile img
 {
     width: 85%;
     object-fit: cover;
 }
 
-#experiences .experience-logo-cont img.palakkad
+#experiences .experience-logo-cont.desktop img.palakkad,
+#experiences .experience-logo-cont.mobile img.palakkad
 {
     height: 100%;
     width: 100%;
@@ -555,7 +563,7 @@ a
     white-space: nowrap;
 }
 
-#experiences .experience-logo-cont
+#experiences .experience-logo-cont.desktop
 {
     width: 6rem;
     aspect-ratio : 1 / 1;
@@ -569,6 +577,12 @@ a
     overflow: hidden;
 }
 
+
+#experiences .experience-logo-cont.mobile
+{
+    display: none;
+}
+
 #experiences .experience-descr
 {
     display: flex;
@@ -579,7 +593,7 @@ a
     text-align: left;
 }
 
-#experiences .experience-inst.inverted
+#experiences .experience-inst.inverted .desktop-grouping
 {
     flex-direction: row-reverse;
 }
@@ -841,6 +855,96 @@ footer{
         margin: 4rem 0 1rem 0;
     }
 
+    #experiences .experience-logo-cont.desktop
+    {
+        display: none;
+    }
+
+    #experiences .experience-logo-cont.mobile
+    {
+        display: flex;
+        margin-left: 0;
+    }
+
+    #experiences .experience-inst.inverted
+    {
+        flex-direction: row;
+    }
+
+    #experiences .experience-inst
+    {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #experiences .experience-inst.inverted .desktop-grouping,
+    #experiences .experience-inst .desktop-grouping
+    {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+    }
+
+    #experiences .experience-inst.inverted .experience-title,
+    #experiences .experience-inst .experience-title
+    {
+        align-items: flex-start;
+    }
+
+    #experiences .experience-inst.inverted .experience-descr,
+    #experiences .location
+    {
+        text-align: left;
+    }
+
+    #experiences .location
+    {
+        margin: 0;
+        font-size: 1.1rem;
+    }
+
+    #experiences .experience-descr
+    {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        width: 15rem;
+    }
+
+    #experiences .experience-title
+    {
+        width: 15rem;
+    }
+
+    #experiences .experience-logo-cont.mobile
+    {
+        width: 3rem;
+        aspect-ratio : 1 / 1;
+        border-radius: 50%;
+        background-color: rgb(0, 0, 0);
+        outline: solid 2px #CBD5C0;
+        margin: 0 1rem 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .experience-cont:before
+    {
+        left: 1.6rem;
+    }
+
+    #experiences .position
+    {
+        text-align: left;
+    }
+
+    #experiences .position-date-cont
+    {
+        width: 100%;
+    }
 
 }
 
