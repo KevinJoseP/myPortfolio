@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&display=swap');
+
 
 html, body{
     font-size: 100%;
@@ -46,6 +48,7 @@ a
     --font-family-sans-condensed: 'Fira Sans Condensed', sans-serif;
     --font-nav-control-elements: var(--font-family-sans-condensed);
     --font-family-sans-serif-grotesque: 'Darker Grotesque', sans-serif;
+    --font-family-sans-nunito: 'Nunito Sans', sans-serif;
 }
 
 .display-none
@@ -136,7 +139,7 @@ a
 
 .desktop .hero-logo
 {
-    height: 2.5rem;
+    height: 3rem;
     margin: 0.3rem;
 }
 
@@ -327,7 +330,7 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 .decor-line
@@ -463,14 +466,14 @@ a
     position: relative;
     z-index: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 6rem;
 }
 
 .experience-cont:before
 {
     height: 100%;
-    width: 3px;
+    width: 1px;
     position: absolute;
     background-color: #CBD5C0;
     left: 50%;
@@ -489,6 +492,9 @@ a
     justify-content: center;
     align-items: center;
     font-family: var(--font-family-sans-serif-grotesque);
+    font-size: 1.1rem;
+    font-weight: 500;
+    
 }
 
 #experiences .experience-title
@@ -504,25 +510,41 @@ a
 #experiences .location
 {
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    text-align: right;
 }
 
 #experiences .position-date-cont
 {
     display: flex;
     justify-content: space-between;
+    font-size: 1rem;
+    align-items: center;
+
 }
 
 #experiences .position
 {
     margin-right: 1rem;
+    text-align: right;
 }
 
 #experiences .experience-logo-cont img
 {
-    width: 100%;
-    aspect-ratio : 1 / 1;
+    width: 85%;
     object-fit: cover;
-    border-radius: 50%;
+}
+
+#experiences .experience-logo-cont img.palakkad
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#experiences .date
+{
+    white-space: nowrap;
 }
 
 #experiences .experience-logo-cont
@@ -532,7 +554,11 @@ a
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
     outline: solid 4px #CBD5C0;
-    margin: 0 3rem;
+    margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 #experiences .experience-descr
@@ -558,6 +584,11 @@ a
 #experiences .experience-inst.inverted .experience-descr
 {
     text-align: right;
+}
+
+#experiences .experience-inst.inverted .location
+{
+    text-align: left;
 }
 
 /* Ending of Experience section styles */
