@@ -3,6 +3,7 @@ const projectsSection = document.getElementById('projects');
 const welcomeSection = document.getElementById('welcome-section');
 const heroLogoImg = document.querySelector('#welcome-section .main-icon-cont img');
 const downArrow = document.querySelector('#welcome-section .down-arrow');
+const backtoTopBtn = document.getElementById('back-to-top-btn');
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
@@ -15,7 +16,7 @@ function handleLogoChangeToNavBar (entries, mainLogoObserver)
         {
             heroPageNavBar.classList.remove('hero-page');
         }
-    })
+    });
 }
 
 function handleWelcomeScreenChange (entries, welcomeScreenObserver)
@@ -24,12 +25,14 @@ function handleWelcomeScreenChange (entries, welcomeScreenObserver)
         if (entry.isIntersecting)
         {
             downArrow.classList.remove('non-hero-page');
+            backtoTopBtn.classList.add('top');
         }
         else
         {
             downArrow.classList.add('non-hero-page');
+            backtoTopBtn.classList.remove('top');
         }
-    })
+    });
 }
 
 
