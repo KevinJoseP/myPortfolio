@@ -4,6 +4,8 @@ const welcomeSection = document.getElementById('welcome-section');
 const heroLogoImg = document.querySelector('#welcome-section .main-icon-cont img');
 const downArrow = document.querySelector('#welcome-section .down-arrow');
 const backtoTopBtn = document.getElementById('back-to-top-btn');
+const projects = document.querySelectorAll('.project-inst');
+const closeBtns = document.querySelectorAll('.modal-cont .close');
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
@@ -35,7 +37,24 @@ function handleWelcomeScreenChange (entries, welcomeScreenObserver)
     });
 }
 
+function handleProjectModalOpen(e)
+{
+    const currProject = e.currentTarget;
+    const modalId = currProject.dataset.modalId;
+    if (modalId)
+    {
+        e.preventDefault();
+        const lProjectModal = document.getElementById(modalId).parentElement;
+        lProjectModal.classList.add('active');
+    }
+}
 
+function handleCloseButtonOnModal(e)
+{
+    e.preventDefault();
+    const currProjectModal = e.currentTarget.parentElement.parentElement;
+    currProjectModal.classList.remove('active');
+}
 
 
 
@@ -56,3 +75,7 @@ if (welcomeSection)
 {
     welcomeScreenObserver.observe(welcomeSection);
 }
+
+
+projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
+closeBtns.forEach(close => close.addEventListener('click', handleCloseButtonOnModal));
