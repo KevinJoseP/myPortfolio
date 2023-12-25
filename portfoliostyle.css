@@ -379,6 +379,7 @@ a
     align-items: center;
     align-self: center;
     justify-self: center;
+    cursor: pointer;
 }
 
 .project-cont .project-inst
@@ -745,6 +746,8 @@ footer{
     bottom: 0;
     z-index: 1300;
     overflow: auto;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
 }
 
 .modal-cont
@@ -758,6 +761,12 @@ footer{
 {
     display: flex;
 }
+
+.modal.fade-in
+{
+    opacity: 1;
+}
+
 
 
 .modal-cont .project-title

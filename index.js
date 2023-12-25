@@ -46,6 +46,9 @@ function handleProjectModalOpen(e)
         e.preventDefault();
         const lProjectModal = document.getElementById(modalId).parentElement;
         lProjectModal.classList.add('active');
+        setTimeout(() => {
+            lProjectModal.classList.add('fade-in');
+        }, 10);
     }
 }
 
@@ -54,6 +57,7 @@ function handleCloseButtonOnModal(e)
     e.preventDefault();
     const currProjectModal = e.currentTarget.parentElement.parentElement;
     currProjectModal.classList.remove('active');
+    currProjectModal.classList.remove('fade-in');
 }
 
 
