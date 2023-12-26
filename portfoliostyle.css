@@ -56,6 +56,18 @@ a
     display: none !important;
 }
 
+.flex-center-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column
+{
+    flex-direction: column;
+}
+
 /***************************************/
 /***************************************/
 /* Beinning of Navigation bar styles */
@@ -748,6 +760,7 @@ footer{
     overflow: auto;
     opacity: 0;
     transition: opacity 300ms linear;
+    background-color: black;
 }
 
 .modal-cont
@@ -804,7 +817,7 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin: 1rem 0 0 0;
+    margin: 1rem 0 1rem 0;
     background-color: #90553C;
     padding: 0.5rem;
     border-radius: 20px;
@@ -898,6 +911,7 @@ footer{
 .modal-cont .project-body
 {
     min-height: 100vh;
+    min-height: 100svh;
     background-color: rgb(34, 34, 34);
 }
 
@@ -918,7 +932,49 @@ footer{
     font-weight: 600;
 }
 
+.modal-cont .project-body
+{
 
+}
+
+.modal-cont .project-body .project-section
+{
+    max-width: 60vw;
+    color: white;
+    font-size: 1.5rem;
+    font-family: var(--font-family-sans-serif-grotesque);
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.modal-cont .project-body .project-section h2
+{
+    margin: 1rem;
+    text-align: left;
+    font-size: 3rem;
+    color: rgb(124, 123, 123);
+}
+
+.modal-cont#eyefi .project-body .project-section.gallery img
+{
+    width: 60%;
+}
+/* 
+Eye-fi Modal */
+.modal-cont#eyefi .duane
+{
+    padding: 1rem 0 2rem;
+}
+.modal-cont#eyefi .duane img
+{
+    width: 30%;
+}
+
+.modal-cont#eyefi li
+{
+    text-align: left;
+    margin-bottom: 0.7rem;
+}
 
 /* End of Project Modals */
 /***************************************/
