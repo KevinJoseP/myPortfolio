@@ -363,7 +363,7 @@ a
 {
     display: grid;
     grid-gap: 1rem;
-    width: 60%;
+    width: clamp(22rem, 90vw, 90rem);
     grid-template-columns: repeat(auto-fit, minmax(22rem, 25rem));
     justify-content: center;
     align-items: center;
@@ -747,7 +747,7 @@ footer{
     z-index: 1300;
     overflow: auto;
     opacity: 0;
-    transition: opacity 500ms ease-in;
+    transition: opacity 300ms linear;
 }
 
 .modal-cont
@@ -786,19 +786,52 @@ footer{
 .modal-cont nav
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
 .modal-cont nav img
 {
-    width: 4rem;
-    margin-right: 1rem;
+    width: 1rem;
     transition: transform 100ms ease;
     filter: invert();
 }
 
-.modal-cont nav img:hover
+.modal-cont .close-modal-btn-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0 0 0;
+    background-color: #90553C;
+    padding: 0.5rem;
+    border-radius: 20px;
+    outline: solid 1px white;
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+}
+
+.modal-cont .close-modal-btn-cont:hover
+{
+    background-color: #1a1d18;
+}
+
+.modal-cont .close-modal-btn-cont:active
+{
+    transform: scale(0.9);
+}
+
+.modal-cont .close-modal-btn-cont div
+{
+    color: white;
+    font-family: var(--font-family-sans-condensed);
+    text-align: center;
+
+}
+
+.modal-cont .close-modal-btn-cont:hover img
 {
     cursor: pointer;
     transform: scale(1.2);
@@ -807,7 +840,7 @@ footer{
 .modal-cont .project-title>img
 {
     width: 80vw;
-    margin: 2rem;
+    margin: 1rem;
     margin-bottom: clamp(-12rem, calc(-2rem - 5vw), -2rem);
 }
 
@@ -865,7 +898,7 @@ footer{
 .modal-cont .project-body
 {
     min-height: 100vh;
-    background-color: whitesmoke;
+    background-color: rgb(34, 34, 34);
 }
 
 .modal-cont #eyefi .main-title h1
