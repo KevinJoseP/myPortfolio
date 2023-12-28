@@ -962,8 +962,9 @@ footer{
 {
     width: 60%;
 }
-/* 
-Eye-fi Modal */
+
+
+/* Eye-fi Modal */
 .modal-cont#eyefi .duane
 {
     padding: 1rem 0 2rem;
@@ -977,6 +978,78 @@ Eye-fi Modal */
 {
     text-align: left;
     margin-bottom: 0.7rem;
+}
+
+.modal-cont#eyefi .research a
+{
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.modal-cont#eyefi .research a img
+{
+    width: 60%;
+}
+
+.modal-cont#eyefi .research ul
+{
+    width: 60%;
+}
+
+.modal-cont#eyefi .research .research-grouping
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.modal-cont#eyefi .research .research-grouping img
+{
+    height: clamp(10rem, 50vh, 30rem);
+}
+
+.modal-cont#eyefi .solution img
+{
+    width: clamp(10rem, 10rem + 20vw, 30rem);
+    padding: 1rem 0;
+}
+
+.modal-cont#eyefi .final-code-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #74927e;
+    border-radius: 20px;
+    padding: 0.5rem;
+    outline: solid 2px white;
+    cursor: pointer;
+    margin-top: 2rem;
+    transition: transform 50ms linear;
+}
+
+.modal-cont#eyefi .final-code-btn:hover
+{
+    background-color: rgb(56, 56, 56);
+}
+
+.modal-cont#eyefi .final-code-btn:active
+{
+    transform: scale(0.95);
+}
+
+.modal-cont#eyefi .final-code-btn div
+{
+    color: white;
+}
+
+.modal-cont#eyefi .final-code-btn img
+{
+    width: 2rem;
+    margin-left: 0.5rem;
+    padding: 0;
+    filter: invert();
 }
 
 /* End of Project Modals */

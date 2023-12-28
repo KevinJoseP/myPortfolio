@@ -226,12 +226,12 @@
                                 CISCO SYSTEMS
                             </div>
                             <div class="position-date-cont">
-                                <div class="position">Software Engineer III</div>
-                                <div class="date">2023 - Now</div>
-                            </div>
-                            <div class="position-date-cont">
                                 <div class="position">Software Engineer II</div>
                                 <div class="date">2020 - 2023</div>
+                            </div>
+                            <div class="position-date-cont">
+                                <div class="position">Software Engineer III</div>
+                                <div class="date">2023 - Now</div>
                             </div>
                         </div>
                         <div class="experience-logo-cont desktop">
@@ -501,11 +501,38 @@
                     </div>
                     <div class="research flex-center-center flex-column project-section">
                         <h2>RESEARCH</h2>
-                        <div></div>
+                        <div>
+                            In addressing Duane's Retraction Syndrome (DRS), we encountered the challenge of establishing a measurable standard for deviation from the norm. Most doctors rely on experience for assessment, as a widely recognized standard isn't yet in common use. Although a standard by Dr. Kekunnaya and colleagues exists, it hasn't been universally adopted. After consulting with four doctors at our institute, we decided to implement the methodology proposed in Dr. Kekunnaya's paper.
+                        </div>
+                        <a href="https://hyderabadeyeresear-my.sharepoint.com/:b:/g/personal/prashanthr_lvpei_net/EY01zuLgWw9Gk2MncIsi2MQBh-sL0-cA-JOeQGCfT2oowg?e=LYBbgU" class="paper" target="_blank"><img src="./images/Projects/eye-fi/kekunaya_paper.png" alt="a screenshot of a research paper" class="research-paper"></a>
+                        <div>Once we fixed on the algorithm to use to determine the degree of DRS, we spent time brainstorming about various methods to get measurements</div>
+                        <div>Each of us were experimenting on various approaches. We tried following approaches</div>
+                        <ul>
+                            <li><span><strong>Deep Learning-Based Point Detection</strong>:</span> Utilize a deep learning approach to identify key facial points (such as the top and bottom of the eyelid, center of the pupil, etc.). These coordinates can then be used to calculate the necessary distances.</li>
+                            <li><span><strong>Computer Vision Approach</strong>:</span> Implement a method that involves converting the image to grayscale and employing Harr-Cascade classifiers and blob detection techniques to locate the iris. Subsequent adjustments to the program would enable distance measurements.</li>
+                            <li><span><strong>Exploring Pre-Existing Models</strong>:</span> Conduct a thorough search for existing models that may be adapted or integrated into our solution.</li>
+                        </ul>
+                        <div>We quickly ruled out the deep learning solution due to a lack of sufficient data and resources necessary for training an effective model. Our initial attempts with a computer vision-based approach yielded moderate success. However, this method had to be ultimately set aside as the accuracy of the results was significantly impacted by variables such as lighting conditions and the positioning of the subject in the image. A pivotal moment came when we engaged in a discussion with a senior Microsoft engineer present at the venue, who introduced us to the Microsoft Azure Face API.</div>
+                        <div>The Microsoft Azure Face API demonstrated remarkable proficiency in detecting major landmarks on various face images. Through extensive experimentation with a diverse array of images, we achieved a notably high success rate, underscoring the robustness and reliability of the API.</div>
+                        <div class="research-grouping">
+                            <img src="./images/Projects/eye-fi/mehal1.png" alt="an input image alt text">
+                            <img src="./images/Projects/eye-fi/mehal2.png" alt="a closer image showing the landmarks as output">
+                        </div>
+                        <div>An advantageous aspect of our approach was leveraging Kekunnaya's algorithm, which primarily relies on calculating ratios. This meant that calibration issues, often a concern in such applications, did not affect our results, significantly enhancing the reliability of our method.</div>
+                        <div>Our mentor highlighted a critical concern: ensuring data security against potential breaches. This is especially paramount given that the iris constitutes a biometric signature, and the leakage of such sensitive images could lead to significant ramifications. To address this issue, we opted to integrate the Zeiss Visuhealth API, renowned for its secure and accurate transmission of ocular images over the Internet, facilitating communication between doctors and patients. Consequently, our final architecture incorporated this API as a key component to ensure enhanced data security.</div>
                     </div>
                     <div class="solution flex-center-center flex-column project-section">
                         <h2>SOLUTION</h2>
-                        <div></div>
+                        <div>Our final Solution incorporates the following architecture</div>
+                        <img src="./images/Projects/eye-fi/solution1.png" alt="Our final architecture">
+                        <img src="./images/Projects/eye-fi/solution2.png" alt="Our final architecture">
+                        <div>And our final results:</div>
+                        <img src="./images/Projects/eye-fi/result1.png" alt="final result image 1">
+                        <img src="./images/Projects/eye-fi/result2.png" alt="final result image 1">
+                        <a class="final-code-btn">
+                            <div>FINAL CODE</div>
+                            <img src="./images/code.svg" alt="a code logo">
+                        </a>
                     </div>
                     <div class="future flex-center-center flex-column project-section">
                         <h2>FUTURE SCOPE/ENHANCEMENTS</h2>
