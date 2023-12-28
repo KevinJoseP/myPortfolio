@@ -1026,6 +1026,8 @@ footer{
     outline: solid 2px white;
     cursor: pointer;
     margin-top: 2rem;
+    line-height: 0;
+    font-family: var(--font-family-sans);
     transition: transform 50ms linear;
 }
 
