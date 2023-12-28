@@ -228,7 +228,7 @@ a
     font-size: clamp(3rem, calc(1rem + 2vw), 8rem);
     text-align: center;
     color: var(--color-text-main);
-    font-family: var(--font-family-serif);
+    font-family: var(--font-family-sans-serif-grotesque);
     font-weight: 300;
     color: #778979;
     
@@ -345,6 +345,8 @@ a
     font-weight: 300;
     margin: 0 0.3rem;
     text-align: center;
+    font-family: var(--font-family-sans-condensed);
+    line-height: 0;
 }
 
 .title-cont

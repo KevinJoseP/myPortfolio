@@ -1,6 +1,6 @@
-const photoGallery = document.getElementById('photography-gallery-section');
-const smileSectBtn = document.getElementById('smile-sect-button');
-const gallerySect = document.getElementById('photography-intro');
+const smilesGallery = document.getElementById('smiles-gallery-section');
+const myGalleryBtn = document.getElementById('my-gallery-button');
+const smilesSect = document.getElementById('smiles-intro');
 const back2TopObserver = new IntersectionObserver (handleBack2Top, {});
 const back2TopObserverMobile = new IntersectionObserver (handleBack2TopMobile, {
     threshold: 0.5
@@ -8,8 +8,8 @@ const back2TopObserverMobile = new IntersectionObserver (handleBack2TopMobile, {
 const shuffleBtn = document.querySelector('.shuffle');
 
 
-const MAX_GALLERY_PHOTO_COUNT = 66;
-const GALLERY_URL = "./gallery/gallery"
+const MAX_SMILES_PHOTO_COUNT = 63;
+const SMILE_URL = "./smiles/smiles";
 
 const mediaQuery = window.matchMedia('(max-width: 40em)');
 let isCurrentScreenSmiles = false;
@@ -57,14 +57,14 @@ function triggerMediaChangeActions()
 
 function deleteHackDiv()
 {
-    const hackDiv = document.querySelector('#photography-gallery-section .backtotophack');
-    photoGallery.removeChild(hackDiv);
+    const hackDiv = document.querySelector('#smiles-gallery-section .backtotophack');
+    smilesGallery.removeChild(hackDiv);
 }
 
 
 function addBackToTopHack()
 {
-    let galleryCnt = photoGallery;
+    let galleryCnt = smilesGallery;
     const backToTopBtnHackdiv = document.createElement('div');
     backToTopBtnHackdiv.classList.add('backtotophack');
     back2TopObserver.observe(backToTopBtnHackdiv);
@@ -73,7 +73,7 @@ function addBackToTopHack()
 
 function addBottomNavBar()
 {
-    let currGalleryCnt = photoGallery;
+    let currGalleryCnt = smilesGallery;
     const bottomNavBar = document.createElement('div');
     bottomNavBar.classList.add('bottom-control-panel');
 
@@ -85,11 +85,9 @@ function addBottomNavBar()
 
 function deleteBottomNavbar()
 {
-    bottomNavBar = document.querySelector('#photography-intro .bottom-control-panel');
-    //console.log(bottomNavBar);
-    let currGallery = photoGallery
+    bottomNavBar = document.querySelector('#smiles-intro .bottom-control-panel');
+    let currGallery = smilesGallery;
     currGallery.removeChild(bottomNavBar);
-    //console.log("deletedBottomNavBar");
 }
 
 function addShuffleBtn(navCnt)
@@ -113,7 +111,7 @@ function addBackToTopBtn(navCnt)
 {
     // Create the anchor element
     var a = document.createElement('a');
-    a.href = './photography.html#section-top';
+    a.href = './smiles.html#section-top';
     a.classList.add('back-to-top-photo');
 
     // Create the image element
@@ -132,10 +130,10 @@ function fillInPhotos()
 {
     let currMaxCount = 0;
     let currGallery;
-    currMaxCount = MAX_GALLERY_PHOTO_COUNT;
-    currUrl = GALLERY_URL;
-    photoGallery.innerHTML = '';
-    currGallery = photoGallery;
+    currMaxCount = MAX_SMILES_PHOTO_COUNT;
+    currUrl = SMILE_URL;
+    smilesGallery.innerHTML = '';
+    currGallery = smilesGallery;
 
     for (let i = 0; i < currMaxCount;i++)
     {
@@ -161,6 +159,7 @@ function fillInPhotos()
 }
 
 
+
 function handleBack2Top(entries, back2TopObserver)
 {
     entries.forEach(entry => {
@@ -182,8 +181,7 @@ function handleBack2TopMobile(entries, back2TopObserverMobile)
     entries.forEach(entry => {
         // //console.log("handleBack2topMobile")
         let bottomNavBar;
-        bottomNavBar = document.querySelector('#photography-intro .bottom-control-panel'); 
-        
+        bottomNavBar = document.querySelector('#smiles-intro .bottom-control-panel');
         if (!entry.isIntersecting)
         {
             bottomNavBar.classList.remove('display-none');
@@ -199,7 +197,7 @@ function handleShuffle(e)
 {
     if (!isMobile)deleteHackDiv();
     deleteBottomNavbar();
-    let currGallery = photoGallery;
+    let currGallery = smilesGallery;
     const divs = Array.prototype.slice.call(currGallery.children);
     while (divs.length) {
         currGallery.appendChild(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
@@ -211,14 +209,14 @@ function handleShuffle(e)
 
 function addBottomPanelObserverForMobile()
 {
-    const introSection = document.querySelector('#photography-intro .descr-section-title');
+    const introSection = document.querySelector('#smiles-intro .descr-section-title');
     back2TopObserverMobile.observe(introSection);
 
 }
 
 function removeBottomPanelObserverForLargeScreens()
 {
-    const introSection = document.querySelector('#photography-intro .descr-section-title');
+    const introSection = document.querySelector('#smiles-intro .descr-section-title');
     back2TopObserverMobile.unobserve(introSection);
 }
 
