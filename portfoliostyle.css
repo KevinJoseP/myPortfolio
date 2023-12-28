@@ -125,6 +125,12 @@ a
     transform: scale(0.92);
 }
 
+.nav-link.active
+{
+    background-color: black;
+    color: white;
+}
+
 .nav-logo-grouping
 {
     display: flex;

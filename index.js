@@ -6,6 +6,8 @@ const downArrow = document.querySelector('#welcome-section .down-arrow');
 const backtoTopBtn = document.getElementById('back-to-top-btn');
 const projects = document.querySelectorAll('.project-inst');
 const closeBtns = document.querySelectorAll('.modal-cont .close');
+const sections = document.querySelectorAll('section.sections');
+const navElems = document.querySelectorAll('a.nav-link');
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
@@ -60,6 +62,25 @@ function handleCloseButtonOnModal(e)
     currProjectModal.classList.remove('fade-in');
 }
 
+function handleSectionChange(entries, sectionIntersectionObserver)
+{
+    entries.forEach(entry => {
+        if (entry.isIntersecting)
+        {
+            sections.forEach(section => section.classList.remove('active'));
+            let id = entry.target.getAttribute('id') + "-nav";
+            console.log(id);
+            navElems.forEach(nav => nav.classList.remove('active'));
+            const lNav = document.getElementById(id);
+            if (lNav)
+            {
+                lNav.classList.add('active');
+            }
+
+
+        }
+    });
+}
 
 
 
@@ -79,6 +100,12 @@ if (welcomeSection)
 {
     welcomeScreenObserver.observe(welcomeSection);
 }
+
+const sectionIntersectionObserver = new IntersectionObserver(handleSectionChange, {
+ threshold: 0.2
+});
+
+sections.forEach(section => sectionIntersectionObserver.observe(section));
 
 
 projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
