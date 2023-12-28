@@ -69,7 +69,6 @@ function handleSectionChange(entries, sectionIntersectionObserver)
         {
             sections.forEach(section => section.classList.remove('active'));
             let id = entry.target.getAttribute('id') + "-nav";
-            console.log(id);
             navElems.forEach(nav => nav.classList.remove('active'));
             const lNav = document.getElementById(id);
             if (lNav)
