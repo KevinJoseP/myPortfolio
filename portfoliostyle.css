@@ -1062,6 +1062,42 @@ footer{
     filter: invert();
 }
 
+/* Tj styles */
+
+.modal-cont#tjd .project-title>img
+{
+    width: 80vw;
+    margin: 1rem;
+    margin-bottom: 0;
+    text-shadow: 0 0 1rem white;
+}
+
+.modal-cont#tjd .project-title
+{
+    flex-direction: column-reverse;
+}
+
+.modal-cont#tjd .main-title
+{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cont#tjd .grouping
+{
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.modal-cont#tjd .grouping h1,
+.modal-cont#tjd .grouping h2
+{
+    text-align: center;
+    align-items: center;
+    margin: 0;
+}
 /* End of Project Modals */
 /***************************************/
 /***************************************/
