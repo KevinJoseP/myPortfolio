@@ -37,6 +37,7 @@ a
     text-decoration: none;
 }
 
+
 :root
 {
     --color-text-main: #563524;
@@ -586,7 +587,7 @@ a
 
 #experiences .experience-logo-cont.desktop
 {
-    width: 6rem;
+    width: 8rem;
     aspect-ratio : 1 / 1;
     border-radius: 50%;
     background-color: rgb(0, 0, 0);
@@ -713,10 +714,10 @@ footer{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    outline: 2px solid white;
     left: 50%;
-    transform: translateX(-50%);
+    outline: 2px solid white;
     box-shadow: 0 0 1rem black;
+    transform: translateX(-50%);
     transition: opacity 100ms ease-in;
 }
 
@@ -941,11 +942,6 @@ footer{
 .modal-cont .self
 {
     font-weight: 600;
-}
-
-.modal-cont .project-body
-{
-
 }
 
 .modal-cont .project-body .project-section

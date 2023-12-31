@@ -83,6 +83,19 @@ function handleSectionChange(entries, sectionIntersectionObserver)
 
 
 
+function updateElementPosition() {
+    let element = document.querySelector('body');
+    let leftElement = document.getElementById('back-to-top-btn');
+    let windowWidth = element.clientWidth;
+    let leftPosition = windowWidth/2;
+    leftElement.style.left = leftPosition + 'px';
+}
+
+// Run once and also on window resize
+updateElementPosition();
+window.onresize = updateElementPosition;
+
+
 const mainLogoObserver = new IntersectionObserver(handleLogoChangeToNavBar, {
     threshold: 0.5
 });
