@@ -1106,6 +1106,18 @@ footer{
     align-items: center;
     margin: 0;
 }
+
+.modal#cisco-modal,
+.modal-cont#cisco
+{
+    background-color: rgb(215, 240, 250);
+    color: black;
+}
+
+.modal-cont#cisco .project-body
+{
+    background-color: rgb(215, 240, 250);
+}
 /* End of Project Modals */
 /***************************************/
 /***************************************/
