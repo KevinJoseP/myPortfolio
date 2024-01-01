@@ -347,7 +347,6 @@ a
     margin: 0 0.3rem;
     text-align: center;
     font-family: var(--font-family-sans-condensed);
-    line-height: 0;
 }
 
 .title-cont
@@ -384,7 +383,7 @@ a
 {
     display: grid;
     grid-gap: 1rem;
-    width: clamp(22rem, 90vw, 90rem);
+    width: clamp(18rem, 90vw, 90rem);
     grid-template-columns: repeat(auto-fit, minmax(22rem, 25rem));
     justify-content: center;
     align-items: center;
@@ -547,6 +546,7 @@ a
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
     text-align: right;
+    color: rgb(213, 213, 213);
 }
 
 #experiences .position-date-cont
@@ -556,6 +556,7 @@ a
     font-size: 1rem;
     align-items: center;
     width: auto;
+    color: rgb(213, 213, 213);
 
 }
 
@@ -915,6 +916,18 @@ footer{
     font-family: var(--font-family-sans-condensed);
 }
 
+.modal-cont .grouping h3
+{
+    font-size: clamp(1.5rem, 10vw, 2.5rem);
+    color: rgb(228, 228, 228);
+}
+
+.modal-cont .grouping .team-cont div,
+.modal-cont .grouping .time div
+{
+    font-size: clamp(1rem, 10vw, 1.4rem);
+}
+
 .modal-cont .main-title h2
 {
     font-size: clamp(1.7rem, 1.5rem + 1vw, 3rem);
@@ -946,9 +959,9 @@ footer{
 
 .modal-cont .project-body .project-section
 {
-    max-width: 60vw;
+    width: clamp(18rem, calc(60vw), 100rem);
     color: white;
-    font-size: 1.5rem;
+    font-size: clamp(0.9rem, calc(0.5rem + 3vw), 1.5rem);
     font-family: var(--font-family-sans-serif-grotesque);
     text-align: center;
     margin: 3rem 0;
@@ -958,7 +971,7 @@ footer{
 {
     margin: 1rem;
     text-align: left;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, calc(1rem + 1vw), 3rem);
     color: rgb(124, 123, 123);
 }
 
@@ -1030,7 +1043,6 @@ footer{
     outline: solid 2px white;
     cursor: pointer;
     margin-top: 2rem;
-    line-height: 0;
     font-family: var(--font-family-sans);
     transition: transform 50ms linear;
 }
@@ -1227,6 +1239,7 @@ footer{
         width: 2rem;
     }
 
+
     .project-cont .project-inst img
     {
         width: 16rem;
@@ -1369,6 +1382,70 @@ footer{
     .modal-cont .main-title
     {
         width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-cont div.duane
+    {
+        flex-direction: column;
+    }
+
+    .modal-cont#eyefi .duane img
+    {
+        width: 100%;
+    }
+
+    .modal-cont .project-body .project-section
+    {
+        margin: 1.5rem 0;
+    }
+
+    .modal-cont#eyefi .research a img
+    {
+        width: 100%;
+    }
+
+    .modal-cont#eyefi .research ul
+    {
+        width: 100%;
+    }
+
+    .modal-cont#eyefi .research .research-grouping
+    {
+        flex-direction: column;
+    }
+
+    .modal-cont#eyefi .research .research-grouping img {
+        width: 100%;
+        height: auto;
+    }
+
+    .modal-cont#eyefi .solution img {
+        width: 100%;
+    }
+
+    .modal-cont#eyefi .solution .final-code-btn img 
+    {
+        width: 2rem;
+    }
+
+    .modal-cont .project-body .project-section h2 {
+    text-align: center;
+    }
+
+    .modal-cont#eyefi .project-body .project-section.gallery img
+    {
+        width: 100%;
+    }
+
+    .modal-cont#eyefi .final-code-btn div
+    {
+        font-size: 1rem;
+    }
+
+    .experience-cont {
+        gap: 3rem;
     }
 
 }
