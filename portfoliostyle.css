@@ -1123,6 +1123,20 @@ footer{
 {
     background-color: rgb(215, 240, 250);
 }
+
+.modal#hw-modal
+{
+    background-color: white;
+    background: url(./images/Projects/backgrounds/pattern.svg);
+    
+}
+
+.modal-cont#hardware
+{
+    background-color: white;
+    background: url(./images/Projects/backgrounds/pattern.svg);
+}
+
 /* End of Project Modals */
 /***************************************/
 /***************************************/
