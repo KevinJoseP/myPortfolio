@@ -1114,6 +1114,11 @@ footer{
     color: black;
 }
 
+.project-inst-anchor div[data-modal-id="tjd"] img
+{
+    background-color: rgb(235, 135, 135);
+}
+
 .modal-cont#cisco .project-body
 {
     background-color: rgb(215, 240, 250);
