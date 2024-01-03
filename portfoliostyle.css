@@ -921,19 +921,21 @@ footer{
 
 .modal-cont .grouping h3
 {
-    font-size: clamp(1.5rem, 10vw, 2.5rem);
+    font-size: clamp(1.5rem, 1.5rem + 1vw, 2.5rem);
     color: rgb(228, 228, 228);
 }
 
 .modal-cont .grouping .team-cont div,
-.modal-cont .grouping .time div
+.modal-cont .grouping .time div,
+.modal-cont .grouping .role-cont div,
+.modal-cont .grouping .tech div
 {
     font-size: clamp(1rem, 10vw, 1.4rem);
 }
 
 .modal-cont .main-title h2
 {
-    font-size: clamp(1.7rem, 1.5rem + 1vw, 3rem);
+    font-size: clamp(2rem, 1.5rem + 1vw, 4rem);
 }
 
 .modal-cont .project-body
@@ -1120,7 +1122,7 @@ footer{
 .modal#cisco-modal,
 .modal-cont#cisco
 {
-    background-color: rgb(215, 240, 250);
+    background-color: rgb(0, 0, 0);
     color: black;
 }
 
@@ -1131,7 +1133,38 @@ footer{
 
 .modal-cont#cisco .project-body
 {
-    background-color: rgb(215, 240, 250);
+    background-color: rgb(0, 0, 0);
+}
+
+.modal-cont#cisco .project-title
+{
+    background-image: url(./images/Projects/cisco/cisco.jpg);
+    width: clamp(20rem, 80vw, 100rem);
+    background-color: rgba(0, 0, 0, 0.519);
+    background-blend-mode: multiply;
+    background-position: top;
+    background-size: cover;
+}
+
+.modal-cont#cisco .grouping
+{
+    background: none;
+}
+
+.modal-cont#cisco .grouping h3
+{
+    font-size: clamp(1.5rem, calc(1.5rem + 1vw), 2.5rem);
+}
+
+.modal-cont#cisco ul
+{
+    text-align: left;
+}
+
+.modal-cont .main-title h2
+{
+    font-size: clamp(5rem, calc(3rem + 1vw), 8rem);
+    color: rgba(255, 255, 255, 0.755);
 }
 
 .modal#hw-modal
@@ -1159,6 +1192,8 @@ footer{
     padding: 6rem;
     min-height: fit-content;
 }
+
+
 
 .modal-cont#hardware .details
 {
@@ -1193,6 +1228,7 @@ footer{
 {
     font-family: var(--font-family-cursive);
     color: rgb(249, 237, 217);
+    margin-right: 0.7rem;
 }
 
 /* End of Project Modals */
