@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 html, body{
     font-size: 100%;
@@ -50,6 +50,7 @@ a
     --font-nav-control-elements: var(--font-family-sans-condensed);
     --font-family-sans-serif-grotesque: 'Darker Grotesque', sans-serif;
     --font-family-sans-nunito: 'Nunito Sans', sans-serif;
+    --font-family-cursive: 'Sacramento', cursive;
 }
 
 .display-none
@@ -905,15 +906,17 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    align-items:flex-start;
     gap: 2rem;
 }
 
 .modal-cont h3,
+.modal-cont h2,
 .modal-cont h1
 {
     margin-bottom: 0.5rem;
     font-family: var(--font-family-sans-condensed);
+    font-weight: 300;
 }
 
 .modal-cont .grouping h3
@@ -971,11 +974,12 @@ footer{
 {
     margin: 1rem;
     text-align: left;
-    font-size: clamp(1.5rem, calc(1rem + 1vw), 3rem);
+    font-size: clamp(2rem, calc(1rem + 5vw), 4rem);
     color: rgb(124, 123, 123);
 }
 
-.modal-cont#eyefi .project-body .project-section.gallery img
+.modal-cont#eyefi .project-body .project-section.gallery img,
+.modal-cont#hardware .project-body .project-section.gallery img
 {
     width: 60%;
 }
@@ -1032,7 +1036,8 @@ footer{
     padding: 1rem 0;
 }
 
-.modal-cont#eyefi .final-code-btn
+.modal-cont#eyefi .final-code-btn,
+.modal-cont#hardware .final-code-btn
 {
     display: flex;
     justify-content: center;
@@ -1047,22 +1052,27 @@ footer{
     transition: transform 50ms linear;
 }
 
-.modal-cont#eyefi .final-code-btn:hover
+.modal-cont#eyefi .final-code-btn:hover,
+.modal-cont#hardware .final-code-btn:hover
 {
-    background-color: rgb(56, 56, 56);
+    background-color: rgb(126, 83, 9);
 }
 
-.modal-cont#eyefi .final-code-btn:active
+.modal-cont#eyefi .final-code-btn:active,
+.modal-cont#hardware .final-code-btn:active
 {
     transform: scale(0.95);
 }
 
-.modal-cont#eyefi .final-code-btn div
+.modal-cont#eyefi .final-code-btn div,
+.modal-cont#hardware .final-code-btn div
 {
     color: white;
+    font-size: 1rem;
 }
 
-.modal-cont#eyefi .final-code-btn img
+.modal-cont#eyefi .final-code-btn img,
+.modal-cont#hardware .final-code-btn img
 {
     width: 2rem;
     margin-left: 0.5rem;
@@ -1137,6 +1147,52 @@ footer{
     background-color: rgba(9, 9, 9, 0.766);
     background-image: url(./images/Projects/backgrounds/waves.svg);
     background-blend-mode: multiply;
+}
+
+.modal-cont#hardware .project-title
+{
+    background-image: url(./images/Projects/hardware/Photos-001/hw1.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.554);
+    background-blend-mode: multiply;
+    align-items: flex-start;
+    padding: 6rem;
+    min-height: fit-content;
+}
+
+.modal-cont#hardware .details
+{
+    margin-top: 2rem;
+}
+
+.modal-cont#hardware h1
+{
+    color: rgb(236, 236, 236);
+}
+
+.modal-cont#hardware ul
+{
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-cont#hardware .project-body .project-section
+{
+    padding: 0 3rem;
+}
+
+.modal-cont#hardware .project-body .project-section.background
+{
+    text-align: left;
+}
+
+.modal-cont .title-cont .section-common-h2,
+.modal-cont#hardware .title-cont .section-common-h2
+{
+    font-family: var(--font-family-cursive);
+    color: rgb(249, 237, 217);
 }
 
 /* End of Project Modals */
@@ -1417,6 +1473,7 @@ footer{
         width: 100%;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .modal-cont div.duane
@@ -1458,7 +1515,8 @@ footer{
         width: 100%;
     }
 
-    .modal-cont#eyefi .solution .final-code-btn img 
+    .modal-cont#eyefi .solution .final-code-btn img,
+    .modal-cont#hardware .final-code-btn img
     {
         width: 2rem;
     }
@@ -1472,13 +1530,22 @@ footer{
         width: 100%;
     }
 
-    .modal-cont#eyefi .final-code-btn div
-    {
-        font-size: 1rem;
-    }
-
     .experience-cont {
         gap: 3rem;
+    }
+
+    .modal-cont#hardware .details
+    {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .modal-cont#hardware .project-title
+    {
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
     }
 
 }
