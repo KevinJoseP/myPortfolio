@@ -1126,15 +1126,17 @@ footer{
 
 .modal#hw-modal
 {
-    background-color: white;
-    background: url(./images/Projects/backgrounds/pattern.svg);
+    background-color: rgba(9, 9, 9, 0.766);
+    background-image: url(./images/Projects/backgrounds/waves.svg);
+    background-blend-mode: multiply;
     
 }
 
 .modal-cont#hardware
 {
-    background-color: white;
-    background: url(./images/Projects/backgrounds/pattern.svg);
+    background-color: rgba(9, 9, 9, 0.766);
+    background-image: url(./images/Projects/backgrounds/waves.svg);
+    background-blend-mode: multiply;
 }
 
 /* End of Project Modals */
