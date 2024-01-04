@@ -421,6 +421,7 @@ a
 {
     width: 20rem;
     height: 15rem;
+    margin-bottom: 0.5rem;
     transition: opacity 100ms ease-in;
     border: none;
     padding: none;
@@ -455,6 +456,7 @@ a
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
 .project-cont .project-inst .project-title
@@ -1379,6 +1381,7 @@ footer{
         height: fit-content;
         font-weight: 500;
         margin-top: 0.3rem;
+        margin-bottom: 0.5rem;
 
     }
 
@@ -1395,6 +1398,7 @@ footer{
     .project-cont .project-inst .project-title
     {
         margin-bottom: 0;
+        font-size: 1.2rem;
     }
 
     .title-cont
@@ -1582,6 +1586,31 @@ footer{
         padding: 2rem;
         justify-content: center;
         align-items: center;
+    }
+
+    .modal-cont .main-title h2
+    {
+        font-size: 2rem;
+        color: white;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .modal-cont#cisco .grouping h3
+    {
+        font-size: 2rem;
+    }
+
+    .modal-cont#cisco .grouping .role-cont div
+    {
+        font-size: 1.3rem;
+    }
+
+    .modal-cont#eyefi .grouping 
+    {
+        padding: 1rem;
     }
 
 }
