@@ -93,6 +93,7 @@ a
 #nav-bar-container.hero-page
 {
     justify-content: center;
+    align-items: center;
     padding: 0.5rem 0;
     background-color: var(--color-main-page-bg-color);
     transition: background-color 150ms ease-in;
@@ -348,7 +349,7 @@ a
     font-weight: 300;
     margin: 0 0.3rem;
     text-align: center;
-    font-family: var(--font-family-sans-condensed);
+    font-family: var(--font-family-sans-serif-3);
 }
 
 .title-cont
@@ -766,6 +767,7 @@ footer{
 {
     display: none;
     position:fixed;
+    overflow: hidden;
     top: 0;
     left: 0;
     right: 0;
@@ -974,7 +976,7 @@ footer{
 .modal-cont .project-body .project-section h2
 {
     margin: 1rem;
-    text-align: left;
+    text-align: center;
     font-size: clamp(2rem, calc(1rem + 5vw), 4rem);
     color: rgb(124, 123, 123);
     font-family: var(--font-family-sans-serif-3);
@@ -1039,7 +1041,7 @@ footer{
     padding: 1rem 0;
 }
 
-.modal-cont#eyefi .final-code-btn,
+.modal-cont .final-code-btn,
 .modal-cont#hardware .final-code-btn
 {
     display: flex;
@@ -1055,26 +1057,26 @@ footer{
     transition: transform 50ms linear;
 }
 
-.modal-cont#eyefi .final-code-btn:hover,
+.modal-cont .final-code-btn:hover,
 .modal-cont#hardware .final-code-btn:hover
 {
     background-color: rgb(126, 83, 9);
 }
 
-.modal-cont#eyefi .final-code-btn:active,
+.modal-cont .final-code-btn:active,
 .modal-cont#hardware .final-code-btn:active
 {
     transform: scale(0.95);
 }
 
-.modal-cont#eyefi .final-code-btn div,
+.modal-cont .final-code-btn div,
 .modal-cont#hardware .final-code-btn div
 {
     color: white;
     font-size: 1rem;
 }
 
-.modal-cont#eyefi .final-code-btn img,
+.modal-cont .final-code-btn img,
 .modal-cont#hardware .final-code-btn img
 {
     width: 2rem;
@@ -1197,10 +1199,11 @@ footer{
 
 .modal-cont#aiml .project-body.project1
 {
-    background-color: rgb(144, 99, 99);
+    background-color: rgb(162, 111, 111);
 }
 
-.modal-cont#aiml .project-body.project1 img
+.modal-cont#aiml .project-body.project1 img,
+.modal-cont#aiml .project-body.project2 img
 {
     width: 100%;
 }
@@ -1209,16 +1212,49 @@ footer{
 {
     text-align: left;
     list-style: none;
+    padding-inline: 1rem;
+}
+
+.modal-cont#aiml .project-body.project1 .project1-end
+{
+    margin-bottom: 3rem;
 }
 
 .modal-cont#aiml .project-body.project2
 {
-    background-color: rgb(187, 152, 152);
+    background-color: rgb(103, 47, 47);
+}
+
+.modal-cont#aiml .project-body.project2 ul
+{
+    text-align: left;
 }
 
 .modal-cont#aiml .project-body .project-section h2
 {
-    color: rgb(169, 169, 169);
+    color: rgb(214, 213, 213);
+
+}
+
+.modal-cont#aiml .project-body .project-section .title
+{
+    margin-bottom: 3rem;
+}
+
+.modal-cont#aiml .project-body .project-section .title h2
+{
+    font-size: 1rem;
+}
+
+.modal-cont#aiml .project-body .project-section .title h3
+{
+    color: rgb(214, 213, 213);
+    font-size: 1rem;
+}
+
+.modal-cont#aiml .project-body .project-section h3
+{
+    color: rgb(214, 213, 213);
 }
 
 .modal-cont .main-title h2
@@ -1599,7 +1635,7 @@ footer{
 
     .modal-cont#eyefi .research ul
     {
-        width: 100%;
+        width: 90%;
     }
 
     .modal-cont#eyefi .research .research-grouping
@@ -1623,7 +1659,8 @@ footer{
     }
 
     .modal-cont .project-body .project-section h2 {
-    text-align: center;
+        font-size: 1.5rem;
+        margin: 1rem 0;
     }
 
     .modal-cont#eyefi .project-body .project-section.gallery img
@@ -1672,6 +1709,12 @@ footer{
     .modal-cont#eyefi .grouping 
     {
         padding: 1rem;
+    }
+
+    .modal-cont#aiml .project-body.project1 ul
+    {
+        text-align: left;
+        list-style: circle;
     }
 
 }
