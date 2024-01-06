@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
+
+:root
+{
+    --color-text-main: #563524;
+    --color-text-dark-brown: #90553C;
+    --color-clay: #877863;
+    --color-main-page-bg-color:rgb(253, 250, 242);
+    --font-family-serif: 'Cormorant Garamond', serif;
+    --font-family-sans: 'Fira Sans', sans-serif;
+    --font-family-sans-condensed: 'Fira Sans Condensed', sans-serif;
+    --font-nav-control-elements: var(--font-family-sans-condensed);
+    --font-family-sans-serif-grotesque: 'Darker Grotesque', sans-serif;
+    --font-family-sans-nunito: 'Nunito Sans', sans-serif;
+    --font-family-cursive: 'Sacramento', cursive;
+    --font-family-sans-serif-3: 'Montserrat', sans-serif;
+}
+
+#nav-bar-container.about-page
+{
+    background-color: #C39F97;
+}
+
+#nav-bar-container.about-page .nav-link
+{
+    color: white;
+}
+
+.about-page.desktop .hero-logo
+{
+    filter: invert();
+}
+
+#welcome-section.about-page .hero-cont img
+{
+    width: clamp(15rem, calc(10rem + 10vw), 30rem);
+    height: clamp(15rem, calc(10rem + 10vw), 30rem);
+    object-fit: cover;
+    border-radius: 50%;
+    outline: solid 4px #C39F97;
+
+}
+
+#welcome-section.about-page .hero-cont
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#welcome-section.about-page .hero-cont div
+{
+    font-size: 2rem;
+    font-family: var(--font-family-sans-serif-3);
+    color: #C39F97;
+    margin-top: 2rem;
+}
+
+#welcome-section.about-page .hero-cont div span
+{
+    color: #563524;
+}
+
+#welcome-section.about-page .title-cont .decor-line
+{
+    background-color: #C39F97;
+}
+
+#welcome-section.about-page .title-cont h2
+{
+    color: #C39F97;
+}
