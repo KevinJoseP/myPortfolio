@@ -1424,6 +1424,11 @@ footer{
         background-color: var(--color-main-page-bg-color);
     }
 
+    .project-cont .project-inst:hover img
+    {
+        display: block;
+    }
+
     .mobile-header.display-none
     {
         display: none;
