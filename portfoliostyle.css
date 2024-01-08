@@ -102,7 +102,7 @@ a
 #navbar{
     display: flex;
     justify-content: space-around;
-    width: clamp(20rem, 40vw, 30rem);
+    /* width: clamp(20rem, 40vw, 30rem); */
     margin-right: 1rem;
 }
 
@@ -1349,6 +1349,25 @@ footer{
     width: 100%;
 }
 
+.modal-cont#quiclick .title-cont-group .main-title h2
+{
+    color: black;
+    font-family: var(--font-family-sans-condensed);
+    font-weight: 300;
+}
+
+.modal-cont#quiclick .title-cont-group
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 0;
+    background-color: white;
+    color: rgb(87, 87, 87);
+    font-family: var(--font-family-sans);
+    
+}
+
 /* End of Project Modals */
 /***************************************/
 /***************************************/
@@ -1743,6 +1762,28 @@ footer{
         list-style: circle;
     }
 
+    .modal-cont#quiclick .title-cont-group
+    {
+        flex-direction: column;
+    }
+
+    .modal-cont#quiclick .title-cont-group
+    {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .modal-cont#quiclick .title-cont-group .details
+    {
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .modal-cont#quiclick .project-title
+    {
+        min-height: fit-content;
+    }
 }
 
 /* Ending of media query styles */
