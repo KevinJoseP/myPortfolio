@@ -419,7 +419,9 @@ a
 
 
 
-.project-cont .project-inst img
+.project-cont .project-inst img,
+video#quiclickThumbVideo,
+#quiclickThumbVideo source
 {
     width: 20rem;
     height: 15rem;
@@ -433,7 +435,9 @@ a
     background-color: #858383;
 }
 
-.project-cont .project-inst:hover img
+.project-cont .project-inst:hover img,
+.project-cont .project-inst:hover video#quiclickThumbVideo,
+.project-cont .project-inst:hover #quiclickThumbVideo source
 {
     display: none;
 
@@ -1330,6 +1334,21 @@ footer{
     margin-right: 0.7rem;
 }
 
+.modal#quiclick-modal
+{
+    background-color: white;
+}
+
+.modal-cont#quiclick
+{
+    background-color: white;
+}
+
+.modal-cont#quiclick #quiclickVideo
+{
+    width: 100%;
+}
+
 /* End of Project Modals */
 /***************************************/
 /***************************************/
@@ -1469,7 +1488,9 @@ footer{
     }
 
 
-    .project-cont .project-inst img
+    .project-cont .project-inst img,
+    video#quiclickThumbVideo,
+    #quiclickThumbVideo source
     {
         width: 16rem;
         height: 12rem;
