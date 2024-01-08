@@ -37,7 +37,12 @@
     filter: invert();
 }
 
-#welcome-section.about-page .hero-cont img
+#welcome-section.about-page
+{
+    gap: 0;
+}
+
+#welcome-section.about-page img.hero
 {
     width: clamp(15rem, calc(10rem + 10vw), 30rem);
     height: clamp(15rem, calc(10rem + 10vw), 30rem);
@@ -47,15 +52,8 @@
 
 }
 
-#welcome-section.about-page .hero-cont
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
 
-#welcome-section.about-page .hero-cont div
+#welcome-section.about-page div.hero
 {
     font-size: 2rem;
     font-family: var(--font-family-sans-serif-3);
@@ -63,7 +61,12 @@
     margin-top: 2rem;
 }
 
-#welcome-section.about-page .hero-cont div span
+#welcome-section.about-page .hero-descr
+{
+    color: #816a64;
+}
+
+#welcome-section.about-page div.hero span
 {
     color: #563524;
 }
