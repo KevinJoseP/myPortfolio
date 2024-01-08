@@ -1364,9 +1364,32 @@ footer{
     padding: 5rem 0;
     background-color: white;
     color: rgb(87, 87, 87);
-    font-family: var(--font-family-sans);
+    gap: 1rem;
+    font-family: var(--font-family-sans-serif-3);
     
 }
+
+.modal-cont#quiclick .project-title
+{
+    min-height: fit-content;
+}
+
+.modal-cont#quiclick .project-title .title-cont-group .details .team-cont div
+{
+    font-family: var(--font-family-sans-serif-3);
+}
+
+.modal-cont#quiclick .project-title .title-cont-group h2,
+.modal-cont#quiclick .project-title .title-cont-group h3
+{
+    color: rgb(167, 167, 167);
+}
+
+.modal-cont#quiclick .project-title .title-cont-group h1
+{
+    font-family: var(--font-family-sans-serif-3);
+}
+
 
 /* End of Project Modals */
 /***************************************/

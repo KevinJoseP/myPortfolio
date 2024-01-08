@@ -117,7 +117,7 @@ const sectionIntersectionObserver = new IntersectionObserver(handleSectionChange
  threshold: 0.2
 });
 
-sections.forEach(section => sectionIntersectionObserver.observe(section));
+//sections.forEach(section => sectionIntersectionObserver.observe(section));
 
 
 projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
