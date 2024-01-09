@@ -1453,6 +1453,20 @@ footer{
     margin: 0.5rem 0;
 }
 
+.modal-cont#art .works img.logo
+{
+    width: 50%;
+}
+
+.modal-cont#art .art-inst
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
 
 /* End of Project Modals */
 /***************************************/
@@ -1869,6 +1883,11 @@ footer{
     .modal-cont#quiclick .project-title
     {
         min-height: fit-content;
+    }
+
+    .modal-cont#art .works img.logo
+    {
+        width: 95%;
     }
 }
 
