@@ -1111,7 +1111,7 @@ footer h5
 .modal-cont#tjd .project-title
 {
     flex-direction: column;
-    background-image: url(./images/Projects/TJ_branding/20210407_103731\ \(2\).jpg);
+    background-image: url(./images/Projects/TJ_branding/tj_bg.jpg);
     background-color: rgba(0, 0, 0, 0.561);
     background-blend-mode: multiply;
     background-position: top;
@@ -1166,6 +1166,20 @@ footer h5
 {
     width: 100%;
     margin: 1rem 0;
+}
+
+.modal-cont#tjd .img-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-cont#tjd .img-cont img
+{
+    width: 40%;
+    aspect-ratio: 1/1;
 }
 
 
