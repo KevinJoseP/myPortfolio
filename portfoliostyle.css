@@ -422,9 +422,7 @@ a
 
 
 
-.project-cont .project-inst img,
-video#quiclickThumbVideo,
-#quiclickThumbVideo source
+.project-cont .project-inst img
 {
     width: 20rem;
     height: 15rem;
@@ -438,9 +436,7 @@ video#quiclickThumbVideo,
     background-color: #858383;
 }
 
-.project-cont .project-inst:hover img,
-.project-cont .project-inst:hover video#quiclickThumbVideo,
-.project-cont .project-inst:hover #quiclickThumbVideo source
+.project-cont .project-inst:hover img
 {
     display: none;
 
@@ -700,6 +696,11 @@ footer{
     align-items: center;
     justify-content: center;
     padding: 1rem 0 4rem 0;
+}
+
+footer h4
+{
+    margin-block-end: 0;
 }
 
 .social-media-profile{
@@ -1796,9 +1797,7 @@ footer{
     }
 
 
-    .project-cont .project-inst img,
-    video#quiclickThumbVideo,
-    #quiclickThumbVideo source
+    .project-cont .project-inst img
     {
         width: 16rem;
         height: 12rem;
