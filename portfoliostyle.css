@@ -1162,7 +1162,7 @@ footer h5
     text-align: left;
 }
 
-.modal-cont#tjd #tjVideo
+.modal-cont#tjd .tjVideo
 {
     width: 100%;
     margin: 1rem 0;
