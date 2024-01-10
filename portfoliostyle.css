@@ -1468,6 +1468,195 @@ footer{
     margin: 2rem 0;
 }
 
+.modal-cont#jee,
+.modal#jee-modal
+{
+    background-color: white;
+}
+
+.modal-cont#jee .main-section
+{
+    min-height: 100vh;
+    font-family: var(--font-family-sans-serif-sans);
+    font-size: 1.5rem;
+    color: black;
+}
+
+.modal-cont#jee .title-class
+{
+    min-height: 100vh;
+    background-image: url(./images/Projects/jee/images/iitg_hostel.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.527);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    background-position: center;
+    flex-direction: column;
+}
+
+.modal-cont#jee .title-grouping
+{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+    margin-right: 5rem;
+    gap: 1rem;
+    color: white;
+}
+
+.modal-cont#jee .article-title
+{
+    width: min-content;
+    font-size: clamp(2.3rem, 8vw, 8rem);
+    line-height: 0.75;
+    text-align: right;
+
+}
+
+.modal-cont#jee .content-cont
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+.modal-cont#jee .content
+{
+    color: black;
+    width: 60vw;
+    text-align: left;
+    font-size: clamp(1rem, 1rem + 0.36vw, 2rem);
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem 3rem;
+}
+
+.modal-cont#jee a
+{
+    color: var(--font-color-main);
+}
+
+.modal-cont#jee h2, h3
+{
+    text-align: left;
+}
+
+.modal-cont#jee h2
+{
+    font-size: 2em;
+}
+
+.modal-cont#jee h3{
+    font-size: 1.3em;
+}
+
+.modal-cont#jee .first-letter
+{
+    font-size: 2em;
+}
+
+.modal-cont#jee .thank-you
+{
+    font-size: 2em;
+    color: black;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+.modal-cont#jee .grouping-floating
+{
+    display: flex;
+    width: fit-content;
+    background-color: rgb(70, 70, 70);
+    border-radius: 50px;
+    box-shadow: 0 0 10rem black;
+    outline: solid 2px white;
+}
+
+/* main section styling end */
+.modal-cont#jee .bottom-floating-panel
+{
+    color: black;
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 2000;
+
+}
+
+.modal-cont#jee .floating-panel-options
+{
+    margin: clamp(0.3rem, 8vw, 1rem) clamp(1.2rem, 8vw, 2rem);
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 100ms ease-in;
+    font-size: clamp(0.7rem, 0.5rem + 0.3vw, 1rem);
+    font-family: var(--font-family-sans-condensed);
+}
+
+.modal-cont#jee .floating-panel-options:hover
+{
+    transform: scale(1.1);
+}
+
+.modal-cont#jee .content b
+{
+    font-size: 1.2em;
+}
+
+.modal-cont#jee .option-logo
+{
+    filter: invert();
+    width: clamp(1rem, 1rem + 0.5vw, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.modal-cont#jee .article.image-cont.jee
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin: clamp (1rem, 3vw, 2rem);
+}
+
+.modal-cont#jee .article.image-cont.jee img
+{
+    width: clamp(15rem, 40vw, 50rem);
+}
+
+.modal-cont#jee .article.image-cont.jee .img-caption
+{
+    width: clamp(15rem, 40vw, 50rem);
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: center;
+}
+
+.modal-cont#jee .option-text
+{
+    text-align: center;
+}
+
+
 /* End of Project Modals */
 /***************************************/
 /***************************************/
@@ -1888,6 +2077,36 @@ footer{
     .modal-cont#art .works img.logo
     {
         width: 95%;
+    }
+
+    .modal-cont#jee .title-grouping
+    {
+        align-items:center;
+        margin: 0;
+    }
+
+    .modal-cont#jee .article-title
+    {
+        text-align: center;
+        line-height: 0.85;
+        width: 80vw;
+    }
+    .modal-cont#jee .title-class
+    {
+        align-items: center;
+    }
+    .modal-cont#jee .content
+    {
+        padding: 3rem 0;
+        width: 85vw;
+    }
+    .modal-cont#jee .option-text
+    {
+        display: none;
+    }
+    .modal-cont#jee .option-logo
+    {
+        margin-bottom: 0;
     }
 }
 
