@@ -71,6 +71,11 @@
     color: #563524;
 }
 
+#welcome-section.about-page .title-cont
+{
+    margin-top: 5rem;
+}
+
 #welcome-section.about-page .title-cont .decor-line
 {
     background-color: #C39F97;
@@ -79,4 +84,50 @@
 #welcome-section.about-page .title-cont h2
 {
     color: #C39F97;
+}
+
+#welcome-section.about-page .resume
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+#welcome-section.about-page .resume div
+{
+    padding: 0.5rem 0.7rem;
+    background-color: #ab8b84;
+    width: fit-content;
+    color: white;
+    border-radius: 10px;
+    outline: solid 2px white;
+    box-shadow: 0 0 20px black;
+    transition: background-color 150ms ease-in;
+}
+
+#welcome-section.about-page .resume div:hover
+{
+    background-color: #8e726c;
+}
+
+#contacts.about-me
+{
+    background-color: #C39F97;;
+}
+
+#contacts.about-me h2
+{
+    color: rgba(255, 255, 255, 0.758);
+}
+
+#contacts.about-me .decor-line
+{
+    background-color: white;
+}
+
+#contacts.about-me .grouping .descr
+{
+    color: white;
 }
