@@ -1108,31 +1108,31 @@ footer h5
 
 /* Tj styles */
 
-.modal-cont#tjd .project-title>img
-{
-    width: 80vw;
-    margin: 1rem;
-    margin-bottom: 0;
-    text-shadow: 0 0 1rem white;
-}
-
 .modal-cont#tjd .project-title
 {
-    flex-direction: column-reverse;
+    flex-direction: column;
+    background-image: url(./images/Projects/TJ_branding/20210407_103731\ \(2\).jpg);
+    background-color: rgba(0, 0, 0, 0.561);
+    background-blend-mode: multiply;
+    background-position: top;
+    background-size: cover;
 }
 
 .modal-cont#tjd .main-title
 {
+    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .modal-cont#tjd .grouping
 {
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 1rem;
+    background: none;
 }
 
 .modal-cont#tjd .grouping h1,
@@ -1142,6 +1142,32 @@ footer h5
     align-items: center;
     margin: 0;
 }
+
+.modal-cont#tjd .grouping img
+{
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.modal-cont#tjd .main-title .hero
+{
+    font-size: clamp(2rem, calc(1.5rem + 1vw), 5rem);
+    font-family: var(--font-family-sans-serif-3);
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.modal-cont#tjd ul
+{
+    text-align: left;
+}
+
+.modal-cont#tjd #tjVideo
+{
+    width: 100%;
+    margin: 1rem 0;
+}
+
 
 .modal#cisco-modal,
 .modal-cont#cisco
@@ -1689,6 +1715,8 @@ footer h5
 {
     text-align: center;
 }
+
+
 
 
 /* End of Project Modals */
