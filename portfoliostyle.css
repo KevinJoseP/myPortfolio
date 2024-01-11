@@ -448,9 +448,10 @@ a
 .project-cont .project-inst .project-descr
 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: var(--font-family-sans-serif-grotesque);
-    color: rgba(110, 110, 110, 0.787);
+    color: rgba(110, 110, 110, 0.938);
+    line-height: 1.6;
     display: none;
     width: 20rem;
     height: 15rem;
@@ -982,8 +983,9 @@ footer h5
 {
     width: clamp(18rem, calc(60vw), 100rem);
     color: white;
-    font-size: clamp(0.9rem, calc(0.5rem + 3vw), 1.5rem);
-    font-family: var(--font-family-sans-serif-grotesque);
+    font-size: 14px;
+    line-height: 1.75;
+    font-family: var(--font-family-sans-serif-3);
     text-align: center;
     margin: 3rem 0;
 }
@@ -1111,11 +1113,7 @@ footer h5
 .modal-cont#tjd .project-title
 {
     flex-direction: column;
-    background-image: url(./images/Projects/TJ_branding/tj_bg.jpg);
     background-color: rgba(0, 0, 0, 0.561);
-    background-blend-mode: multiply;
-    background-position: top;
-    background-size: cover;
 }
 
 .modal-cont#tjd .main-title
@@ -1186,6 +1184,8 @@ footer h5
 {
     padding: 2rem;
 }
+
+
 
 .modal-cont#tjd .main-img
 {
@@ -1383,6 +1383,7 @@ footer h5
 .modal-cont#aiml .project-body .project-section h3
 {
     color: rgb(214, 213, 213);
+    text-align: center;
 }
 
 .modal-cont .main-title h2
@@ -1409,7 +1410,8 @@ footer h5
     background-blend-mode: multiply;
 }
 
-.modal-cont .main-title h2
+.modal-cont#hardware .main-title h2,
+.modal-cont#tjd .main-title h2
 {
     font-size: clamp(1rem, calc(0.5rem + 1vw), 2rem);
     font-family: var(--font-family-sans-serif-grotesque);
