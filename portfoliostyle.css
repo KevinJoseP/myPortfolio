@@ -1190,7 +1190,64 @@ footer h5
 .modal-cont#tjd .main-img
 {
     height: 60vh;
-    margin-bottom: 4rem;
+}
+.modal-cont#tjd .project-body .project-section h2
+{
+    color: rgb(149, 82, 82);
+}
+.modal-cont#tjd .project-body .project-section h3
+{
+    margin: 1rem;
+    margin-top: 5rem;
+    text-align: center;
+    font-size: clamp(1.3rem, calc(1rem + 5vw), 2rem);
+    color: rgb(163, 158, 158);
+    font-family: var(--font-family-sans-serif-3);
+    font-weight: 400;
+}
+
+.modal-cont#tjd .website img
+{
+    width: 100%;
+}
+
+.modal-cont#tjd .website .website-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-cont#tjd .final-website-btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: fit-content;
+}
+
+.modal-cont#tjd .final-website-btn div
+{
+    width: fit-content;
+    padding: 0.5rem;
+    background-color: #7e4e36;
+    color: white;
+    border-radius: 10px;
+    outline: solid 2px white;
+    transition: background-color 150ms ease;
+}
+
+.modal-cont#tjd .final-website-btn div
+{
+    background-color: #563524;
+}
+
+.modal-cont#tjd .branding.project-section img.branding
+{
+    max-width: 80%;
+    margin-bottom: 2rem;
 }
 
 .modal#cisco-modal,
