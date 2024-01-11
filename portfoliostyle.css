@@ -1182,6 +1182,16 @@ footer h5
     aspect-ratio: 1/1;
 }
 
+.modal-cont#tjd .project-section
+{
+    padding: 2rem;
+}
+
+.modal-cont#tjd .main-img
+{
+    height: 60vh;
+    margin-bottom: 4rem;
+}
 
 .modal#cisco-modal,
 .modal-cont#cisco
