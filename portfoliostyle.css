@@ -1380,6 +1380,7 @@ footer h5
     font-size: 1rem;
 }
 
+
 .modal-cont#aiml .project-body .project-section h3
 {
     color: rgb(214, 213, 213);
@@ -1534,6 +1535,31 @@ footer h5
 .modal-cont#quiclick .project-title .title-cont-group h1
 {
     font-family: var(--font-family-sans-serif-3);
+}
+
+.modal-cont#quiclick .project-body
+{
+    background-color: white;
+    color: black;
+}
+
+.modal-cont#quiclick .project-body .project-section
+{
+    color: black;
+    text-align: left;
+}
+.modal-cont#quiclick .project-body .project-section .content
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.modal-cont#quiclick .project-body .project-section h3
+{
+    text-align: left;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
 }
 
 .modal-cont#art,
