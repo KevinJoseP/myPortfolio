@@ -76,6 +76,46 @@
     margin-top: 5rem;
 }
 
+#welcome-section.about-page .hero-descr.about-me h3
+{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    margin-top: 3rem;
+}
+
+#welcome-section.about-page .hero-descr.about-me .about-img-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#welcome-section.about-page .hero-descr.about-me .about-img-cont img
+{
+    height: 10rem;
+    outline: solid 3px #000000;
+    margin-top: 3px;
+}
+
+#welcome-section.about-page .hero-descr.about-me div.img-caption
+{
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.3rem 0 2rem 0;
+}
+
+
+#welcome-section.about-page .hero-descr.about-me p
+{
+    text-align: center;
+    margin: 0 0 1.2rem;
+    font-size: 1.3rem;
+}
+
 #welcome-section.about-page .title-cont .decor-line
 {
     background-color: #C39F97;
