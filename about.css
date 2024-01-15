@@ -82,6 +82,15 @@
     margin-bottom: 1rem;
     font-weight: 500;
     margin-top: 3rem;
+    color: #C39F97;
+}
+
+#welcome-section.about-page .hero-descr.about-me h2
+{
+    color: #C39F97;
+    font-family: var(--font-family-sans-serif-3);
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 #welcome-section.about-page .hero-descr.about-me .about-img-cont
