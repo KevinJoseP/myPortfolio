@@ -1264,6 +1264,11 @@ footer h5
     background-color: rgb(235, 135, 135);
 }
 
+.project-inst-anchor div[data-modal-id="quiclick"] img
+{
+    background-color: rgb(110, 145, 221);
+}
+
 .modal-cont#cisco .project-body
 {
     background-color: rgb(0, 0, 0);
