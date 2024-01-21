@@ -981,13 +981,15 @@ footer h5
 
 .modal-cont .project-body .project-section
 {
-    width: clamp(18rem, calc(60vw), 100rem);
+    width: clamp(18rem, 60vw, 80rem);
     color: white;
     font-size: 14px;
     line-height: 1.75;
     font-family: var(--font-family-sans-serif-3);
     text-align: center;
     margin: 3rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .modal-cont .project-body .project-section h2
@@ -1481,12 +1483,14 @@ footer h5
     margin-right: 0.7rem;
 }
 
-.modal#quiclick-modal
+.modal#quiclick-modal,
+.modal#healthcare-modal
 {
     background-color: white;
 }
 
-.modal-cont#quiclick
+.modal-cont#quiclick,
+.modal-cont#healthcare
 {
     background-color: white;
 }
@@ -1537,7 +1541,8 @@ footer h5
     font-family: var(--font-family-sans-serif-3);
 }
 
-.modal-cont#quiclick .project-body
+.modal-cont#quiclick .project-body,
+.modal-cont#healthcare .project-body
 {
     background-color: white;
     color: black;
@@ -1863,7 +1868,46 @@ footer h5
     text-align: center;
 }
 
+.modal-cont#healthcare .project-section img
+{
+    width: 100%;
+    box-shadow: 0 0 10px black;
+    border-radius: 19px;
+    margin: 1rem 0;
+}
 
+.modal-cont#healthcare .project-body p,
+.modal-cont#healthcare .project-body
+{
+    color: black;
+}
+
+.modal-cont#healthcare .project-body .problem h1
+{
+    font-size: 2rem;
+    color: black;
+}
+
+.modal-cont#healthcare .project-body .problem h2
+{
+    font-size: 1rem;
+}
+
+.modal-cont#healthcare .project-body .problem
+{
+    margin: 3rem 0;
+}
+
+.modal-cont#healthcare .project-title
+{
+    background-image: url(./images/Projects/healthcare/hospital.jpg);
+    background-color: rgba(0, 0, 0, 0.519);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+
+}
 
 
 
