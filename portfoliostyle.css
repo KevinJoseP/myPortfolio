@@ -1914,6 +1914,12 @@ footer h5
 
 }
 
+.modal-cont#healthcare .project-section .problem ul
+{
+    color: black;
+    text-align: left;
+}
+
 
 
 /* End of Project Modals */
