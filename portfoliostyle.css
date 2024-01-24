@@ -1915,8 +1915,6 @@ footer h5
 .modal-cont#healthcare .project-section img
 {
     width: 100%;
-    box-shadow: 0 0 10px black;
-    border-radius: 23px;
     margin: 1rem 0;
 }
 
