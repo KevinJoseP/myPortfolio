@@ -1301,6 +1301,26 @@ footer h5
     text-align: left;
 }
 
+.modal-cont#cisco .gallery .cisco-cont
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.modal-cont#cisco .gallery .cisco-cont a
+{
+    width: fit-content;
+}
+
+.modal-cont#cisco .gallery .cisco-cont img
+{
+    max-height: 40vh;
+}
+
+
 .modal-cont#aiml .project-title
 {
     background-image: url(./images/Projects/backgrounds/ai_bg.png);
