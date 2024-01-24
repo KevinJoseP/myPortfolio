@@ -1074,7 +1074,7 @@ footer h5
     align-items: center;
     background-color: #74927e;
     border-radius: 20px;
-    padding: 0.5rem;
+    padding: 0.5rem 0.8rem;
     outline: solid 2px white;
     cursor: pointer;
     margin-top: 2rem;
@@ -1518,6 +1518,25 @@ footer h5
 .modal-cont#healthcare
 {
     background-color: white;
+}
+
+.modal-cont#healthcare .summary.project-section
+{
+    background-color: rgb(5, 43, 69);
+    padding: 0 2rem 2rem 3rem;
+    border-radius: 30px;
+}
+
+.modal-cont#healthcare .summary ul
+{
+    color: rgb(72, 169, 179);
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.modal-cont#healthcare .summary li
+{
+    margin: 1rem 0;
 }
 
 .modal-cont#quiclick #quiclickVideo
