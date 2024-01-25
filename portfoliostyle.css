@@ -986,8 +986,8 @@ footer h5
     font-size: 14px;
     line-height: 1.75;
     font-family: var(--font-family-sans-serif-3);
-    text-align: center;
-    margin: 3rem 0;
+    text-align: left;
+    margin: 1rem 0;
     padding-left: 2rem;
     padding-right: 2rem;
 }
@@ -1914,9 +1914,11 @@ footer h5
 
 .modal-cont#healthcare .project-section img
 {
-    width: 100%;
+    max-width: 100%;
+    max-height: 50vh;
     margin: 1rem 0;
 }
+
 
 .modal-cont#healthcare .project-body p,
 .modal-cont#healthcare .project-body
@@ -1928,6 +1930,7 @@ footer h5
 {
     font-size: 2rem;
     color: black;
+    text-align: center;
 }
 
 .modal-cont#healthcare .project-body .problem h2
@@ -1966,12 +1969,40 @@ footer h5
     flex-direction: column;
     list-style: none;
     align-items: center;
+    padding-left: 0;
+}
+
+.modal-cont#healthcare .thanks.project-section p
+{
+    width: clamp(20rem, 95%, 100rem);
 }
 
 .modal-cont#healthcare .thanks.project-section ul.thanks li
 {
     text-align: left;
 }
+
+.modal-cont#healthcare .project-section h3
+{
+    color: black;
+    margin-bottom: 0;
+    text-align: left;
+    margin-left:0;
+    padding-left: 0;
+    width: 100%;
+}
+
+.modal-cont#healthcare .project-section ul.problem-summary
+{
+    padding-left: 0;
+}
+
+.modal-cont#healthcare .project-section ul.problem-summary li
+{
+    list-style:decimal;
+    color: black;
+}
+
 
 
 
