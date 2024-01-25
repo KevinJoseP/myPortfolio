@@ -1950,10 +1950,26 @@ footer h5
     height: fit-content;
 
 }
-
+.modal-cont#healthcare .section-common-h2
+{
+    color: burlywood;
+}
 .modal-cont#healthcare .project-section .problem ul
 {
     color: black;
+    text-align: left;
+}
+.modal-cont#healthcare .thanks.project-section ul.thanks
+{
+    color: var(--color-text-dark-brown);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+}
+
+.modal-cont#healthcare .thanks.project-section ul.thanks li
+{
     text-align: left;
 }
 
