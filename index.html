@@ -1079,12 +1079,80 @@ My responsibilities also encompassed managing Cisco's proprietary ACI Python SDK
                             </div>
                         </div>
                     </div>
-                    <div class="research flex-center-center flex-column project-section">
+                    <div class="final flex-center-center flex-column project-section">
                         <h2>PROTOTYPING</h2>
                         <div class="content">
                             <div class="sub-grouping">
                                 <h3>WIREFRAMES</h3>
                                 <img loading="lazy"  src="./images/Projects/quiclick/wireframe.png" alt="initial wireframes">
+                            </div>
+                            <div class="sub-grouping hifi">
+                                <h3>HIGH FIDELITY PROTOTYPES</h3>
+                                <div class="hifi-grouping">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype1.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>Welcome Screen:</strong> This is a simple welcome screen that offers an overview of the app's purpose and displays the 'Quiclick' logo. Considering the app's straightforward nature, I decided against including any guided tours or animations to explain its functionality.</p>
+                                        <p><strong>Login Screen:</strong> Leveraging the versatility of Auth0, I've enabled users to log in using their email and password or through popular third-party services like Google and Facebook. This approach not only simplifies the login process but also aligns with Auth0's robust security and user authentication practices, ensuring a seamless and secure user experience.</p>
+                                    </div>
+                                </div>
+                                <div class="hifi-grouping invert">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype4.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>Face Registration:</strong> This step is essential for ensuring security. Users are required to take a live selfie, which is used for facial recognition within photos taken by others at the event. The inclusion of an oval guide helps ensure the user's entire face is accurately captured.</p>
+                                    </div>
+                                </div>
+                                <div class="hifi-grouping">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype2.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>Home Screen:</strong> This is the home screen of the App. Its very simple and intuitive. Users have 4 options from here.</p>
+                                        <ul>
+                                            <li><strong>Join Event: </strong>Join any event, created by anyone through this.</li>
+                                            <li><strong>Create Event: </strong>Users can create/host their own events. They can customise the event with photo, title, location, date and time.</li>
+                                            <li><strong>My Events: </strong>This section displays all events the user has participated in, including those they have hosted or are currently hosting, as well as events they have joined that were hosted by others.</li>
+                                            <li><strong>Saved Photos: </strong>These are the photos from various events the user has saved. It also contains photos taken by the user.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="hifi-grouping invert">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype3.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>Joining the Event:</strong> The exclusive method for participating in a live event is by scanning a QR code, which is provided at the event's venue. This approach introduces a level of security, preventing individuals not associated with the event from joining. Enhancing this security could involve implementing geofencing-like technologies, requiring users to be near the venue. Alternatively, requiring participants to connect to the same Wi-Fi network at the venue was another option considered.</p>
+                                    </div>
+                                </div>
+                                <div class="hifi-grouping">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype5.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>Event Home Screen:</strong> This screen presents users with three primary actions:</p>
+                                        <ul>
+                                            <li><strong>Click Photos:</strong> Users can take photos directly using their phone's camera app. Photos captured in this manner are automatically uploaded to the event's main photo pool. Duplicates are filtered out during backend processing for efficiency.</li>
+                                            <li><strong>Add Photos:</strong> Users can also upload photos from their gallery, particularly useful if they inadvertently took pictures using the phone's native camera app instead of the event's app. This feature allows for the inclusion of these photos in the event's collection.</li>
+                                            <li><strong>My Photos:</strong> This feature displays all the photos associated with the event, allowing users to browse through the shared photo pool.</li>
+                                        </ul>
+                                        <p>Beyond these options, there's a button to exit the event for users who wish to leave, as well as navigation buttons to return to the main home page or access the "My Events" page. The inclusion of a home page link is standard, while the "My Events" link was added based on survey feedback indicating a user desire for quick access to past event photos.</p>
+                                    </div>
+                                </div>
+                                <div class="hifi-grouping invert">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype6.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>My Photos Page:</strong> This page provides access to the event's collective photo pool, featuring images captured both by the user and by others. Users can apply filters to view only their own photos or those taken by other attendees. Each photo includes information about who captured it. Additionally, two key functionalities are provided:</p>
+                                        <ul>
+                                            <li><strong>Save Button:</strong> This allows users to save selected photos within the app, ensuring they remain accessible even if the event is later deleted by the host.</li>
+                                            <li><strong>Download Button:</strong> This enables users to download photos directly to their devices for personal use.</li>
+                                        </ul>                                        
+                                    </div>
+                                </div>
+                                <div class="hifi-grouping">
+                                    <div class="image-grouping"><img src="./images/Projects/quiclick/prototype7.png" alt="a prototype for home screen"></div>
+                                    <div class="descr-grouping">
+                                        <p><strong>My Events Page:</strong> This page displays a list of all the events the user has participated in.</p>
+                                        <p>The events are categorized into three types, based on their timing:</p>
+                                        <ul>
+                                            <li><strong>LIVE:</strong> Events currently taking place are labeled as 'LIVE'.</li>
+                                            <li><strong>COMPLETED:</strong> Past events the user has attended are marked as 'COMPLETED'. Access to the photo pool for these events remains available.</li>
+                                            <li><strong>EXPIRED:</strong> Events are considered 'EXPIRED' once the host deletes them. Participants will receive a notification about the deletion and will have 14 days to save their desired photos. After this period, the photo pool will no longer be accessible, except for the photos that have been saved.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

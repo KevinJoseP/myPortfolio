@@ -1596,6 +1596,7 @@ footer h5
 {
     color: black;
     text-align: left;
+    width: clamp(18rem, 90vw, 100rem);
 }
 .modal-cont#quiclick .project-body .project-section .content
 {
@@ -1645,6 +1646,43 @@ footer h5
     width: clamp(20rem, 50vw, 50rem);
     margin: 3rem 0;
     text-align: center;
+}
+
+.modal-cont#quiclick .final .sub-grouping.hifi
+{
+    display: flex;
+}
+.modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping img
+{
+    height: 80vh;
+    width: auto;
+}
+
+.modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping.invert
+{
+    flex-direction: row-reverse;
+}
+.modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping .descr-grouping,
+.modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping .image-grouping
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+}
+
+.modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping .descr-grouping p
+{
+    padding: 1rem;
+    width: 100%;
+    margin: 0;
 }
 
 
@@ -2002,7 +2040,6 @@ footer h5
     list-style:decimal;
     color: black;
 }
-
 
 
 
@@ -2420,6 +2457,7 @@ footer h5
     {
         min-height: fit-content;
     }
+
 
     .modal-cont#art .works img.logo
     {
