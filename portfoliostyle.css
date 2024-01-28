@@ -989,7 +989,7 @@ footer h5
 
 .modal-cont .project-body .project-section
 {
-    width: clamp(18rem, 60vw, 80rem);
+    width: clamp(14rem, 60vw, 80rem);
     color: white;
     font-size: 14px;
     line-height: 1.75;
@@ -1326,6 +1326,7 @@ footer h5
 .modal-cont#cisco .gallery .cisco-cont img
 {
     max-height: 40vh;
+    max-width: 80vw;
 }
 
 
@@ -2509,6 +2510,13 @@ footer h5
         width: 100%;
     }
 
+    .modal-cont .project-body .project-section
+    {
+        text-align: center;
+        width: 90vw;
+        padding: 0;
+    }
+
     .modal-cont .project-title>img
     {
         width: 90vw;
@@ -2518,6 +2526,8 @@ footer h5
     {
         flex-direction: column;
         text-align: center;
+        width: 100%;
+        padding: 3rem 0;
     }
 
     .modal-cont .main-title
@@ -2614,11 +2624,25 @@ footer h5
     .modal-cont#cisco .grouping h3
     {
         font-size: 2rem;
+        text-align: center;
     }
 
     .modal-cont#cisco .grouping .role-cont div
     {
-        font-size: 1.3rem;
+        font-size: 1rem;
+    }
+    .modal-cont#cisco .project-title
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal-cont .details
+    {
+        justify-content: center;
+        align-items: center;
     }
 
     .modal-cont#eyefi .grouping 
