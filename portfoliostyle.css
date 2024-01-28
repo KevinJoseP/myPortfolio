@@ -445,7 +445,7 @@ a
 
 
 
-.project-cont .project-inst .project-descr
+.project-cont .project-inst .project-descr.desktop
 {
     text-align: center;
     font-size: 1rem;
@@ -483,6 +483,10 @@ a
     color: rgba(110, 110, 110, 0.787);
 }
 
+.project-cont .project-inst .project-descr.mobile
+{
+    display: none;
+}
 
 
 /* Ending of Projects section styles */
@@ -2243,6 +2247,31 @@ footer h5
         margin: 0;
         text-align: center;
     }
+
+    .project-cont .project-inst .project-descr.mobile
+    {
+        display: flex;
+        font-size: 1rem;
+        width: 16rem;
+        height: fit-content;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+
+        text-align: center;
+        font-size: 1rem;
+        font-family: var(--font-family-sans-serif-grotesque);
+        color: rgba(110, 110, 110, 0.938);
+        transition: all 300ms ease-in;
+
+    }
+
+    .project-cont .project-inst .project-descr.desktop
+    {
+        display: none;
+    }
+
     
     #welcome-div-image{
         display: none;
@@ -2366,18 +2395,6 @@ footer h5
     {
         width: 16rem;
         height: 12rem;
-    }
-
-    .project-cont .project-inst .project-descr
-    {
-        display: flex;
-        font-size: 1rem;
-        width: 16rem;
-        height: fit-content;
-        font-weight: 500;
-        margin-top: 0.3rem;
-        margin-bottom: 0.5rem;
-
     }
 
     .project-cont .project-inst
