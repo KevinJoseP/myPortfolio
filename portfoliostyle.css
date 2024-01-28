@@ -960,6 +960,7 @@ footer h5
 .modal-cont .grouping .tech div
 {
     font-size: clamp(1rem, 10vw, 1.4rem);
+    width: 100%;
 }
 
 
@@ -2261,6 +2262,11 @@ footer h5
         text-align: center;
     }
 
+    .modal-cont h1
+    {
+        font-size: 2rem;
+    }
+
     .project-cont .project-inst .project-descr.mobile
     {
         display: flex;
@@ -2724,9 +2730,25 @@ footer h5
         margin-bottom: 0;
     }
 
-    modal-cont .grouping .team-cont div, .modal-cont .grouping .time div, .modal-cont .grouping .role-cont div, .modal-cont .grouping .tech div 
+    .modal-cont .grouping .team-cont div, .modal-cont .grouping .time div, .modal-cont .grouping .role-cont div, .modal-cont .grouping .tech div 
     {
         width: 90%;
+    }
+
+    .modal-cont#eyefi h1
+    {
+        padding: 1rem;
+    }
+
+    .modal-cont .time,
+    .modal-cont .team-cont,
+    .modal-cont .role-cont,
+    .modal-cont .tech
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
