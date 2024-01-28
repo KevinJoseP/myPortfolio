@@ -921,6 +921,10 @@ footer h5
     border: none;
     outline: 0;
 }
+.modal-cont h1
+{
+    font-size: 3rem;
+}
 
 .modal-cont .details
 {
@@ -936,7 +940,7 @@ footer h5
 .modal-cont h1
 {
     margin-bottom: 0.5rem;
-    font-family: var(--font-family-sans-condensed);
+    font-family: var(--font-family-sans-serif-3);
     font-weight: 300;
 }
 
@@ -1416,7 +1420,7 @@ footer h5
 
 .modal-cont .main-title h2
 {
-    font-size: clamp(2rem, calc(2rem + 1vw), 5rem);
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.755);
     margin-right: 0.2rem;
     font-family: var(--font-family-sans-serif-3);
@@ -1549,8 +1553,8 @@ footer h5
 .modal-cont#quiclick .title-cont-group .main-title h2,
 .modal-cont#stockit .title-cont-group .main-title h2
 {
-    color: black;
-    font-family: var(--font-family-sans-condensed);
+    color: rgb(112, 111, 111);
+    font-family: var(--font-family-sans-serif-3);
     font-weight: 300;
 }
 
@@ -1717,6 +1721,7 @@ footer h5
 .modal-cont#stockit .project-title .title-cont-group h1
 {
     width: 80%;
+    font-family: var(--font-family-sans-serif-3);
 }
 
 .modal-cont#stockit .title-cont-group .main-title
@@ -2136,6 +2141,17 @@ footer h5
 {
     width: clamp(18rem, 60vw, 80rem);
 } 
+
+.modal-cont#stockit .project-title
+{
+    font-family: var(--font-family-sans-serif-3);
+}
+
+.modal-cont#stockit .project-title h3
+{
+    color: rgb(195, 194, 194);
+    font-size: 1.1rem;
+}
 
 .modal-cont#stockit .project-section .content.sub-task
 {
