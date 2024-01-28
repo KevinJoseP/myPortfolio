@@ -972,7 +972,7 @@ footer h5
 
 .modal-cont #eyefi .main-title h1
 {
-    font-family: var(--font-family-sans-nunito);
+    font-family: var(--font-family-sans-serif-3);
     font-weight: 300;
     color: rgb(117, 115, 115);
 }
@@ -1013,7 +1013,7 @@ footer h5
 .modal-cont#eyefi .project-body .project-section.gallery img,
 .modal-cont#hardware .project-body .project-section.gallery img
 {
-    width: 60%;
+    width: 40%;
 }
 
 
@@ -1036,7 +1036,10 @@ footer h5
 .modal-cont#eyefi .research a
 {
     width: 100%;
-    margin-top: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-cont#eyefi .research a img
@@ -1072,6 +1075,15 @@ footer h5
 {
     width: 2rem;
     padding: 0;
+}
+
+.modal-cont#eyefi .image-groupings
+{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-cont .final-code-btn,
@@ -2522,7 +2534,8 @@ footer h5
         width: 90vw;
     }
 
-    .modal-cont .grouping
+    .modal-cont#cisco .grouping,
+    .modal-cont#eyefi .grouping
     {
         flex-direction: column;
         text-align: center;
@@ -2621,7 +2634,8 @@ footer h5
         margin-right: 0;
     }
 
-    .modal-cont#cisco .grouping h3
+    .modal-cont#cisco .grouping h3,
+    .modal-cont#eyefi .grouping h3
     {
         font-size: 2rem;
         text-align: center;
@@ -2643,11 +2657,6 @@ footer h5
     {
         justify-content: center;
         align-items: center;
-    }
-
-    .modal-cont#eyefi .grouping 
-    {
-        padding: 1rem;
     }
 
     .modal-cont#aiml .project-body.project1 ul
@@ -2713,6 +2722,11 @@ footer h5
     .modal-cont#jee .option-logo
     {
         margin-bottom: 0;
+    }
+
+    modal-cont .grouping .team-cont div, .modal-cont .grouping .time div, .modal-cont .grouping .role-cont div, .modal-cont .grouping .tech div 
+    {
+        width: 90%;
     }
 }
 
