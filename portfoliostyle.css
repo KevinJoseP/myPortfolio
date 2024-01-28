@@ -1573,7 +1573,7 @@ footer h5
 }
 
 .modal-cont#quiclick .project-title,
-.modal-cont#stockit .project-tit
+.modal-cont#stockit .project-title
 {
     min-height: fit-content;
 }
@@ -1592,6 +1592,7 @@ footer h5
 .modal-cont#quiclick .project-title .title-cont-group h1
 {
     font-family: var(--font-family-sans-serif-3);
+    width: 70%;
 }
 
 .modal-cont#quiclick .project-body,
@@ -1620,7 +1621,7 @@ footer h5
     text-align: left;
     font-size: 1.5rem;
     margin-top: 2rem;
-    margin-bottom: 0;
+    color: rgb(87, 87, 87);
 }
 
 .modal-cont#quiclick .project-body .project-section .content
@@ -1633,11 +1634,6 @@ footer h5
 .modal-cont#quiclick .project-body .project-section .content .img-grouping
 {
     width: fit-content;
-}
-.modal-cont#quiclick .project-body .project-section .content .sub-grouping img
-{
-    width: clamp(20rem, 50vw, 50rem);
-    margin: 1rem 0;
 }
 
 .modal-cont#quiclick .project-body .project-section .content .img-grouping img
@@ -1652,10 +1648,10 @@ footer h5
     align-items: center;
     flex-direction: column;
 }
-.modal-cont#quiclick .project-body .project-section .content .sub-grouping p
+.modal-cont#quiclick .project-body .project-section .content p
 {
     width: clamp(20rem, 50vw, 50rem);
-    margin: 3rem 0;
+    margin: 1rem 0;
     text-align: center;
 }
 
@@ -1737,6 +1733,11 @@ footer h5
     background-color: grey;
     padding: 2rem 0;
     color: white;
+}
+
+.modal-cont#quiclick .project-body .project-section h2
+{
+    color: black;
 }
 
 .modal-cont#art,
@@ -2094,31 +2095,36 @@ footer h5
 }
 
 
-.modal-cont#stockit img.medium
+.modal-cont#stockit img.medium,
+.modal-cont#quiclick img.medium
 {
     width: 50%;
     margin: 1rem;
 }
 
-.modal-cont#stockit img.large
+.modal-cont#stockit img.large,
+.modal-cont#quiclick img.large
 {
     width: 70%;
     margin: 1rem;
 }
 
-.modal-cont#stockit img.xl
+.modal-cont#stockit img.xl,
+.modal-cont#quiclick img.xl
 {
     width: 100%;
     margin: 1rem;
 }
 
-.modal-cont#stockit img.small
+.modal-cont#stockit img.small,
+.modal-cont#quiclick img.small
 {
     width: 30%;
     margin: 1rem;
 }
 
-.modal-cont#stockit p.descr
+.modal-cont#stockit p.descr,
+.modal-cont#quiclick .project-body .project-section .content .sub-grouping p.descr
 {
     font-style: italic;
     font-size: 0.6rem;
@@ -2131,10 +2137,12 @@ footer h5
     margin-bottom: 3rem;
 }
 
-.modal-cont#stockit h2.section-common-h2
+.modal-cont#stockit h2.section-common-h2,
+.modal-cont#quiclick h2.section-common-h2
 {
     font-family: var(--font-family-cursive);
     font-weight: 400;
+    color: var(--color-text-dark-brown);
 }
 
 .modal-cont#stockit .project-section p
@@ -2165,11 +2173,12 @@ footer h5
     text-align: left;
 }
 
-.modal-cont#stockit .project-section .content.sub-task .image-grouping
+.modal-cont#stockit .project-section .content.sub-task .image-grouping,
+.modal-cont#quiclick .project-section .image-grouping
 {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.5rem;
     width: 100%;
     justify-content: center;
 }
@@ -2195,12 +2204,14 @@ footer h5
     width: clamp(18rem, 60vw, 80vw);
 }
 
-.modal-cont#stockit .project-section .content.sub-task .image-grouping img
+.modal-cont#stockit .project-section .content.sub-task .image-grouping img,
+.modal-cont#quiclick .project-section .image-grouping img
 {
     width: 15%;
 }
 
-.modal-cont#stockit .project-section .content.sub-task .image-grouping img.large
+.modal-cont#stockit .project-section .content.sub-task .image-grouping img.large,
+.modal-cont#quiclick .project-section .image-grouping img
 {
     width: 40%;
 }
