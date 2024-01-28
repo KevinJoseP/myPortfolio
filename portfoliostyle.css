@@ -1598,7 +1598,8 @@ footer h5
     color: black;
 }
 
-.modal-cont#quiclick .project-body .project-section
+.modal-cont#quiclick .project-body .project-section,
+.modal-cont#stockit .project-body .project-section
 {
     color: black;
     text-align: left;
@@ -2086,6 +2087,112 @@ footer h5
     list-style:decimal;
     color: black;
 }
+
+
+.modal-cont#stockit img.medium
+{
+    width: 50%;
+    margin: 1rem;
+}
+
+.modal-cont#stockit img.large
+{
+    width: 70%;
+    margin: 1rem;
+}
+
+.modal-cont#stockit img.xl
+{
+    width: 100%;
+    margin: 1rem;
+}
+
+.modal-cont#stockit img.small
+{
+    width: 30%;
+    margin: 1rem;
+}
+
+.modal-cont#stockit p.descr
+{
+    font-style: italic;
+    font-size: 0.6rem;
+    text-align: center;
+    margin: 0.5rem 0 3rem 0;
+}
+
+.modal-cont#stockit iframe
+{
+    margin-bottom: 3rem;
+}
+
+.modal-cont#stockit h2.section-common-h2
+{
+    font-family: var(--font-family-cursive);
+    font-weight: 400;
+}
+
+.modal-cont#stockit .project-section p
+{
+    width: clamp(18rem, 60vw, 80rem);
+} 
+
+.modal-cont#stockit .project-section .content.sub-task
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-cont#stockit .project-section .content.sub-task h3
+{
+    text-align: left;
+}
+
+.modal-cont#stockit .project-section .content.sub-task .image-grouping
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.modal-cont#stockit .project-section h2
+{
+    color: rgb(68, 68, 68);
+    font-weight: 500;
+}
+
+.modal-cont#stockit .project-section .content.sub-task h3
+{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: left;
+    font-family: var(--font-family-sans-serif-3);
+    color: rgb(149, 149, 149);
+}
+
+.modal-cont#stockit .project-section .content.sub-task li
+{
+    width: clamp(18rem, 60vw, 80vw);
+}
+
+.modal-cont#stockit .project-section .content.sub-task .image-grouping img
+{
+    width: 15%;
+}
+
+.modal-cont#stockit .project-section .content.sub-task .image-grouping img.large
+{
+    width: 40%;
+}
+
+
+
+
+
 
 
 
