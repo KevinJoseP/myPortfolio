@@ -1509,13 +1509,15 @@ footer h5
 }
 
 .modal#quiclick-modal,
-.modal#healthcare-modal
+.modal#healthcare-modal,
+.modal#stockit-modal
 {
     background-color: white;
 }
 
 .modal-cont#quiclick,
-.modal-cont#healthcare
+.modal-cont#healthcare,
+.modal-cont#stockit
 {
     background-color: white;
 }
@@ -1544,14 +1546,16 @@ footer h5
     width: 100%;
 }
 
-.modal-cont#quiclick .title-cont-group .main-title h2
+.modal-cont#quiclick .title-cont-group .main-title h2,
+.modal-cont#stockit .title-cont-group .main-title h2
 {
     color: black;
     font-family: var(--font-family-sans-condensed);
     font-weight: 300;
 }
 
-.modal-cont#quiclick .title-cont-group
+.modal-cont#quiclick .title-cont-group,
+.modal-cont#stockit .title-cont-group
 {
     width: 100%;
     display: flex;
@@ -1564,7 +1568,8 @@ footer h5
     
 }
 
-.modal-cont#quiclick .project-title
+.modal-cont#quiclick .project-title,
+.modal-cont#stockit .project-tit
 {
     min-height: fit-content;
 }
@@ -1586,7 +1591,8 @@ footer h5
 }
 
 .modal-cont#quiclick .project-body,
-.modal-cont#healthcare .project-body
+.modal-cont#healthcare .project-body,
+.modal-cont#stockit .project-body
 {
     background-color: white;
     color: black;
@@ -1685,7 +1691,47 @@ footer h5
     margin: 0;
 }
 
+.modal-cont#stockit .project-title .hero-grouping .project-hero-img
+{
+    width: 50%;
+}
 
+.modal-cont#stockit .project-title .hero-grouping .project-hero-img img
+{
+    width: 100%;
+}
+
+.modal-cont#stockit .project-title .hero-grouping
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cont#stockit .title-cont-group
+{
+    flex-direction: column;
+}
+
+.modal-cont#stockit .project-title .title-cont-group h1
+{
+    width: 80%;
+}
+
+.modal-cont#stockit .title-cont-group .main-title
+{
+    width: 40%;
+}
+
+.modal-cont#stockit .title-cont-group .details
+{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    background-color: grey;
+    padding: 2rem 0;
+    color: white;
+}
 
 .modal-cont#art,
 .modal#art-modal
