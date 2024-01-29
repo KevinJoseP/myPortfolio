@@ -1679,7 +1679,7 @@ footer h5
 }
 .modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping img
 {
-    height: 80vh;
+    max-height: 80vh;
     width: auto;
 }
 
