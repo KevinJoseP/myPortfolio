@@ -130,6 +130,46 @@ const sectionIntersectionObserver = new IntersectionObserver(handleSectionChange
 
 //sections.forEach(section => sectionIntersectionObserver.observe(section));
 
+// for scroll selections
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const sections = document.querySelectorAll('section.sections');
+    console.log(sections);
+    window.addEventListener('scroll', () => {
+        let currentActive = '';
+    
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionBottom = sectionTop + sectionHeight;
+    
+          // Calculate the middle of the viewport
+          const scrollMiddle = window.scrollY + window.innerHeight / 2;
+    
+          // Check if the middle of the viewport is within the section
+          if (scrollMiddle >= sectionTop && scrollMiddle <= sectionBottom) {
+            currentActive = section.getAttribute('id');
+          }
+        });
+    
+        // Remove 'active' class from all nav elements
+        sections.forEach(section => {
+          const navId = section.getAttribute('id') + '-nav';
+          const navElement = document.getElementById(navId);
+          if (navElement) {
+            navElement.classList.remove('active');
+          }
+        });
+    
+        // Add 'active' class to the current nav element
+        const currentNavId = currentActive + '-nav';
+        const currentNavElement = document.getElementById(currentNavId);
+        if (currentNavElement) {
+          currentNavElement.classList.add('active');
+        }
+    });
+});
+
 
 projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
 closeBtns.forEach(close => close.addEventListener('click', handleCloseButtonOnModal));
