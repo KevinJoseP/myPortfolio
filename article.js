@@ -7,6 +7,7 @@ const summarizedContent = document.querySelector('.article #summarized-content')
 const floatingPanel = document.querySelector('.article .bottom-floating-panel');
 const healthCare = document.querySelector('.modal-cont#healthcare .project-title');
 
+
 const mainOpt = {
 }
 
@@ -33,13 +34,16 @@ const titleObserver = new IntersectionObserver(function (entries, titleObserver)
 
 const titleObserverGeneral = new IntersectionObserver(function (entries, titleObserverGeneral){
     entries.forEach(entry => {
-        const identifier = ".bottom-floating-panel.healthcare"
-        const floatingPanelGen = document.querySelector(identifier);
+        const floatingPanelidentifier = ".bottom-floating-panel.healthcare";
+        const floatingPanelGen = document.querySelector(floatingPanelidentifier);
+        const sidePanelIdentifier = ".side-nav-panel.healthcare";
+        const sidePanelGen = document.querySelector(sidePanelIdentifier);
         console.log(entry.isIntersecting);
         if (floatingPanelGen)
         {
             console.log("toggle");
             floatingPanelGen.classList.toggle('display-none', entry.isIntersecting);
+            sidePanelGen.classList.toggle('display-none', entry.isIntersecting);
         }
     });
 }, {
