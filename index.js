@@ -8,6 +8,7 @@ const projects = document.querySelectorAll('.project-inst');
 const closeBtns = document.querySelectorAll('.modal-cont .close');
 const sections = document.querySelectorAll('section.sections');
 const navElems = document.querySelectorAll('a.nav-link');
+const hoverCloseBtns = document.querySelectorAll('.modal-cont .bottom-floating-panel .close');
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
@@ -61,6 +62,16 @@ function handleCloseButtonOnModal(e)
     currProjectModal.classList.remove('active');
     currProjectModal.classList.remove('fade-in');
 }
+
+function handleHoverCloseBtnOnModal(e)
+{
+    e.preventDefault();
+    //wtf??
+    const currProjectModal = e.currentTarget.parentElement.parentElement.parentElement.parentElement;
+    currProjectModal.classList.remove('active');
+    currProjectModal.classList.remove('fade-in');
+}
+
 
 function handleSectionChange(entries, sectionIntersectionObserver)
 {
@@ -122,3 +133,4 @@ const sectionIntersectionObserver = new IntersectionObserver(handleSectionChange
 
 projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
 closeBtns.forEach(close => close.addEventListener('click', handleCloseButtonOnModal));
+hoverCloseBtns.forEach(close => close.addEventListener('click', handleHoverCloseBtnOnModal));

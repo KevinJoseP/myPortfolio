@@ -74,6 +74,10 @@ a
     flex-direction: column;
 }
 
+*
+{
+    scroll-behavior: smooth;
+}
 /***************************************/
 /***************************************/
 /* Beinning of Navigation bar styles */
@@ -363,6 +367,12 @@ a
     align-items: center;
     margin: 4rem 0;
 }
+
+.modal-cont#healthcare .title-cont
+{
+    margin-bottom: 10rem;
+}
+
 
 .decor-line
 {
@@ -1950,7 +1960,8 @@ footer h5
     margin-bottom: 10rem;
 }
 
-.modal-cont#jee .grouping-floating
+.modal-cont#jee .grouping-floating,
+.modal-cont#healthcare .grouping-floating
 {
     display: flex;
     width: fit-content;
@@ -1961,7 +1972,8 @@ footer h5
 }
 
 /* main section styling end */
-.modal-cont#jee .bottom-floating-panel
+.modal-cont#jee .bottom-floating-panel,
+.modal-cont#healthcare .bottom-floating-panel
 {
     color: black;
     position: fixed;
@@ -1976,7 +1988,8 @@ footer h5
 
 }
 
-.modal-cont#jee .floating-panel-options
+.modal-cont#jee .floating-panel-options,
+.modal-cont#healthcare .floating-panel-options
 {
     margin: clamp(0.3rem, 8vw, 1rem) clamp(1.2rem, 8vw, 2rem);
     cursor: pointer;
@@ -1990,7 +2003,8 @@ footer h5
     font-family: var(--font-family-sans-condensed);
 }
 
-.modal-cont#jee .floating-panel-options:hover
+.modal-cont#jee .floating-panel-options:hover,
+.modal-cont#healthcare .floating-panel-options:hover
 {
     transform: scale(1.1);
 }
@@ -2000,7 +2014,8 @@ footer h5
     font-size: 1.2em;
 }
 
-.modal-cont#jee .option-logo
+.modal-cont#jee .option-logo,
+.modal-cont#healthcare .option-logo
 {
     filter: invert();
     width: clamp(1rem, 1rem + 0.5vw, 2rem);
@@ -2031,7 +2046,8 @@ footer h5
     text-align: center;
 }
 
-.modal-cont#jee .option-text
+.modal-cont#jee .option-text,
+.modal-cont#healthcare .option-text
 {
     text-align: center;
 }
@@ -2042,6 +2058,7 @@ footer h5
     max-height: 50vh;
     margin: 1rem 0;
 }
+
 
 
 .modal-cont#healthcare .project-body p,
@@ -2452,6 +2469,11 @@ footer h5
         margin: 4rem 0 1rem 0;
     }
 
+    .modal-cont#healthcare .title-cont
+    {
+        margin-bottom: 5rem;
+    }
+
     #experiences .experience-logo-cont.desktop
     {
         display: none;
@@ -2736,11 +2758,13 @@ footer h5
         padding: 3rem 0;
         width: 85vw;
     }
-    .modal-cont#jee .option-text
+    .modal-cont#jee .option-text,
+    .modal-cont#healthcare .option-text
     {
         display: none;
     }
-    .modal-cont#jee .option-logo
+    .modal-cont#jee .option-logo,
+    .modal-cont#healthcare .option-logo
     {
         margin-bottom: 0;
     }

@@ -5,7 +5,7 @@ const elaborate = document.querySelector('.article #elaborate');
 const elaborateContent = document.querySelector('.article #detailed-content');
 const summarizedContent = document.querySelector('.article #summarized-content');
 const floatingPanel = document.querySelector('.article .bottom-floating-panel');
-
+const healthCare = document.querySelector('.modal-cont#healthcare .project-title');
 
 const mainOpt = {
 }
@@ -23,7 +23,7 @@ const mainOpt = {
 //     });
 // }, mainOpt);
 
-const titleObserver = new IntersectionObserver(function (entries, mainPageObserver){
+const titleObserver = new IntersectionObserver(function (entries, titleObserver){
     entries.forEach(entry => {
         floatingPanel.classList.toggle('display-none', entry.isIntersecting);
     });
@@ -31,11 +31,27 @@ const titleObserver = new IntersectionObserver(function (entries, mainPageObserv
     threshold: 0.9
 });
 
+const titleObserverGeneral = new IntersectionObserver(function (entries, titleObserverGeneral){
+    entries.forEach(entry => {
+        const identifier = ".bottom-floating-panel.healthcare"
+        const floatingPanelGen = document.querySelector(identifier);
+        console.log(entry.isIntersecting);
+        if (floatingPanelGen)
+        {
+            console.log("toggle");
+            floatingPanelGen.classList.toggle('display-none', entry.isIntersecting);
+        }
+    });
+}, {
+    
+});
+
+
 // contents.forEach(content => {
 //     mainPageObserver.observe(content);
 // });
 titleObserver.observe(titlePage);
-
+titleObserverGeneral.observe(healthCare);
 function handleBsButton(e)
 {
     elaborateContent.classList.add('display-none');
