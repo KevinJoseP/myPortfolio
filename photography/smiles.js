@@ -224,6 +224,7 @@ function removeBottomPanelObserverForLargeScreens()
 function init()
 {
     fillInPhotos();
+    handleShuffle();
 }
 
 init();
