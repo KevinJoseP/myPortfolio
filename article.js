@@ -5,7 +5,11 @@ const elaborate = document.querySelector('.article #elaborate');
 const elaborateContent = document.querySelector('.article #detailed-content');
 const summarizedContent = document.querySelector('.article #summarized-content');
 const floatingPanel = document.querySelector('.article .bottom-floating-panel');
+let bottomHoverPanelMods = [];
 const healthCare = document.querySelector('.modal-cont#healthcare .project-title');
+if (healthCare)bottomHoverPanelMods.push(healthCare);
+const stockit = document.querySelector('.modal-cont#stockit .project-title');
+if (stockit)bottomHoverPanelMods.push(stockit);
 
 
 const mainOpt = {
@@ -34,15 +38,18 @@ const titleObserver = new IntersectionObserver(function (entries, titleObserver)
 
 const titleObserverGeneral = new IntersectionObserver(function (entries, titleObserverGeneral){
     entries.forEach(entry => {
-        const floatingPanelidentifier = ".bottom-floating-panel.healthcare";
+
+        const floatingPanelidentifier = ".bottom-floating-panel." + entry.target.dataset.titleId;
         const floatingPanelGen = document.querySelector(floatingPanelidentifier);
-        const sidePanelIdentifier = ".side-nav-panel.healthcare";
+        const sidePanelIdentifier = ".side-nav-panel." + entry.target.dataset.titleId;
         const sidePanelGen = document.querySelector(sidePanelIdentifier);
-        console.log(entry.isIntersecting);
+        console.log(floatingPanelGen);
         if (floatingPanelGen)
         {
-            console.log("toggle");
             floatingPanelGen.classList.toggle('display-none', entry.isIntersecting);
+        }
+        if (sidePanelGen)
+        {
             sidePanelGen.classList.toggle('display-none', entry.isIntersecting);
         }
     });
@@ -55,7 +62,9 @@ const titleObserverGeneral = new IntersectionObserver(function (entries, titleOb
 //     mainPageObserver.observe(content);
 // });
 titleObserver.observe(titlePage);
-titleObserverGeneral.observe(healthCare);
+bottomHoverPanelMods.forEach(modal => {
+    titleObserverGeneral.observe(modal);
+})
 function handleBsButton(e)
 {
     elaborateContent.classList.add('display-none');
