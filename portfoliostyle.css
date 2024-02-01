@@ -1877,9 +1877,24 @@ footer h5
 
 .modal-cont#art .works img.logo
 {
-    width: 50%;
+    max-width: 30%;
+    height: auto;
 }
 
+.modal-cont#art .art-cont .sketch
+{
+    max-width: 40%;
+    height: auto;
+}
+
+.modal-cont#art .art-cont
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
 .modal-cont#art .art-inst
 {
     display: flex;
