@@ -8,7 +8,7 @@ const back2TopObserverMobile = new IntersectionObserver (handleBack2TopMobile, {
 const shuffleBtn = document.querySelector('.shuffle');
 
 
-const MAX_SMILES_PHOTO_COUNT = 63;
+const MAX_SMILES_PHOTO_COUNT = 68;
 const SMILE_URL = "./smiles/smiles";
 
 const mediaQuery = window.matchMedia('(max-width: 40em)');
