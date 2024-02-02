@@ -1624,7 +1624,6 @@ footer h5
     max-width: 95%;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 
@@ -1632,6 +1631,7 @@ footer h5
 {
     margin: 1rem 0;
     max-width: 100%;
+    text-align: left;
 }
 
 .modal-cont#quiclick #quiclickVideo
@@ -1888,6 +1888,11 @@ footer h5
     font-family: var(--font-family-sans-serif-grotesque);
     font-weight: 200;
     margin-bottom: 1rem;
+}
+
+.modal-cont#aiml .main-title h2
+{
+    text-align: left;
 }
 
 .modal-cont#art .works img
