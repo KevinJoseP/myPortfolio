@@ -1061,6 +1061,12 @@ footer h5
     width: 40%;
 }
 
+.modal-cont#hardware .project-body .project-section.gallery .image-grouping img
+{
+    height: 40vh;
+    width: auto;
+}
+
 
 /* Eye-fi Modal */
 .modal-cont#eyefi .duane
@@ -1122,7 +1128,8 @@ footer h5
     padding: 0;
 }
 
-.modal-cont#eyefi .image-groupings
+.modal-cont#eyefi .image-groupings,
+.modal-cont#hardware .image-grouping
 {
     display: flex;
     gap:1rem;
