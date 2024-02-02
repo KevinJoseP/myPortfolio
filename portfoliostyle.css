@@ -899,7 +899,7 @@ footer h5
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 1rem 2rem;
     background-color: #90553C;
     padding: 0.5rem;
     border-radius: 20px;
@@ -923,6 +923,7 @@ footer h5
     color: white;
     font-family: var(--font-family-sans-condensed);
     text-align: center;
+    margin-left: 0.5rem;
 
 }
 
@@ -1638,6 +1639,12 @@ footer h5
     width: 100%;
 }
 
+.modal-cont#quiclick .title-cont,
+.modal-cont#stockit .title-cont
+{
+    margin-bottom: 10rem;
+}
+
 .modal-cont#quiclick .title-cont-group .main-title h2,
 .modal-cont#stockit .title-cont-group .main-title h2
 {
@@ -1675,6 +1682,7 @@ footer h5
 .modal-cont#quiclick .project-title .title-cont-group h3
 {
     color: rgb(167, 167, 167);
+    width: 90%;
 }
 
 .modal-cont#quiclick .project-title .title-cont-group h1
@@ -1696,7 +1704,7 @@ footer h5
 {
     color: black;
     text-align: left;
-    width: clamp(18rem, 90vw, 100rem);
+    width: clamp(15rem, 90vw, 100rem);
 }
 .modal-cont#quiclick .project-body .project-section .content
 {
@@ -1726,7 +1734,7 @@ footer h5
 
 .modal-cont#quiclick .project-body .project-section .content .img-grouping img
 {
-    width: clamp(20rem, 30vw, 30rem);
+    width: clamp(13rem, 30vw, 30rem);
 }
 
 .modal-cont#quiclick .project-body .project-section .content .sub-grouping
@@ -1738,7 +1746,7 @@ footer h5
 }
 .modal-cont#quiclick .project-body .project-section .content p
 {
-    width: clamp(20rem, 50vw, 50rem);
+    width: clamp(15rem, 50vw, 50rem);
     margin: 1rem 0;
     text-align: center;
 }
@@ -2239,7 +2247,7 @@ footer h5
 .modal-cont#stockit img.xl,
 .modal-cont#quiclick img.xl
 {
-    width: 100%;
+    width: 90%;
     margin: 1rem;
 }
 
@@ -2918,7 +2926,141 @@ footer h5
         padding: 0.5rem;
     }
 
-    
+    .modal-cont#stockit .project-body p
+    {
+        text-align: center;
+    }
+
+    .modal-cont#stockit .project-title .hero-grouping
+    {
+        flex-direction: column;
+    }
+
+    .modal-cont#stockit .project-title .title-cont-group h2
+    {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+    }
+    .modal-cont#stockit .project-title .title-cont-group h1
+    {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .modal-cont#stockit .title-cont-group .main-title
+    {
+        width: 100%;
+    }
+
+    .modal-cont#stockit .title-cont-group
+    {
+        padding: 1rem 0;
+    }
+
+    .modal-cont#stockit .project-title .hero-grouping .project-hero-img
+    {
+        width: 90%;
+    }
+
+    .modal-cont#stockit .title-cont-group .details
+    {
+        flex-direction: column;
+    }
+
+    .modal-cont#stockit img.medium,
+    .modal-cont#quiclick img.medium
+    {
+        width: 90%;
+    }
+
+    .modal-cont#stockit .project-section .content.sub-task h3
+    {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .modal-cont#stockit .project-section .content.sub-task .image-grouping, .modal-cont#quiclick .project-section .image-grouping
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-cont#stockit .project-section .content.sub-task .image-grouping img, .modal-cont#quiclick .project-section .image-grouping img
+    {
+        width: 80%;
+    }
+
+    .modal-cont#stockit img.small, .modal-cont#quiclick img.small
+    {
+        width: 80%;
+    }
+
+    .modal-cont#stockit .project-section .content.sub-task .image-grouping img.large, .modal-cont#quiclick .project-section .image-grouping img
+    {
+        width: 90%;
+    }
+
+    .modal-cont#stockit iframe
+    {
+        width: 90%;
+    }
+
+    .modal-cont#stockit p.descr, .modal-cont#quiclick .project-body .project-section .content .sub-grouping p.descr
+    {
+        margin-bottom: 1.5rem;
+    }
+
+
+    .modal-cont#stockit img.large, .modal-cont#quiclick img.large
+    {
+        width: 95%;
+    }
+
+    .modal-cont#quiclick .project-body .project-section .content .sub-grouping img
+    {
+        width: 95%;
+    }
+
+    .modal-cont#quiclick .project-body .project-section h3
+    {
+        text-align: center;
+    }
+
+    .modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping
+    {
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    .modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping.invert
+    {
+        flex-direction: column;
+    }
+
+    .modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping .descr-grouping,
+    .modal-cont#quiclick .final .sub-grouping.hifi .hifi-grouping .image-grouping
+    {
+        width: 90%;
+    }
+
+    .modal-cont#quiclick .project-title .title-cont-group h1 
+    {
+        width: 90%;
+        font-size: 2rem;
+    }
+
+    .modal-cont#quiclick .project-title .title-cont-group h2
+    {
+        font-size: 1.5rem;
+    }
+
+    .modal-cont#quiclick .project-title .title-cont-group h2,
+    .modal-cont#quiclick .project-title .title-cont-group h3
+    {
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 50em){
