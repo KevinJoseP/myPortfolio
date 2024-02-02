@@ -241,7 +241,7 @@ a
     min-height: 100svh;
     width: 40%;
     position: fixed;
-    z-index: 1500;
+    z-index: 1000;
     
 }
 
@@ -252,7 +252,7 @@ a
     min-height: 100svh;
     width: 40%;
     position: fixed;
-    z-index: 1500;
+    z-index: 1000;
 }
 
 .photography .main-title,
@@ -416,9 +416,9 @@ gallery section begins */
     #photography-gallery-section,
     #smiles-gallery-section
     {
-        width: 100%;
-        padding-top: 1rem;
+        padding: 1rem 0 1rem 0;
         margin-left: 0;
+        width: 100%;
 
     }
 
@@ -495,6 +495,13 @@ gallery section begins */
     .bottom-control-panel
     {
         left: 50vw;
+    }
+
+    .smiles .gallery-photo,
+    .photography .gallery-photo
+    {
+        max-width: 80vw;
+        max-height: 60vh;
     }
 
 }
