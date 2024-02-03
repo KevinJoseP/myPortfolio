@@ -2315,6 +2315,23 @@ footer h5
     align-items: center;
 }
 
+.modal-cont#stockit .project-section a.button
+{
+    padding: 0.7rem;
+    background-color: #74927e;
+    color: white;
+    margin: 1rem 0;
+    border-radius: 10px;
+    outline: solid 2px white;
+    box-shadow: 0 0 1rem black;
+    transition: transform 100ms ease-in, background-color 100ms ease-in;
+}
+
+.modal-cont#stockit .project-section a.button:hover
+{
+    background-color: var(--color-text-dark-brown);
+    transform: scale(1.05);
+}
 .modal-cont#stockit .project-section .content.sub-task h3
 {
     text-align: left;
