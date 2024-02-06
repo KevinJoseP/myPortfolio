@@ -3049,7 +3049,7 @@ footer h5
 
     .modal-cont#quiclick .project-body .project-section .content .sub-grouping img
     {
-        width: 95%;
+        max-width: 95%;
     }
 
     .modal-cont#quiclick .project-body .project-section h3
