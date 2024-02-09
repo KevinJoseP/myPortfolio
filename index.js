@@ -131,43 +131,79 @@ const sectionIntersectionObserver = new IntersectionObserver(handleSectionChange
 //sections.forEach(section => sectionIntersectionObserver.observe(section));
 
 // for scroll selections
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const sections = document.querySelectorAll('section.sections');
-    console.log(sections);
-    window.addEventListener('scroll', () => {
+
+
+function activateSideBarNavOnSection(sectionSelector, paneToBeScrolled, isWindow = true)
+{
+    if (!paneToBeScrolled)
+    {
+        return;
+    }
+    const sections = document.querySelectorAll(sectionSelector);
+    paneToBeScrolled.addEventListener('scroll', () => {
         let currentActive = '';
     
         sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.offsetHeight;
-          const sectionBottom = sectionTop + sectionHeight;
-    
-          // Calculate the middle of the viewport
-          const scrollMiddle = window.scrollY + window.innerHeight / 2;
-    
-          // Check if the middle of the viewport is within the section
-          if (scrollMiddle >= sectionTop && scrollMiddle <= sectionBottom) {
-            currentActive = section.getAttribute('id');
-          }
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionBottom = sectionTop + sectionHeight;
+            let lScrollTop;
+            let lInnerHeight;
+            if (isWindow)
+            {
+                lScrollTop = paneToBeScrolled.scrollY;
+                lInnerHeight = paneToBeScrolled.innerHeight;
+            }
+            else
+            {
+                lScrollTop = paneToBeScrolled.scrollTop;
+                lInnerHeight = paneToBeScrolled.clientHeight;
+
+            }
+        
+            // Calculate the middle of the viewport
+            const scrollMiddle = lScrollTop + lInnerHeight / 2;
+            const windowHeight = lScrollTop + lInnerHeight;
+            // Check if the middle of the viewport is within the section
+            if (scrollMiddle >= sectionTop && scrollMiddle <= sectionBottom) 
+            {
+                currentActive = section.getAttribute('id');
+            }
+            if (sectionTop >= lScrollTop && sectionBottom <= windowHeight)
+            {
+                currentActive = section.getAttribute('id');
+            }
         });
     
         // Remove 'active' class from all nav elements
-        sections.forEach(section => {
-          const navId = section.getAttribute('id') + '-nav';
-          const navElement = document.getElementById(navId);
-          if (navElement) {
-            navElement.classList.remove('active');
-          }
-        });
+        if (currentActive)
+        {
+            sections.forEach(section => {
+                const navId = section.getAttribute('id') + '-nav';
+                const navElement = document.getElementById(navId);
+                if (navElement) {
+                    navElement.classList.remove('active');
+                }
+            });
+        }
+
+        // console.log(currentActive);
     
         // Add 'active' class to the current nav element
         const currentNavId = currentActive + '-nav';
         const currentNavElement = document.getElementById(currentNavId);
-        if (currentNavElement) {
-          currentNavElement.classList.add('active');
+        if (currentNavElement) 
+        {
+            currentNavElement.classList.add('active');
         }
     });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    activateSideBarNavOnSection('section.sections', window, true);
+    activateSideBarNavOnSection('#stockit-modal .side-bar-nav-section', document.getElementById('stockit-modal'), false);
+    activateSideBarNavOnSection('#healthcare-modal .side-bar-nav-section', document.getElementById('healthcare-modal'), false);
 });
 
 

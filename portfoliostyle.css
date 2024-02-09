@@ -872,7 +872,6 @@ footer h5
 .modal-cont .side-nav-panel a
 {
     text-decoration: none;
-    color: black;
     font-size: 0.8rem;
     font-family: var(--font-family-sans-serif-grotesque);
     transition: transform 100ms ease-in;
@@ -884,6 +883,12 @@ footer h5
 {
     transform: scale(1.08);
     color: rgb(3, 3, 3);
+}
+
+.modal-cont .side-nav-panel a.active
+{
+    transform: scale(1.07);
+    color: black;
 }
 
 .modal-cont nav img
