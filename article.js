@@ -43,7 +43,6 @@ const titleObserverGeneral = new IntersectionObserver(function (entries, titleOb
         const floatingPanelGen = document.querySelector(floatingPanelidentifier);
         const sidePanelIdentifier = ".side-nav-panel." + entry.target.dataset.titleId;
         const sidePanelGen = document.querySelector(sidePanelIdentifier);
-        console.log(floatingPanelGen);
         if (floatingPanelGen)
         {
             floatingPanelGen.classList.toggle('display-none', entry.isIntersecting);

@@ -206,7 +206,26 @@ document.addEventListener('DOMContentLoaded', () => {
     activateSideBarNavOnSection('#healthcare-modal .side-bar-nav-section', document.getElementById('healthcare-modal'), false);
 });
 
+function handleSideNavBarClick(e)
+{
+    const currActive = e.target;
+    const allSiblingNav = Array.from(e.target.parentElement.children);
+    allSiblingNav.forEach(sibling => {
+        if (sibling)
+        {
+            sibling.classList.remove('active');
+        }
+    });
+    currActive.classList.add('active');
+}
+
 
 projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
 closeBtns.forEach(close => close.addEventListener('click', handleCloseButtonOnModal));
 hoverCloseBtns.forEach(close => close.addEventListener('click', handleHoverCloseBtnOnModal));
+
+const sideNavBtns = document.querySelectorAll('.side-nav-panel a');
+
+sideNavBtns.forEach(sideNav => {
+    sideNav.addEventListener('click', handleSideNavBarClick);
+});
