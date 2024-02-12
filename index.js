@@ -53,8 +53,8 @@ function handleProjectModalOpen(e)
         setTimeout(() => {
             lProjectModal.classList.add('fade-in');
         }, 10);
+        lProjectModal.scrollTo(0, 0);
     }
-
     // When opening the modal
     scrollPosition = window.pageYOffset;  // Remember the scroll position
     // document.body.style.overflow = 'hidden';
