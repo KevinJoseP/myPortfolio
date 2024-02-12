@@ -232,7 +232,7 @@ a
 
 #welcome-section .main-icon-cont img
 {
-    width: clamp(5rem, 5vw, 15rem);
+    width: clamp(5rem, 5vw, 8rem);
     margin-bottom: clamp(0.5rem, calc(0.5rem + 2vh), 2rem);
 }
 
