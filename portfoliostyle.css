@@ -123,13 +123,14 @@ a
     cursor: pointer;
     text-decoration: none;
     width: fit-content;
-    padding: 0.5rem;
+    padding: 0.4rem 0.5rem 0.5rem 0.5rem;
     margin: 0 0.3rem;
     border-radius: 5px;
     transition: color 150ms ease-in, background-color 150ms ease-in, transform 50ms ease-in;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: var(--font-family-sans-condensed);
+    font-family: var(--font-family-sans-serif-grotesque);
 }
 
 .nav-link:active
@@ -286,9 +287,9 @@ a
 #welcome-section .know-more-button
 {
     padding: 0.8rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     background-color: var(--color-text-dark-brown);
-    font-family: var(--font-nav-control-elements);
+    font-family: var(--font-family-sans-serif-3);
     font-weight: 300;
     color: white;
     border-radius: 10px;
@@ -354,6 +355,7 @@ a
 {
     color: #CBD5C0;
     font-size: clamp(1.5rem, calc(0.5rem + 5vw), 3rem);
+    font-size: 2rem;
     font-weight: 300;
     margin: 0 0.3rem;
     text-align: center;
@@ -368,7 +370,7 @@ a
     margin: 4rem 0;
 }
 
-.modal-cont#healthcare .title-cont
+.modal-cont .title-cont
 {
     margin-bottom: 10rem;
 }
@@ -377,7 +379,7 @@ a
 .decor-line
 {
     height: 1.5px;
-    width: clamp(1rem, calc(0.5rem + 3vw), 5rem);
+    width: 1.5rem;
     background-color: #CBD5C0;
 }
 
@@ -907,15 +909,15 @@ footer h5
     margin: 1rem 0 1rem 0rem;
     background-color: #90553C;
     padding: 0.5rem;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: solid 1px white;
-    transition: transform 100ms ease-in;
+    transition: transform 100ms ease-in, background-color 150ms ease-in;
     cursor: pointer;
 }
 
 .modal-cont .close-modal-btn-cont:hover
 {
-    background-color: #1a1d18;
+    background-color: #790202;
 }
 
 .modal-cont .close-modal-btn-cont:active
@@ -1656,11 +1658,6 @@ footer h5
     width: 100%;
 }
 
-.modal-cont#quiclick .title-cont,
-.modal-cont#stockit .title-cont
-{
-    margin-bottom: 10rem;
-}
 
 .modal-cont#quiclick .title-cont-group .main-title h2,
 .modal-cont#stockit .title-cont-group .main-title h2
@@ -1865,7 +1862,17 @@ footer h5
 .modal-cont#art,
 .modal#art-modal
 {
-    background-color: white;
+    background-color: black;
+}
+
+.modal-cont#art .project-body .project-section
+{
+    background-color: black;
+}
+
+.modal-cont#art .project-body
+{
+    background-color: black;
 }
 
 .modal-cont#art .project-title
@@ -2063,11 +2070,12 @@ footer h5
 {
     display: flex;
     width: fit-content;
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(0, 0, 0);
     border-radius: 50px;
-    box-shadow: 0 0 10rem black;
+    box-shadow: 0 0 3rem black;
     outline: solid 2px white;
 }
+
 
 .modal-cont#healthcare .project-title
 {
@@ -2159,8 +2167,7 @@ footer h5
     text-align: center;
 }
 
-.modal-cont#jee .option-text,
-.modal-cont#healthcare .option-text
+.modal-cont .option-text
 {
     text-align: center;
     color: white;
@@ -2602,7 +2609,7 @@ footer h5
         margin: 4rem 0 1rem 0;
     }
 
-    .modal-cont#healthcare .title-cont
+    .modal-cont .title-cont
     {
         margin-bottom: 5rem;
     }
@@ -2892,13 +2899,11 @@ footer h5
         padding: 3rem 0;
         width: 85vw;
     }
-    .modal-cont#jee .option-text,
-    .modal-cont#healthcare .option-text
+    .modal-cont .option-text
     {
         display: none;
     }
-    .modal-cont#jee .option-logo,
-    .modal-cont#healthcare .option-logo
+    .modal-cont .option-logo
     {
         margin-bottom: 0;
     }

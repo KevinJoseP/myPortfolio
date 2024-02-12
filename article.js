@@ -5,11 +5,8 @@ const elaborate = document.querySelector('.article #elaborate');
 const elaborateContent = document.querySelector('.article #detailed-content');
 const summarizedContent = document.querySelector('.article #summarized-content');
 const floatingPanel = document.querySelector('.article .bottom-floating-panel');
-let bottomHoverPanelMods = [];
-const healthCare = document.querySelector('.modal-cont#healthcare .project-title');
-if (healthCare)bottomHoverPanelMods.push(healthCare);
-const stockit = document.querySelector('.modal-cont#stockit .project-title');
-if (stockit)bottomHoverPanelMods.push(stockit);
+let bottomHoverPanelMods = document.querySelectorAll('.modal-cont .project-title');
+
 
 
 const mainOpt = {
@@ -53,7 +50,7 @@ const titleObserverGeneral = new IntersectionObserver(function (entries, titleOb
         }
     });
 }, {
-    
+    threshold: 0.5
 });
 
 
