@@ -1153,13 +1153,14 @@ footer h5
     justify-content: center;
     align-items: center;
     background-color: #74927e;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 0.5rem 0.8rem;
     outline: solid 2px white;
     cursor: pointer;
     margin-top: 2rem;
     font-family: var(--font-family-sans);
     transition: transform 50ms linear;
+    box-shadow: 0 0 2rem black;
 }
 
 .modal-cont .final-code-btn:hover,

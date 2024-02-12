@@ -9,6 +9,7 @@ const closeBtns = document.querySelectorAll('.modal-cont .close');
 const sections = document.querySelectorAll('section.sections');
 const navElems = document.querySelectorAll('a.nav-link');
 const hoverCloseBtns = document.querySelectorAll('.modal-cont .bottom-floating-panel .close');
+let scrollPosition = 0;
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
@@ -53,6 +54,12 @@ function handleProjectModalOpen(e)
             lProjectModal.classList.add('fade-in');
         }, 10);
     }
+
+    // When opening the modal
+    scrollPosition = window.pageYOffset;  // Remember the scroll position
+    // document.body.style.overflow = 'hidden';
+    // document.body.style.position = 'fixed';
+    // document.body.style.top = `-${scrollPosition}px`;
 }
 
 function handleCloseButtonOnModal(e)
@@ -61,6 +68,11 @@ function handleCloseButtonOnModal(e)
     const currProjectModal = e.currentTarget.parentElement.parentElement;
     currProjectModal.classList.remove('active');
     currProjectModal.classList.remove('fade-in');
+    // When closing the modal
+    // document.body.style.overflow = 'auto';
+    // document.body.style.position = '';
+    window.scrollTo(0, scrollPosition);  // Restore the scroll position
+    // document.body.style.top = '';
 }
 
 function handleHoverCloseBtnOnModal(e)
@@ -70,6 +82,11 @@ function handleHoverCloseBtnOnModal(e)
     const currProjectModal = e.currentTarget.parentElement.parentElement.parentElement.parentElement;
     currProjectModal.classList.remove('active');
     currProjectModal.classList.remove('fade-in');
+    // When closing the modal
+    document.body.style.overflow = 'auto';
+    document.body.style.position = '';
+    window.scrollTo(0, scrollPosition);  // Restore the scroll position
+    document.body.style.top = '';
 }
 
 
