@@ -913,6 +913,7 @@ footer h5
     outline: solid 1px white;
     transition: transform 100ms ease-in, background-color 150ms ease-in;
     cursor: pointer;
+    box-shadow: 0 0 1rem black;
 }
 
 .modal-cont .close-modal-btn-cont:hover
