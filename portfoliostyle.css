@@ -1376,9 +1376,14 @@ footer h5
     background: none;
 }
 
+.modal-cont#cisco .grouping h2
+{
+    font-size: 2rem;
+}
+
 .modal-cont#cisco .grouping h3
 {
-    font-size: clamp(1.1rem, calc(1rem + 1vw), 2.5rem);
+    font-size: 1.5rem;
     font-family: var(--font-family-sans-serif-3);
     font-weight: 300;
 }
