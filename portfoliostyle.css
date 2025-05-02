@@ -2414,12 +2414,23 @@ footer h5
     width: 40%;
 }
 
-
-
-
-
-
-
+/* Secret Me Link */
+#secret-me-link {
+    position: fixed;
+    bottom: 8px;
+    right: 12px;
+    font-size: 11px;
+    color: #bbb;
+    opacity: 0.15;
+    z-index: 9999;
+    text-decoration: none;
+    pointer-events: auto;
+    transition: opacity 0.2s;
+}
+#secret-me-link:hover {
+    opacity: 0.7;
+    color: #333;
+}
 
 /* End of Project Modals */
 /***************************************/
