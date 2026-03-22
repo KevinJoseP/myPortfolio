@@ -1,0 +1,24 @@
+/* Standalone project page overrides */
+/* The .modal-cont class is reused so all existing styles apply */
+
+body.project-page {
+    animation: pageFadeIn 0.3s ease-in;
+}
+
+@keyframes pageFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* On standalone pages, .modal-cont is not inside a .modal overlay */
+body.project-page .modal-cont {
+    position: static;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+/* Constrain only the hero/title section so the background image doesn't stretch full width */
+body.project-page .modal-cont .project-title {
+    max-width: 60rem;
+    margin: 0 auto;
+}

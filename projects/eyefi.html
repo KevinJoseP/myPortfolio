@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project Eye-fi - Kevin Jose</title>
+        <link href="../normalize.css" rel="stylesheet">
+        <link href="../portfoliostyle.css" rel="stylesheet">
+        <link href="./project-page.css" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="../images/KJ_favicon.png" rel="icon">
+    </head>
+    <body class="project-page">
+        <header id="home-page-icon" class="about-page">
+            <div id="nav-bar-container" class="desktop about-page">
+                <div class="nav-logo-grouping">
+                    <a class="image-link" href="../index.html"><img class="hero-logo" alt="Kevin Jose's logo" src="../images/KJ_neo_logo.png"></a>
+                    <a class="close-btn" href=""><img src="../images/close_icon.svg" alt="menu close button" class="menu-close-img"></a>
+                </div>
+                <nav id="navbar">
+                    <a class="nav-link" href="../index.html" id="home-nav">HOME</a>
+                    <a class="nav-link" href="../about.html">ABOUT</a>
+                    <a class="nav-link" href="../index.html#projects" id="projects-nav">PROJECTS</a>
+                    <a class="nav-link" href="../index.html#journey" id="experiences-nav">JOURNEY</a>
+                    <a class="nav-link" href="../index.html#contacts" id="contacts-nav">CONTACT</a>
+                    <a class="nav-link" href="../resources/kevin_cv.pdf" target="_blank">RESUME</a>
+                </nav>
+            </div>
+            <nav class="mobile-header">
+                <a class="image-link" href="../index.html"><img class="hero-logo" alt="Kevin Jose's logo" src="../images/KJ_neo_logo.png"></a>
+                <a class="menu-btn" href=""><img src="../images/menu_icon.svg" alt="menu hamburger button" class="menu-btn-img"></a>
+            </nav>
+        </header>
+
+        <div class="modal-cont" id="eyefi">
+                <a id="eyefi-section-top"></a>
+                <section class="project-title" data-title-id="eyefi">
+                    <img loading="lazy" src="../images/Projects/eye-fi/eyefi.png" alt="AI generated image of blue eyes" class="title-img">
+                    <div class="grouping">
+                        <div class="main-title">
+                            <h2>PROJECT EYE-FI</h2>
+                            <h1>A tool to measure the eyelid retraction and overshoot of eyes in Duane's Retraction Syndrome</h1>
+                        </div>
+                        <div class="details">
+                            <div class="team-cont">
+                                <h3>THE TEAM</h3>
+                                <div class="team">Kunal Parulekar (Mentor) </div>
+                                <div class="team">Mehal Rathore (Optometrist)</div>
+                                <div class="team self">Kevin Jose (Developer, Emotional Support)</div>
+                                <div class="team">Saurabh Sharma (Developer)</div>
+                                <div class="team">Shivakshit Patri (Developer)</div>
+                                <div class="team">2x Ophthalmologist (Mentors)</div>
+                            </div>
+                            <div class="time">
+                                <h3>PROJECT DURATION</h3>
+                                <div>5 Days, Engineering the Eye hackathon, July 2019</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="project-body flex-center-center flex-column">
+                    <div class="background flex-center-center flex-column project-section">
+                        <h2>BACKGROUND</h2>
+                        <div>The 'Engineering the Eye Hackathon' represents a dynamic, five-day event collaboratively organized by prominent organizations: Microsoft, Carl Zeiss, the LV Prasad Eye Institute, the Indian Institute of Technology Hyderabad, and the Indian Institute of Information Technology Hyderabad. Renowned as one of India's largest and most esteemed hackathons, the event stands out due to its extensive participant engagement. The hackathon centers around addressing real-world challenges encountered in the fields of Ophthalmology and Optometry, impacting both medical professionals and patients. Our specific problem statement was developed through comprehensive discussions with several doctors from the LV Prasad Eye Institute, ensuring its relevance and potential impact.</div>
+                    </div>
+                    <div class="problem flex-center-center flex-column project-section">
+                        <h2>PROBLEM</h2>
+                        <div>
+                            Duane's Retraction Syndrome is a condition present from birth that affects eye movement. It's marked by limited sideways eye movement, and the eye area (palpebral fissure) narrows when trying to move the eyes inward. Sometimes, when attempting this inward movement, the eye might also move up or down unexpectedly.
+                        </div>
+                        <div class="flex-center-center duane">
+                            <img loading="lazy" src="../images/Projects/eye-fi/eyefi_spec1.png" alt="an example of Duane's retraction syndrome">
+                            <img loading="lazy" src="../images/Projects/eye-fi/eyefi_spec2.png" alt="an example of Duane's retraction syndrome">
+                        </div>
+                        <div>
+                            <ul>
+                                <li><span><strong>Manual Measurement of DRS</strong>:</span> Currently, the measurement of Duane's Retraction Syndrome (DRS) is a manual process. Experts rely on physical measuring tools and subsequent calculations to determine accurate measurements, which is both time-consuming and prone to human error.</li>
+                                <li><span><strong>Risk of Infection</strong>:</span> There have been instances, as highlighted by a doctor we consulted, where patients contracted infections due to the use of non-sterile physical measurement devices during the assessment process.</li>
+                                <li><span><strong>Lack of Live Measurement in Surgery</strong>:</span> In the context of corrective surgeries or treatments for eye conditions, there is no system in place for the live measurement of the degree of deviation from the normative eye alignment. This absence of real-time data can impact the precision and effectiveness of these medical interventions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="research flex-center-center flex-column project-section">
+                        <h2>RESEARCH</h2>
+                        <div>
+                            In addressing Duane's Retraction Syndrome (DRS), we encountered the challenge of establishing a measurable standard for deviation from the norm. Most doctors rely on experience for assessment, as a widely recognized standard isn't yet in common use. Although a standard by Dr. Kekunnaya and colleagues exists, it hasn't been universally adopted. After consulting with four doctors at our institute, we decided to implement the methodology proposed in Dr. Kekunnaya's paper.
+                        </div>
+                        <a href="https://hyderabadeyeresear-my.sharepoint.com/:b:/g/personal/prashanthr_lvpei_net/EY01zuLgWw9Gk2MncIsi2MQBh-sL0-cA-JOeQGCfT2oowg?e=LYBbgU" class="paper" target="_blank"><img loading="lazy" src="../images/Projects/eye-fi/kekunaya_paper.png" alt="a screenshot of a research paper" class="research-paper"></a>
+                        <div>Once we fixed on the algorithm to use to determine the degree of DRS, we spent time brainstorming about various methods to get measurements</div>
+                        <div>Each of us were experimenting on various approaches. We tried following approaches</div>
+                        <ul>
+                            <li><span><strong>Deep Learning-Based Point Detection</strong>:</span> Utilize a deep learning approach to identify key facial points (such as the top and bottom of the eyelid, center of the pupil, etc.). These coordinates can then be used to calculate the necessary distances.</li>
+                            <li><span><strong>Computer Vision Approach</strong>:</span> Implement a method that involves converting the image to grayscale and employing Harr-Cascade classifiers and blob detection techniques to locate the iris. Subsequent adjustments to the program would enable distance measurements.</li>
+                            <li><span><strong>Exploring Pre-Existing Models</strong>:</span> Conduct a thorough search for existing models that may be adapted or integrated into our solution.</li>
+                        </ul>
+                        <div>We quickly ruled out the deep learning solution due to a lack of sufficient data and resources necessary for training an effective model. Our initial attempts with a computer vision-based approach yielded moderate success. However, this method had to be ultimately set aside as the accuracy of the results was significantly impacted by variables such as lighting conditions and the positioning of the subject in the image. A pivotal moment came when we engaged in a discussion with a senior Microsoft engineer present at the venue, who introduced us to the Microsoft Azure Face API.</div>
+                        <div>The Microsoft Azure Face API demonstrated remarkable proficiency in detecting major landmarks on various face images. Through extensive experimentation with a diverse array of images, we achieved a notably high success rate, underscoring the robustness and reliability of the API.</div>
+                        <div class="research-grouping">
+                            <img loading="lazy" src="../images/Projects/eye-fi/mehal1.png" alt="an input image alt text">
+                            <img loading="lazy" src="../images/Projects/eye-fi/mehal2.png" alt="a closer image showing the landmarks as output">
+                        </div>
+                        <div>An advantageous aspect of our approach was leveraging Kekunnaya's algorithm, which primarily relies on calculating ratios. This meant that calibration issues, often a concern in such applications, did not affect our results, significantly enhancing the reliability of our method.</div>
+                        <div>Our mentor highlighted a critical concern: ensuring data security against potential breaches. This is especially paramount given that the iris constitutes a biometric signature, and the leakage of such sensitive images could lead to significant ramifications. To address this issue, we opted to integrate the Zeiss Visuhealth API, renowned for its secure and accurate transmission of ocular images over the Internet, facilitating communication between doctors and patients. Consequently, our final architecture incorporated this API as a key component to ensure enhanced data security.</div>
+                    </div>
+                    <div class="solution flex-center-center flex-column project-section">
+                        <h2>SOLUTION</h2>
+                        <div>Our final Solution incorporates the following architecture</div>
+                        <img loading="lazy" src="../images/Projects/eye-fi/solution1.png" alt="Our final architecture">
+                        <img loading="lazy" src="../images/Projects/eye-fi/solution2.png" alt="Our final architecture">
+                        <div>And our final results:</div>
+                        <img loading="lazy" src="../images/Projects/eye-fi/result1.png" alt="final result image 1">
+                        <img loading="lazy" src="../images/Projects/eye-fi/result2.png" alt="final result image 1">
+                        <a class="final-code-btn" href="https://github.com/KevinJoseP/eyeFi" target="_blank">
+                            <div>FINAL CODE</div>
+                            <img loading="lazy" src="../images/code.svg" alt="a code logo">
+                        </a>
+                    </div>
+                    <div class="future flex-center-center flex-column project-section">
+                        <h2>FUTURE SCOPE/ENHANCEMENTS</h2>
+                        <div>
+                            <ul>
+                                <li>Expand into Real-time video analysis for more effective diagnostic and surgical applications.</li>
+                                <li>Improve precision in detecting various types of DRS, particularly beyond types 1, 2, and 3, by acquiring and analyzing more diverse data sets.</li>
+                                <li>Adopt and scale the system to encompass all grades of overshooting, in line with the methodology proposed by Dr. Kekunnaya and colleagues.</li>
+                                <li>Microsoft Azure's face API showed limitations in cases where patients had eye diseases causing discoloration to the sclera, like cataracts. After consultations with Microsoft engineers, it was attributed to current dataset limitations and model training. Addressing this with an enhanced dataset could resolve the issue.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="learnings flex-center-center flex-column project-section">
+                        <h2>KEY LEARNINGS</h2>
+                        <div>
+                            <ul>
+                                <li>The most profound insight was the disparate progression of healthcare and technology in India. Complex health issues often have simple tech solutions, yet they are overlooked. Hackathons provide some relief, but more collaborative efforts are needed between tech institutions like IITs and the healthcare field.</li>
+                                <li>Participating in my first hackathon was a revelation. Despite initial doubts, the experience showcased the incredible potential of collaborative problem-solving in a conducive environment, changing my perspective on innovation and teamwork.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gallery flex-center-center flex-column project-section">
+                        <h2>GALLERY</h2>
+                        <div class="image-groupings">
+                            <img loading="lazy" src="../images/Projects/eye-fi/photos/eyefi3.jpg" alt="The team Eye-fi">
+                            <img loading="lazy" src="../images/Projects/eye-fi/photos/eyefi2.jpg" alt="Team Eye-fi presenting projects to the judges">
+                            <img loading="lazy" src="../images/Projects/eye-fi/photos/eyefi0.jpg" alt="Team Eye-fi presenting projects to the judges">
+                            <img loading="lazy" src="../images/Projects/eye-fi/photos/eyefi4.jpg" alt="Team Eye-fi presenting projects to the judges">
+                            <img loading="lazy" src="../images/Projects/eye-fi/photos/eyefi1.jpg" alt="Team Eye-fi presenting projects to the judges">
+                        </div>
+                    </div>
+                    <div class="title-cont">
+                        <div class="decor-line"></div>
+                        <h2 class="section-common-h2">Thank You</h2>
+                        <div class="decor-line"></div>
+                    </div>
+                </section>
+                <nav class="bottom-floating-panel eyefi">
+                    <div class="grouping-floating">
+                        <a class="floating-panel-options" href="#eyefi-section-top">
+                            <img src="../images/Projects/jee/images/upArrow.svg" alt="Back to top" class="option-logo">
+                            <div class="option-text">BACK TO TOP</div>
+                        </a>
+                        <a class="floating-panel-options" href="../index.html#projects">
+                            <img src="../images/close_icon.svg" alt="back to projects" class="option-logo">
+                            <div class="option-text">BACK</div>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+        <footer class="index">
+            <h4>Designed and Developed From Scratch By Me, Of Course!</h4>
+            <h5>Copyright &#169; Kevin Jose </h5>
+            <address id="social-media-container">
+                <a class="social-media-link" href="https://www.linkedin.com/in/krsj1234/" target="_blank"><img loading="lazy" alt="linkedIn profile" class="social-media-profile" src="../images/linkedin_logo.png"></a>
+                <a class="social-media-link" href="https://github.com/KevinJoseP" target="_blank"><img loading="lazy" alt="Github profile" class="social-media-profile" src="../images/github_logo.png"></a>
+            </address>
+            <h4>Found a bug? Feel free to drop a message, or even better, raise an issue on my repo by clicking<a href="https://github.com/KevinJoseP/myPortfolio/issues" target="_blank" class="github-issues"> here!</a></h4>
+        </footer>
+        <script src="../utils/scripts/util.js"></script>
+        <script src="./project-page.js"></script>
+    </body>
+</html>

@@ -4,12 +4,8 @@ const welcomeSection = document.getElementById('welcome-section');
 const heroLogoImg = document.querySelector('#welcome-section .main-icon-cont img');
 const downArrow = document.querySelector('#welcome-section .down-arrow');
 const backtoTopBtn = document.getElementById('back-to-top-btn');
-const projects = document.querySelectorAll('.project-inst');
-const closeBtns = document.querySelectorAll('.modal-cont .close');
 const sections = document.querySelectorAll('section.sections');
 const navElems = document.querySelectorAll('a.nav-link');
-const hoverCloseBtns = document.querySelectorAll('.modal-cont .bottom-floating-panel .close');
-let scrollPosition = 0;
 
 function handleLogoChangeToNavBar (entries, mainLogoObserver)
 {
@@ -39,54 +35,6 @@ function handleWelcomeScreenChange (entries, welcomeScreenObserver)
             backtoTopBtn.classList.remove('top');
         }
     });
-}
-
-function handleProjectModalOpen(e)
-{
-    const currProject = e.currentTarget;
-    const modalId = currProject.dataset.modalId;
-    if (modalId)
-    {
-        e.preventDefault();
-        const lProjectModal = document.getElementById(modalId).parentElement;
-        lProjectModal.classList.add('active');
-        setTimeout(() => {
-            lProjectModal.classList.add('fade-in');
-        }, 10);
-        lProjectModal.scrollTo(0, 0);
-    }
-    // When opening the modal
-    scrollPosition = window.pageYOffset;  // Remember the scroll position
-    // document.body.style.overflow = 'hidden';
-    // document.body.style.position = 'fixed';
-    // document.body.style.top = `-${scrollPosition}px`;
-}
-
-function handleCloseButtonOnModal(e)
-{
-    e.preventDefault();
-    const currProjectModal = e.currentTarget.parentElement.parentElement;
-    currProjectModal.classList.remove('active');
-    currProjectModal.classList.remove('fade-in');
-    // When closing the modal
-    // document.body.style.overflow = 'auto';
-    // document.body.style.position = '';
-    window.scrollTo(0, scrollPosition);  // Restore the scroll position
-    // document.body.style.top = '';
-}
-
-function handleHoverCloseBtnOnModal(e)
-{
-    e.preventDefault();
-    //wtf??
-    const currProjectModal = e.currentTarget.parentElement.parentElement.parentElement.parentElement;
-    currProjectModal.classList.remove('active');
-    currProjectModal.classList.remove('fade-in');
-    // When closing the modal
-    document.body.style.overflow = 'auto';
-    document.body.style.position = '';
-    window.scrollTo(0, scrollPosition);  // Restore the scroll position
-    document.body.style.top = '';
 }
 
 
@@ -159,7 +107,7 @@ function activateSideBarNavOnSection(sectionSelector, paneToBeScrolled, isWindow
     const sections = document.querySelectorAll(sectionSelector);
     paneToBeScrolled.addEventListener('scroll', () => {
         let currentActive = '';
-    
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
@@ -177,12 +125,12 @@ function activateSideBarNavOnSection(sectionSelector, paneToBeScrolled, isWindow
                 lInnerHeight = paneToBeScrolled.clientHeight;
 
             }
-        
+
             // Calculate the middle of the viewport
             const scrollMiddle = lScrollTop + lInnerHeight / 2;
             const windowHeight = lScrollTop + lInnerHeight;
             // Check if the middle of the viewport is within the section
-            if (scrollMiddle >= sectionTop && scrollMiddle <= sectionBottom) 
+            if (scrollMiddle >= sectionTop && scrollMiddle <= sectionBottom)
             {
                 currentActive = section.getAttribute('id');
             }
@@ -191,7 +139,7 @@ function activateSideBarNavOnSection(sectionSelector, paneToBeScrolled, isWindow
                 currentActive = section.getAttribute('id');
             }
         });
-    
+
         // Remove 'active' class from all nav elements
         if (currentActive)
         {
@@ -205,11 +153,11 @@ function activateSideBarNavOnSection(sectionSelector, paneToBeScrolled, isWindow
         }
 
         // console.log(currentActive);
-    
+
         // Add 'active' class to the current nav element
         const currentNavId = currentActive + '-nav';
         const currentNavElement = document.getElementById(currentNavId);
-        if (currentNavElement) 
+        if (currentNavElement)
         {
             currentNavElement.classList.add('active');
         }
@@ -219,30 +167,4 @@ function activateSideBarNavOnSection(sectionSelector, paneToBeScrolled, isWindow
 document.addEventListener('DOMContentLoaded', () => {
 
     activateSideBarNavOnSection('section.sections', window, true);
-    activateSideBarNavOnSection('#stockit-modal .side-bar-nav-section', document.getElementById('stockit-modal'), false);
-    activateSideBarNavOnSection('#healthcare-modal .side-bar-nav-section', document.getElementById('healthcare-modal'), false);
-});
-
-function handleSideNavBarClick(e)
-{
-    const currActive = e.target;
-    const allSiblingNav = Array.from(e.target.parentElement.children);
-    allSiblingNav.forEach(sibling => {
-        if (sibling)
-        {
-            sibling.classList.remove('active');
-        }
-    });
-    currActive.classList.add('active');
-}
-
-
-projects.forEach(project => project.addEventListener('click', handleProjectModalOpen));
-closeBtns.forEach(close => close.addEventListener('click', handleCloseButtonOnModal));
-hoverCloseBtns.forEach(close => close.addEventListener('click', handleHoverCloseBtnOnModal));
-
-const sideNavBtns = document.querySelectorAll('.side-nav-panel a');
-
-sideNavBtns.forEach(sideNav => {
-    sideNav.addEventListener('click', handleSideNavBarClick);
 });
