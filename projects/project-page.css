@@ -22,3 +22,8 @@ body.project-page .modal-cont .project-title {
     max-width: 60rem;
     margin: 0 auto;
 }
+
+/* Article page: title-class needs full width for background image */
+body.project-page .modal-cont .title-class.project-title {
+    max-width: none;
+}
